@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Contact & Boek een Sessie | Ontwikkel-Oase – Josine Dielissen</title>
+    <meta name="description" content="Neem contact op met Josine Dielissen van Ontwikkel-Oase. Plan een gratis kennismakingsgesprek of boek direct een coaching-, team- of leiderschapssessie.">
+    <meta name="keywords" content="contact Ontwikkel-Oase, coaching boeken, kennismakingsgesprek, Josine Dielissen contact, sessie plannen">
+    <link rel="canonical" href="https://www.ontwikkeloase.nl/contact.html">
+    <meta property="og:title" content="Contact & Boek een Sessie | Ontwikkel-Oase">
+    <meta property="og:description" content="Plan een gratis kennismakingsgesprek of boek direct een sessie bij Josine Dielissen van Ontwikkel-Oase.">
+    <meta property="og:url" content="https://www.ontwikkeloase.nl/contact.html">
+    <meta property="og:type" content="website">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact – Ontwikkel-Oase",
+            "url": "https://www.ontwikkeloase.nl/contact.html",
+            "mainEntity": {
+                "@type": "LocalBusiness",
+                "name": "Ontwikkel-Oase",
+                "telephone": "+31683234386",
+                "email": "info@ontwikkeloase.nl",
+                "founder": { "@type": "Person", "name": "Josine Dielissen" }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --zwart:    #111110;
+            --olijf:    #5A6B3A;
+            --olijf-lt: #8A9E62;
+            --kerrie:   #C49A1A;
+            --oudrose:  #C2867E;
+            --beige:    #F6F3EE;
+            --wit:      #FDFCFA;
+            --zink:     #6B6B67;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans:  'DM Sans', system-ui, sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { background: var(--beige); color: var(--zwart); font-family: var(--font-sans); font-weight: 300; line-height: 1.75; overflow-x: hidden; }
+        ::selection { background: var(--kerrie); color: #fff; }
+
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,243,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(90,107,58,0.12); transition: all 0.4s ease; }
+        nav.scrolled { background: rgba(253,252,250,0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
+        .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; text-decoration: none; color: var(--zwart); letter-spacing: -0.02em; }
+        .nav-logo em { color: var(--olijf); font-style: italic; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--olijf); }
+        .nav-links a.cta { border: 1px solid var(--zwart); padding: 0.6rem 1.4rem; color: var(--zwart); transition: all 0.3s; }
+        .nav-links a.cta:hover, .nav-links a.cta.active { background: var(--zwart); color: var(--wit); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
+        .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); }
+        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--beige); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; text-decoration: none; color: var(--zwart); transition: color 0.3s; }
+        .mobile-menu a:hover { color: var(--olijf); }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* HERO – split design: left dark, right light */
+        .contact-hero {
+            min-height: 60vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 80px;
+        }
+        .hero-left {
+            background: var(--zwart);
+            padding: 6rem 4rem 5rem;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            position: relative; overflow: hidden;
+        }
+        .hero-left::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 60% at 30% 30%, rgba(90,107,58,0.2) 0%, transparent 65%);
+        }
+        .hero-deco-text {
+            position: absolute; bottom: -2rem; right: -1rem;
+            font-family: var(--font-serif);
+            font-size: clamp(8rem, 14vw, 14rem);
+            font-style: italic; font-weight: 300;
+            color: rgba(255,255,255,0.03);
+            line-height: 1; pointer-events: none;
+        }
+        .hero-left-content { position: relative; z-index: 1; }
+        .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.2s forwards; }
+        .hero-title { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 300; line-height: 1.08; color: #fff; letter-spacing: -0.02em; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.4s forwards; }
+        .hero-title em { font-style: italic; color: var(--oudrose); }
+        .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.5); max-width: 380px; margin-top: 1.4rem; line-height: 1.85; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.6s forwards; }
+
+        .hero-right {
+            background: var(--beige);
+            padding: 6rem 4rem 5rem;
+            display: flex; flex-direction: column; justify-content: flex-end;
+        }
+
+        /* Contact info cards on the right */
+        .contact-info-grid { display: flex; flex-direction: column; gap: 1.5rem; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.5s forwards; }
+        .contact-info-card {
+            display: flex; gap: 1.4rem; align-items: flex-start;
+            padding: 1.8rem 2rem;
+            background: var(--wit);
+            border: 1px solid rgba(90,107,58,0.1);
+            text-decoration: none; color: inherit;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        a.contact-info-card:hover { border-color: var(--kerrie); transform: translateX(4px); }
+        .info-icon {
+            width: 44px; height: 44px; flex-shrink: 0;
+            background: var(--beige); border: 1px solid rgba(90,107,58,0.12);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; color: var(--olijf);
+        }
+        .info-text {}
+        .info-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; margin-bottom: 0.25rem; }
+        .info-value { font-size: 0.95rem; color: var(--zwart); font-weight: 400; }
+        .info-sub { font-size: 0.8rem; color: var(--zink); margin-top: 0.1rem; }
+
+        /* MAIN CONTACT SECTION */
+        .contact-main { padding: 7rem 2rem; background: var(--wit); }
+        .contact-main-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 5fr 4fr;
+            gap: 7rem; align-items: start;
+        }
+
+        /* FORM */
+        .form-section {}
+        .form-section h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+        .form-section h2 em { font-style: italic; color: var(--olijf); }
+        .form-section p { color: var(--zink); margin-bottom: 2.5rem; font-size: 0.95rem; line-height: 1.85; }
+
+        /* Step indicator */
+        .step-indicator { display: flex; gap: 0; margin-bottom: 3rem; }
+        .step { flex: 1; padding: 0.9rem 1rem; text-align: center; border-bottom: 2px solid rgba(0,0,0,0.08); cursor: pointer; transition: all 0.3s; }
+        .step.active { border-bottom-color: var(--kerrie); }
+        .step-num { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 300; color: rgba(0,0,0,0.2); line-height: 1; transition: color 0.3s; }
+        .step.active .step-num { color: var(--kerrie); }
+        .step-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--zink); margin-top: 0.3rem; }
+
+        /* Form steps */
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+        .form-row.full { grid-template-columns: 1fr; }
+
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-group label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; color: var(--zink); }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.9rem 1.1rem;
+            background: var(--beige);
+            border: 1px solid rgba(0,0,0,0.1);
+            font-family: var(--font-sans);
+            font-size: 0.92rem; font-weight: 300;
+            color: var(--zwart);
+            outline: none;
+            transition: border-color 0.3s, background 0.3s;
+            width: 100%;
+            -webkit-appearance: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--olijf);
+            background: var(--wit);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        /* Service select cards */
+        .service-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-bottom: 1.2rem; }
+        .service-card {
+            padding: 1.2rem 1rem; border: 1px solid rgba(0,0,0,0.1);
+            background: var(--beige); cursor: pointer;
+            transition: all 0.3s; text-align: center;
+        }
+        .service-card:hover { border-color: var(--olijf); }
+        .service-card.selected { border-color: var(--olijf); background: rgba(90,107,58,0.06); }
+        .service-card input[type="radio"] { display: none; }
+        .service-card-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+        .service-card-label { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--zwart); font-weight: 400; }
+
+        /* Availability grid */
+        .availability-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; color: var(--zink); margin-bottom: 0.8rem; display: block; }
+        .avail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1.2rem; }
+        .avail-btn {
+            padding: 0.7rem 0.5rem; border: 1px solid rgba(0,0,0,0.1);
+            background: var(--beige); cursor: pointer; text-align: center;
+            font-family: var(--font-sans); font-size: 0.72rem; color: var(--zink);
+            transition: all 0.3s;
+        }
+        .avail-btn:hover { border-color: var(--olijf); color: var(--olijf); }
+        .avail-btn.selected { border-color: var(--olijf); background: rgba(90,107,58,0.06); color: var(--olijf); }
+
+        /* Form nav buttons */
+        .form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+        .btn-next, .btn-prev, .btn-submit {
+            padding: 0.95rem 2.2rem;
+            font-family: var(--font-sans);
+            font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+            font-weight: 500; cursor: pointer; transition: all 0.3s; border: none;
+        }
+        .btn-next, .btn-submit { background: var(--zwart); color: #fff; }
+        .btn-next:hover, .btn-submit:hover { background: var(--olijf); }
+        .btn-prev { background: none; border: 1px solid rgba(0,0,0,0.15); color: var(--zink); }
+        .btn-prev:hover { border-color: var(--zwart); color: var(--zwart); }
+
+        /* Success message */
+        .success-msg { display: none; text-align: center; padding: 4rem 2rem; }
+        .success-msg.show { display: block; }
+        .success-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+        .success-msg h3 { font-family: var(--font-serif); font-size: 2rem; font-weight: 300; margin-bottom: 0.8rem; }
+        .success-msg p { color: var(--zink); font-size: 0.95rem; line-height: 1.85; }
+
+        /* SIDEBAR */
+        .contact-sidebar {}
+        .sidebar-block {
+            padding: 2.5rem;
+            margin-bottom: 1.5px;
+        }
+        .sidebar-block:nth-child(odd) { background: var(--beige); border: 1px solid rgba(90,107,58,0.08); }
+        .sidebar-block:nth-child(even) { background: var(--zwart); }
+        .sidebar-block h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 300; margin-bottom: 1rem; }
+        .sidebar-block.dark h3 { color: #fff; }
+        .sidebar-block p { font-size: 0.88rem; color: var(--zink); line-height: 1.85; }
+        .sidebar-block.dark p { color: rgba(255,255,255,0.5); }
+
+        /* Josine mini card */
+        .josine-card { display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1.5rem; }
+        .josine-avatar {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: linear-gradient(135deg, rgba(90,107,58,0.15), rgba(196,154,26,0.1));
+            border: 1px solid rgba(90,107,58,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-serif); font-size: 1.4rem;
+            color: var(--olijf); font-style: italic; flex-shrink: 0;
+        }
+        .josine-info h4 { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.1rem; }
+        .josine-info span { font-size: 0.75rem; color: var(--zink); }
+
+        .response-time {
+            display: flex; gap: 0.8rem; align-items: center;
+            padding: 1rem 1.2rem;
+            background: rgba(90,107,58,0.06);
+            border-left: 3px solid var(--olijf);
+            margin-top: 1.5rem;
+        }
+        .response-time span:first-child { font-size: 1.2rem; }
+        .response-time-text p:first-child { font-size: 0.78rem; font-weight: 500; }
+        .response-time-text p:last-child { font-size: 0.72rem; color: var(--zink); }
+
+        /* Social links */
+        .social-links { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.2rem; }
+        .social-link {
+            display: flex; gap: 0.8rem; align-items: center;
+            padding: 0.8rem 1rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            text-decoration: none; color: rgba(255,255,255,0.6);
+            font-size: 0.82rem; transition: all 0.3s;
+        }
+        .social-link:hover { border-color: var(--kerrie); color: var(--kerrie); }
+        .social-link-icon { font-size: 1rem; width: 20px; text-align: center; }
+
+        /* MAP PLACEHOLDER */
+        .map-section { background: var(--beige); padding: 0; }
+        .map-placeholder {
+            width: 100%; height: 280px;
+            background: linear-gradient(135deg, rgba(90,107,58,0.08) 0%, rgba(196,154,26,0.05) 100%);
+            border-top: 1px solid rgba(90,107,58,0.1);
+            border-bottom: 1px solid rgba(90,107,58,0.1);
+            display: flex; align-items: center; justify-content: center;
+            flex-direction: column; gap: 0.8rem;
+        }
+        .map-placeholder p { font-family: var(--font-serif); font-size: 1.1rem; font-style: italic; color: var(--zink); }
+        .map-placeholder span { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--olijf); }
+
+        /* FOOTER */
+        footer { background: var(--zwart); color: rgba(255,255,255,0.4); padding: 5rem 2rem 2rem; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+        .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 1.2rem; }
+        .footer-brand p { font-size: 0.88rem; line-height: 1.85; max-width: 260px; }
+        .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 500; margin-bottom: 1.4rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a { text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--kerrie); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 0.68rem; letter-spacing: 0.1em; }
+        .footer-social { display: flex; gap: 1.2rem; }
+        .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.75rem; transition: all 0.3s; }
+        .footer-social a:hover { border-color: var(--kerrie); color: var(--kerrie); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .contact-hero { grid-template-columns: 1fr; }
+            .hero-right { padding: 3rem 2.5rem; }
+            .hero-left { padding: 7rem 2.5rem 3rem; min-height: 50vh; }
+            .contact-main-inner { grid-template-columns: 1fr; gap: 4rem; }
+        }
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .service-cards { grid-template-columns: 1fr; }
+            .avail-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over.html">Over Josine</a></li>
+            <li><a href="aanbod.html">Aanbod</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="cta active">Boek een sessie</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="over.html">Over Josine</a>
+    <a href="aanbod.html">Aanbod</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Boek een sessie</a>
+</div>
+
+<!-- HERO -->
+<header class="contact-hero">
+    <div class="hero-left">
+        <div class="hero-deco-text">Hoi</div>
+        <div class="hero-left-content">
+            <span class="hero-eyebrow">Eerste stap naar groei</span>
+            <h1 class="hero-title">Laten we<br><em>kennismaken.</em></h1>
+            <p class="hero-sub">Het begint met een gesprek. Gratis, vrijblijvend en altijd vanuit oprechte interesse in jouw verhaal.</p>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="contact-info-grid">
+            <a href="mailto:info@ontwikkeloase.nl" class="contact-info-card">
+                <div class="info-icon">✉</div>
+                <div class="info-text">
+                    <div class="info-label">E-mail</div>
+                    <div class="info-value">info@ontwikkeloase.nl</div>
+                    <div class="info-sub">Reactie binnen 24 uur</div>
+                </div>
+            </a>
+            <a href="tel:+31683234386" class="contact-info-card">
+                <div class="info-icon">☎</div>
+                <div class="info-text">
+                    <div class="info-label">Telefoon</div>
+                    <div class="info-value">+31 6 83 23 43 86</div>
+                    <div class="info-sub">Ma – Vr, 9:00 – 17:00</div>
+                </div>
+            </a>
+            <div class="contact-info-card" style="cursor:default;">
+                <div class="info-icon">◎</div>
+                <div class="info-text">
+                    <div class="info-label">Locatie</div>
+                    <div class="info-value">Nederland</div>
+                    <div class="info-sub">Online & op locatie mogelijk</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTACT -->
+<section class="contact-main">
+    <div class="contact-main-inner">
+
+        <!-- FORM -->
+        <div class="form-section" data-aos="fade-right">
+            <h2>Stuur een <em>bericht.</em></h2>
+            <p>Vul het formulier in en Josine neemt binnen één werkdag contact met je op voor een gratis kennismakingsgesprek.</p>
+
+            <!-- Step indicator -->
+            <div class="step-indicator">
+                <div class="step active" id="step-ind-1">
+                    <div class="step-num">01</div>
+                    <div class="step-label">Over jou</div>
+                </div>
+                <div class="step" id="step-ind-2">
+                    <div class="step-num">02</div>
+                    <div class="step-label">Traject</div>
+                </div>
+                <div class="step" id="step-ind-3">
+                    <div class="step-num">03</div>
+                    <div class="step-label">Beschikbaarheid</div>
+                </div>
+            </div>
+
+            <form id="contactForm" novalidate>
+
+                <!-- STEP 1: Over jou -->
+                <div class="form-step active" id="formStep1">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="voornaam">Voornaam *</label>
+                            <input type="text" id="voornaam" name="voornaam" placeholder="Jouw voornaam" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="achternaam">Achternaam *</label>
+                            <input type="text" id="achternaam" name="achternaam" placeholder="Jouw achternaam" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mailadres *</label>
+                            <input type="email" id="email" name="email" placeholder="jouw@email.nl" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefoon">Telefoonnummer</label>
+                            <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 ...">
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="rol">Jouw rol / functie</label>
+                            <input type="text" id="rol" name="rol" placeholder="Bijv. Manager, Ondernemer, Teamlid...">
+                        </div>
+                    </div>
+                    <div class="form-nav">
+                        <span></span>
+                        <button type="button" class="btn-next" onclick="nextStep(1)">Volgende stap →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Traject -->
+                <div class="form-step" id="formStep2">
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label>Welk traject interesse je? *</label>
+                        <div class="service-cards" style="margin-top:0.5rem;">
+                            <label class="service-card" id="sc-1" onclick="selectService(this)">
+                                <input type="radio" name="traject" value="1op1">
+                                <div class="service-card-icon">🌱</div>
+                                <div class="service-card-label">1-op-1<br>Coaching</div>
+                            </label>
+                            <label class="service-card" id="sc-2" onclick="selectService(this)">
+                                <input type="radio" name="traject" value="team">
+                                <div class="service-card-icon">🤝</div>
+                                <div class="service-card-label">Team&shy;ontwikkeling</div>
+                            </label>
+                            <label class="service-card" id="sc-3" onclick="selectService(this)">
+                                <input type="radio" name="traject" value="leiderschap">
+                                <div class="service-card-icon">✦</div>
+                                <div class="service-card-label">Leiderschap&shy;straject</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="vraag">Wat is je belangrijkste vraag of uitdaging? *</label>
+                            <textarea id="vraag" name="vraag" placeholder="Vertel in jouw eigen woorden wat er speelt. Er is geen goed of fout antwoord..." rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="verwachting">Wat hoop je te bereiken?</label>
+                            <input type="text" id="verwachting" name="verwachting" placeholder="Bijv. meer zelfvertrouwen, betere samenwerking, helder richting...">
+                        </div>
+                    </div>
+                    <div class="form-nav">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">← Terug</button>
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Volgende stap →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Beschikbaarheid -->
+                <div class="form-step" id="formStep3">
+                    <span class="availability-label">Wanneer ben jij beschikbaar?</span>
+                    <div class="avail-grid" id="availGrid">
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Maandag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Dinsdag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Woensdag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Donderdag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Vrijdag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Ochtend</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Middag</button>
+                        <button type="button" class="avail-btn" onclick="toggleAvail(this)">Online</button>
+                    </div>
+                    <div class="form-row full" style="margin-top:0.5rem;">
+                        <div class="form-group">
+                            <label for="hoeHoor">Hoe heb je Ontwikkel-Oase gevonden?</label>
+                            <select id="hoeHoor" name="hoeHoor">
+                                <option value="" disabled selected>Selecteer een optie</option>
+                                <option>Via Google</option>
+                                <option>Via sociale media</option>
+                                <option>Aanbevolen door iemand</option>
+                                <option>Via LinkedIn</option>
+                                <option>Anders</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="extra">Extra opmerkingen</label>
+                            <textarea id="extra" name="extra" rows="3" placeholder="Alles wat je nog wilt toevoegen..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem; flex-direction:row; align-items:center; gap:0.8rem;">
+                        <input type="checkbox" id="privacy" name="privacy" style="width:16px;height:16px;accent-color:var(--olijf);flex-shrink:0;" required>
+                        <label for="privacy" style="font-size:0.8rem;color:var(--zink);text-transform:none;letter-spacing:0;">Ik ga akkoord met de <a href="#" style="color:var(--olijf);">privacyverklaring</a> van Ontwikkel-Oase. *</label>
+                    </div>
+                    <div class="form-nav">
+                        <button type="button" class="btn-prev" onclick="prevStep(3)">← Terug</button>
+                        <button type="submit" class="btn-submit">Verzend aanvraag ✓</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Success -->
+            <div class="success-msg" id="successMsg">
+                <div class="success-icon">🌿</div>
+                <h3>Bedankt, <em style="font-style:italic;color:var(--olijf);">goed van je!</em></h3>
+                <p>Josine neemt binnen één werkdag contact met je op voor een gratis kennismakingsgesprek.<br>Tot snel.</p>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="contact-sidebar" data-aos="fade-left" data-aos-delay="150">
+            <div class="sidebar-block">
+                <div class="josine-card">
+                    <div class="josine-avatar">J</div>
+                    <div class="josine-info">
+                        <h4>Josine Dielissen</h4>
+                        <span>Coach & Oprichter Ontwikkel-Oase</span>
+                    </div>
+                </div>
+                <h3>Persoonlijk<br>contact.</h3>
+                <p>Elk bericht komt rechtstreeks bij Josine terecht. Ze leest het persoonlijk en reageert altijd zelf.</p>
+                <div class="response-time">
+                    <span>⏱</span>
+                    <div class="response-time-text">
+                        <p>Reactietijd: binnen 24 uur</p>
+                        <p>Op werkdagen maandag t/m vrijdag</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-block dark">
+                <h3 style="color:#fff;">Volg Josine<br>online.</h3>
+                <p>Blijf op de hoogte van nieuwe inzichten, inspiratie en het laatste nieuws van Ontwikkel-Oase.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="social-link-icon">in</span>
+                        <span>LinkedIn – Josine Dielissen</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-link-icon">◎</span>
+                        <span>Instagram – @ontwikkeloase</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Wat gebeurt er<br>na jouw bericht?</h3>
+                <div style="margin-top:1.2rem; display:flex; flex-direction:column; gap:1rem;">
+                    <div style="display:flex; gap:1rem; align-items:flex-start;">
+                        <div style="width:28px;height:28px;background:var(--kerrie);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0;font-weight:500;">1</div>
+                        <div><p style="font-size:0.85rem;color:var(--zwart);font-weight:400;margin-bottom:0.2rem;">Josine leest je bericht</p><p style="font-size:0.8rem;color:var(--zink);margin:0;">Persoonlijk, niet via een assistent</p></div>
+                    </div>
+                    <div style="display:flex; gap:1rem; align-items:flex-start;">
+                        <div style="width:28px;height:28px;background:var(--olijf);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0;font-weight:500;">2</div>
+                        <div><p style="font-size:0.85rem;color:var(--zwart);font-weight:400;margin-bottom:0.2rem;">Gratis kennismakingsgesprek</p><p style="font-size:0.8rem;color:var(--zink);margin:0;">30 minuten, geen verplichtingen</p></div>
+                    </div>
+                    <div style="display:flex; gap:1rem; align-items:flex-start;">
+                        <div style="width:28px;height:28px;background:var(--oudrose);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0;font-weight:500;">3</div>
+                        <div><p style="font-size:0.85rem;color:var(--zwart);font-weight:400;margin-bottom:0.2rem;">Voorstel op maat</p><p style="font-size:0.8rem;color:var(--zink);margin:0;">Alleen als er een klik is</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+    <div class="map-placeholder">
+        <span>Locatie</span>
+        <p>Sessies op locatie in Nederland · Online via video</p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+            <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigatie</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over.html">Over Josine</a></li>
+                <li><a href="aanbod.html">Aanbod</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Diensten</h4>
+            <ul>
+                <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
+                <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
+                <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+                <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+                <li><a href="contact.html">Boek een sessie</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
+        <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 900, once: true, offset: 60 });
+
+    // Nav
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // Multi-step form
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    function showStep(n) {
+        document.querySelectorAll('.form-step').forEach((s, i) => {
+            s.classList.toggle('active', i + 1 === n);
+        });
+        document.querySelectorAll('.step').forEach((s, i) => {
+            s.classList.toggle('active', i + 1 === n);
+        });
+        currentStep = n;
+    }
+
+    function nextStep(from) {
+        // Basic validation
+        const step = document.getElementById('formStep' + from);
+        const required = step.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach(el => {
+            el.style.borderColor = '';
+            if (!el.value.trim()) {
+                el.style.borderColor = 'var(--oudrose)';
+                valid = false;
+            }
+        });
+        if (!valid) return;
+        if (from < totalSteps) showStep(from + 1);
+    }
+
+    function prevStep(from) {
+        if (from > 1) showStep(from - 1);
+    }
+
+    function selectService(card) {
+        document.querySelectorAll('.service-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+    }
+
+    function toggleAvail(btn) {
+        btn.classList.toggle('selected');
+    }
+
+    // Form submit
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const privacy = document.getElementById('privacy');
+        if (!privacy.checked) {
+            privacy.style.outline = '2px solid var(--oudrose)';
+            return;
+        }
+        // Show success
+        document.getElementById('contactForm').style.display = 'none';
+        document.querySelector('.step-indicator').style.display = 'none';
+        document.querySelector('.form-section h2').style.display = 'none';
+        document.querySelector('.form-section p').style.display = 'none';
+        const success = document.getElementById('successMsg');
+        success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+</script>
+</body>
+</html>

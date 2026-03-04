@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Over Josine Dielissen | Coach & Oprichter – Ontwikkel-Oase</title>
+    <meta name="description" content="Maak kennis met Josine Dielissen, de drijvende kracht achter Ontwikkel-Oase. Leer meer over haar achtergrond, visie en aanpak als coach en begeleider.">
+    <meta name="keywords" content="Josine Dielissen, coach, over mij, Ontwikkel-Oase, achtergrond, visie, persoonlijke ontwikkeling">
+    <link rel="canonical" href="https://www.ontwikkeloase.nl/over.html">
+    <meta property="og:title" content="Over Josine Dielissen | Ontwikkel-Oase">
+    <meta property="og:description" content="Maak kennis met Josine Dielissen – coach, begeleider en oprichter van Ontwikkel-Oase.">
+    <meta property="og:url" content="https://www.ontwikkeloase.nl/over.html">
+    <meta property="og:type" content="profile">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Josine Dielissen",
+            "jobTitle": "Coach & Oprichter",
+            "worksFor": { "@type": "Organization", "name": "Ontwikkel-Oase" },
+            "url": "https://www.ontwikkeloase.nl/over.html",
+            "telephone": "+31683234386",
+            "email": "info@ontwikkeloase.nl"
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --zwart:    #111110;
+            --olijf:    #5A6B3A;
+            --olijf-lt: #8A9E62;
+            --kerrie:   #C49A1A;
+            --oudrose:  #C2867E;
+            --beige:    #F6F3EE;
+            --wit:      #FDFCFA;
+            --zink:     #6B6B67;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans:  'DM Sans', system-ui, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--beige);
+            color: var(--zwart);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+        ::selection { background: var(--kerrie); color: #fff; }
+
+        /* ── NAV (identical to index) ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(246,243,238,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(90,107,58,0.12);
+            transition: all 0.4s ease;
+        }
+        nav.scrolled { background: rgba(253,252,250,0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
+        .nav-inner {
+            max-width: 1280px; margin: 0 auto;
+            padding: 0 2.5rem; height: 80px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; text-decoration: none; color: var(--zwart); letter-spacing: -0.02em; }
+        .nav-logo em { color: var(--olijf); font-style: italic; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--olijf); }
+        .nav-links a.cta { border: 1px solid var(--zwart); padding: 0.6rem 1.4rem; color: var(--zwart); transition: all 0.3s; }
+        .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
+        .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); transition: all 0.3s; }
+        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--beige); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; text-decoration: none; color: var(--zwart); transition: color 0.3s; }
+        .mobile-menu a:hover { color: var(--olijf); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            min-height: 60vh;
+            background: var(--zwart);
+            display: flex; align-items: flex-end;
+            padding: 8rem 2rem 5rem;
+            position: relative; overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 70% at 80% 50%, rgba(90,107,58,0.18) 0%, transparent 65%);
+        }
+        /* Large decorative letter */
+        .page-hero-deco {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-serif);
+            font-size: clamp(14rem, 22vw, 22rem);
+            font-style: italic;
+            color: rgba(255,255,255,0.03);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .page-hero-inner {
+            max-width: 1200px; margin: 0 auto; width: 100%;
+            position: relative; z-index: 1;
+        }
+        .page-hero-eyebrow {
+            font-size: 0.65rem; letter-spacing: 0.28em;
+            text-transform: uppercase; color: var(--kerrie);
+            font-weight: 500; display: block; margin-bottom: 1.2rem;
+            opacity: 0;
+            animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.2s forwards;
+        }
+        .page-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300; line-height: 1.08;
+            color: #fff; letter-spacing: -0.02em;
+            opacity: 0;
+            animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
+        }
+        .page-hero-title em { font-style: italic; color: var(--oudrose); }
+        .page-hero-sub {
+            font-size: 1rem; color: rgba(255,255,255,0.5);
+            max-width: 480px; margin-top: 1.4rem;
+            opacity: 0;
+            animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.6s forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── INTRO SPLIT ── */
+        .intro-split {
+            padding: 8rem 2rem;
+            background: var(--wit);
+        }
+        .intro-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 5fr 4fr;
+            gap: 8rem; align-items: start;
+        }
+        .intro-text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300; line-height: 1.2;
+            margin-bottom: 2rem; letter-spacing: -0.01em;
+        }
+        .intro-text h2 em { font-style: italic; color: var(--olijf); }
+        .intro-text p { color: var(--zink); line-height: 1.95; margin-bottom: 1.4rem; font-size: 1rem; }
+        .intro-text p strong { color: var(--zwart); font-weight: 500; }
+        .intro-text .cta-row { margin-top: 2.8rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        /* Portrait + quote card */
+        .intro-visual { position: relative; }
+        .portrait-wrap {
+            width: 100%; aspect-ratio: 3/4;
+            background: linear-gradient(145deg, rgba(90,107,58,0.1) 0%, rgba(196,154,26,0.07) 100%);
+            border: 1px solid rgba(90,107,58,0.14);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-serif); color: var(--zink);
+            font-style: italic; font-size: 1rem;
+            position: relative; overflow: hidden;
+        }
+        .portrait-wrap::after {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(90,107,58,0.12), transparent);
+        }
+        .quote-card {
+            position: absolute; bottom: -2.5rem; left: -2.5rem;
+            background: var(--kerrie); color: #fff;
+            padding: 2rem 2.2rem;
+            max-width: 260px;
+        }
+        .quote-card p {
+            font-family: var(--font-serif);
+            font-size: 1.1rem; font-style: italic;
+            font-weight: 300; line-height: 1.6;
+        }
+        .quote-card cite {
+            display: block; margin-top: 0.8rem;
+            font-size: 0.6rem; letter-spacing: 0.15em;
+            text-transform: uppercase; color: rgba(255,255,255,0.7);
+            font-style: normal;
+        }
+
+        /* ── WAARDEN ── */
+        .waarden-section {
+            padding: 7rem 2rem;
+            background: var(--beige);
+        }
+        .waarden-inner { max-width: 1100px; margin: 0 auto; }
+        .section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1.2rem; }
+        .section-title em { font-style: italic; color: var(--olijf); }
+
+        .waarden-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 2px; margin-top: 3.5rem;
+            background: rgba(90,107,58,0.1);
+        }
+        .waarde-item {
+            background: var(--wit);
+            padding: 3rem 2.5rem;
+            position: relative; overflow: hidden;
+            transition: background 0.35s;
+        }
+        .waarde-item:hover { background: var(--beige); }
+        .waarde-num {
+            font-family: var(--font-serif);
+            font-size: 5rem; font-weight: 300;
+            color: rgba(196,154,26,0.12); line-height: 1;
+            position: absolute; top: 1.5rem; right: 1.5rem;
+        }
+        .waarde-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--olijf);
+            margin-bottom: 1.8rem;
+        }
+        .waarde-item:nth-child(2) .waarde-dot { background: var(--kerrie); }
+        .waarde-item:nth-child(3) .waarde-dot { background: var(--oudrose); }
+        .waarde-item:nth-child(4) .waarde-dot { background: var(--olijf-lt); }
+        .waarde-item:nth-child(5) .waarde-dot { background: var(--kerrie); }
+        .waarde-item:nth-child(6) .waarde-dot { background: var(--oudrose); }
+        .waarde-item h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 0.8rem; }
+        .waarde-item p { font-size: 0.9rem; color: var(--zink); line-height: 1.85; }
+
+        /* ── TIJDLIJN ── */
+        .tijdlijn-section {
+            padding: 8rem 2rem;
+            background: var(--zwart); color: var(--wit);
+        }
+        .tijdlijn-inner { max-width: 900px; margin: 0 auto; }
+        .tijdlijn-inner .section-label { color: var(--kerrie); }
+        .tijdlijn-inner .section-title { color: var(--wit); margin-bottom: 4rem; }
+        .tijdlijn-inner .section-title em { color: var(--oudrose); }
+
+        .tijdlijn { position: relative; }
+        .tijdlijn::before {
+            content: '';
+            position: absolute; left: 90px; top: 0; bottom: 0;
+            width: 1px; background: rgba(255,255,255,0.08);
+        }
+        .tijdlijn-item {
+            display: grid; grid-template-columns: 90px 1fr;
+            gap: 0 3rem; margin-bottom: 4rem;
+            position: relative;
+        }
+        .tijdlijn-year {
+            font-family: var(--font-serif);
+            font-size: 1.1rem; font-weight: 300;
+            color: var(--kerrie); padding-top: 0.15rem;
+            text-align: right;
+        }
+        .tijdlijn-content { padding-left: 3rem; border-left: none; position: relative; }
+        .tijdlijn-content::before {
+            content: '';
+            position: absolute; left: -4px; top: 8px;
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--kerrie);
+            box-shadow: 0 0 0 4px rgba(196,154,26,0.2);
+        }
+        .tijdlijn-content h3 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem; font-weight: 400;
+            color: #fff; margin-bottom: 0.5rem;
+        }
+        .tijdlijn-content p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.85; }
+
+        /* ── AANPAK ── */
+        .aanpak-section { padding: 8rem 2rem; background: var(--wit); }
+        .aanpak-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 6rem; align-items: center;
+        }
+        .aanpak-text {}
+        .aanpak-text p { color: var(--zink); line-height: 1.95; margin-bottom: 1.2rem; }
+        .aanpak-pillars { margin-top: 3rem; }
+        .pillar {
+            display: flex; gap: 1.5rem; align-items: flex-start;
+            padding: 1.6rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .pillar:last-child { border-bottom: none; }
+        .pillar-icon {
+            width: 44px; height: 44px; flex-shrink: 0;
+            background: var(--beige);
+            border: 1px solid rgba(90,107,58,0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-serif); font-size: 1.1rem; color: var(--olijf);
+        }
+        .pillar-text h4 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; margin-bottom: 0.3rem; }
+        .pillar-text p { font-size: 0.88rem; color: var(--zink); line-height: 1.75; margin: 0; }
+
+        /* Opleidingen card */
+        .opleiding-card {
+            background: var(--beige);
+            border: 1px solid rgba(90,107,58,0.1);
+            padding: 3rem;
+        }
+        .opleiding-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem; font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        .opleiding-item {
+            display: flex; gap: 1.2rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .opleiding-item:last-child { border-bottom: none; }
+        .opl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--olijf); flex-shrink: 0; margin-top: 0.55rem; }
+        .opl-info h4 { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.15rem; }
+        .opl-info p { font-size: 0.82rem; color: var(--zink); }
+
+        /* ── CTA ── */
+        .cta-section { padding: 8rem 2rem; background: var(--olijf); text-align: center; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%); }
+        .cta-content { position: relative; z-index: 1; }
+        .cta-content h2 { font-family: var(--font-serif); font-size: clamp(2.2rem, 4.5vw, 3.8rem); font-weight: 300; color: #fff; line-height: 1.15; margin-bottom: 1.4rem; }
+        .cta-content h2 em { font-style: italic; color: rgba(255,255,255,0.65); }
+        .cta-content p { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 480px; margin: 0 auto 2.8rem; }
+
+        /* Buttons */
+        .btn-primary { display: inline-block; background: var(--zwart); color: var(--wit); padding: 1rem 2.4rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.35s, transform 0.2s; }
+        .btn-primary:hover { background: var(--olijf); transform: translateY(-1px); }
+        .btn-outline { display: inline-block; border: 1px solid var(--zwart); color: var(--zwart); padding: 1rem 2.4rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.35s; }
+        .btn-outline:hover { background: var(--zwart); color: var(--wit); }
+        .btn-white { display: inline-block; background: #fff; color: var(--olijf); padding: 1.1rem 2.8rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.3s; }
+        .btn-white:hover { background: var(--zwart); color: #fff; }
+
+        /* ── FOOTER ── */
+        footer { background: var(--zwart); color: rgba(255,255,255,0.4); padding: 5rem 2rem 2rem; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+        .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 1.2rem; }
+        .footer-brand p { font-size: 0.88rem; line-height: 1.85; max-width: 260px; }
+        .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 500; margin-bottom: 1.4rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a { text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--kerrie); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 0.68rem; letter-spacing: 0.1em; }
+        .footer-social { display: flex; gap: 1.2rem; }
+        .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.75rem; transition: all 0.3s; }
+        .footer-social a:hover { border-color: var(--kerrie); color: var(--kerrie); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .intro-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .aanpak-inner { grid-template-columns: 1fr; gap: 3rem; }
+            .waarden-grid { grid-template-columns: 1fr 1fr; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .tijdlijn::before { left: 70px; }
+            .tijdlijn-year { font-size: 0.95rem; }
+            .quote-card { left: -1rem; max-width: 220px; }
+        }
+        @media (max-width: 600px) {
+            .waarden-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .tijdlijn-item { grid-template-columns: 60px 1fr; }
+            .tijdlijn::before { left: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over.html" class="active">Over Josine</a></li>
+            <li><a href="aanbod.html">Aanbod</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu openen">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="over.html">Over Josine</a>
+    <a href="aanbod.html">Aanbod</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Boek een sessie</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+    <div class="page-hero-deco">J</div>
+    <div class="page-hero-inner">
+        <span class="page-hero-eyebrow">Over Ontwikkel-Oase</span>
+        <h1 class="page-hero-title">Maak kennis met<br><em>Josine Dielissen.</em></h1>
+        <p class="page-hero-sub">Coach, begeleider en oprichter van Ontwikkel-Oase. Gepassioneerd door mensen en de ruimte die groei vraagt.</p>
+    </div>
+</header>
+
+<!-- INTRO SPLIT -->
+<section class="intro-split">
+    <div class="intro-grid">
+        <div class="intro-text" data-aos="fade-right">
+            <h2>Begeleiding vanuit<br><em>echte verbinding.</em></h2>
+            <p>Josine Dielissen is de drijvende kracht achter Ontwikkel-Oase. Met meer dan tien jaar ervaring als coach en begeleider weet ze als geen ander hoe transformatie eruitziet van binnenuit.</p>
+            <p>Haar aanpak is <strong>warm en menselijk</strong>, maar ook direct en helder. Ze gelooft niet in kant-en-klare oplossingen, maar in de kracht die al aanwezig is — bij mensen én bij teams. Haar rol is die ruimte te creëren.</p>
+            <p>Of het nu gaat om een persoonlijk keerpunt, een carrièrevraagstuk of een team dat vastloopt: Josine brengt rust, inzicht en beweging.</p>
+            <div class="cta-row">
+                <a href="contact.html" class="btn-primary">Gratis kennismaken</a>
+                <a href="aanbod.html" class="btn-outline">Bekijk het aanbod</a>
+            </div>
+        </div>
+        <div class="intro-visual" data-aos="fade-left" data-aos-delay="150">
+            <div class="portrait-wrap">Foto Josine Dielissen</div>
+            <div class="quote-card">
+                <p>"Groei vraagt geen kracht. Groei vraagt ruimte."</p>
+                <cite>— Josine Dielissen</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WAARDEN -->
+<section class="waarden-section">
+    <div class="waarden-inner">
+        <span class="section-label" data-aos="fade-up">Kernwaarden</span>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Waar Josine<br>in <em>gelooft.</em></h2>
+        <div class="waarden-grid">
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="waarde-num">01</div>
+                <div class="waarde-dot"></div>
+                <h3>Veiligheid</h3>
+                <p>Echte groei vraagt een veilige basis. Zonder oordeel en met onvoorwaardelijke aanwezigheid creëert Josine een plek waar alles mag zijn wat het is.</p>
+            </div>
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="80">
+                <div class="waarde-num">02</div>
+                <div class="waarde-dot"></div>
+                <h3>Eerlijkheid</h3>
+                <p>Vriendelijk en direct. Josine gelooft in eerlijke spiegels. Niet confronterend, maar uitnodigend om dieper te kijken naar wat er werkelijk speelt.</p>
+            </div>
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="160">
+                <div class="waarde-num">03</div>
+                <div class="waarde-dot"></div>
+                <h3>Nieuwsgierigheid</h3>
+                <p>Ieder mens heeft een uniek verhaal. Josine luistert met oprechte interesse en benadert elk vraagstuk zonder aannames of vooroordelen.</p>
+            </div>
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="waarde-num">04</div>
+                <div class="waarde-dot"></div>
+                <h3>Actie</h3>
+                <p>Inzicht is een begin, geen eindpunt. Josine helpt de vertaalslag te maken van bewustwording naar concreet, duurzaam gedrag in het dagelijkse leven.</p>
+            </div>
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="80">
+                <div class="waarde-num">05</div>
+                <div class="waarde-dot"></div>
+                <h3>Verbinding</h3>
+                <p>Mensen groeien sneller en dieper in verbinding met anderen. Josine brengt mensen samen en creëert omgevingen waar leren van elkaar vanzelfsprekend is.</p>
+            </div>
+            <div class="waarde-item" data-aos="fade-up" data-aos-delay="160">
+                <div class="waarde-num">06</div>
+                <div class="waarde-dot"></div>
+                <h3>Inspiratie</h3>
+                <p>Elke sessie is een ontdekking. Door te werken vanuit kracht en mogelijkheid in plaats van problemen en tekortkomingen, ontstaat echte verandering.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIJDLIJN -->
+<section class="tijdlijn-section">
+    <div class="tijdlijn-inner">
+        <span class="section-label" data-aos="fade-up">Achtergrond</span>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Het pad naar<br><em>Ontwikkel-Oase.</em></h2>
+        <div class="tijdlijn">
+            <div class="tijdlijn-item" data-aos="fade-up">
+                <div class="tijdlijn-year">2010</div>
+                <div class="tijdlijn-content">
+                    <h3>Start in HR & Organisatieontwikkeling</h3>
+                    <p>Josine begint haar loopbaan in de HR-wereld en ontdekt al snel haar passie voor menselijke ontwikkeling binnen organisaties.</p>
+                </div>
+            </div>
+            <div class="tijdlijn-item" data-aos="fade-up">
+                <div class="tijdlijn-year">2013</div>
+                <div class="tijdlijn-content">
+                    <h3>Opleiding tot gecertificeerd coach (ICF)</h3>
+                    <p>Na haar coaching-opleiding richt Josine zich volledig op individuele begeleiding. Ze haalt haar ICF-certificering en begeleidt haar eerste coachees.</p>
+                </div>
+            </div>
+            <div class="tijdlijn-item" data-aos="fade-up">
+                <div class="tijdlijn-year">2016</div>
+                <div class="tijdlijn-content">
+                    <h3>Specialisatie in teamdynamiek & leiderschap</h3>
+                    <p>Josine volgt aanvullende opleidingen in teamcoaching en leiderschapsontwikkeling. Ze werkt met teams in diverse sectoren en merkt de kracht van collectieve groei.</p>
+                </div>
+            </div>
+            <div class="tijdlijn-item" data-aos="fade-up">
+                <div class="tijdlijn-year">2019</div>
+                <div class="tijdlijn-content">
+                    <h3>Oprichting Ontwikkel-Oase</h3>
+                    <p>Met de oprichting van Ontwikkel-Oase creëert Josine een plek waar alle vormen van groei samenkomen: een oase voor mensen en organisaties.</p>
+                </div>
+            </div>
+            <div class="tijdlijn-item" data-aos="fade-up">
+                <div class="tijdlijn-year">Nu</div>
+                <div class="tijdlijn-content">
+                    <h3>200+ coachees en 50+ teams begeleid</h3>
+                    <p>Ontwikkel-Oase groeit. Met een bewezen aanpak en een netwerk van tevreden klanten is Josine één van de meest gevraagde coaches in haar vakgebied.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AANPAK + OPLEIDINGEN -->
+<section class="aanpak-section">
+    <div class="aanpak-inner">
+        <div class="aanpak-text" data-aos="fade-right">
+            <span class="section-label">Aanpak</span>
+            <h2 class="section-title">Hoe Josine<br>te werk <em>gaat.</em></h2>
+            <p>Josine werkt vanuit een eclectische aanpak: ze combineert wetenschappelijke inzichten uit de positieve psychologie, systemisch denken en oplossingsgericht coachen.</p>
+            <p>Geen vaste formules, wel een heldere structuur. Het traject past zich altijd aan aan de persoon of het team — niet andersom.</p>
+            <div class="aanpak-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">①</div>
+                    <div class="pillar-text">
+                        <h4>Luisteren zonder oordeel</h4>
+                        <p>De basis van elk gesprek: volledige aanwezigheid en oprechte interesse in jouw verhaal.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">②</div>
+                    <div class="pillar-text">
+                        <h4>Verdieping door de juiste vragen</h4>
+                        <p>Josine gebruikt krachtige vragen die je uitnodigen om dieper te kijken en nieuwe inzichten op te doen.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">③</div>
+                    <div class="pillar-text">
+                        <h4>Van inzicht naar actie</h4>
+                        <p>Samen vertalen we bewustwording naar concrete stappen die passen bij jouw situatie en tempo.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">④</div>
+                    <div class="pillar-text">
+                        <h4>Duurzame verankering</h4>
+                        <p>Josine ondersteunt bij het borgen van groei, zodat verandering echt beklijft na het traject.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opleiding-card" data-aos="fade-left" data-aos-delay="150">
+            <h3>Opleidingen &<br>certificeringen</h3>
+            <div class="opleiding-item">
+                <div class="opl-dot"></div>
+                <div class="opl-info">
+                    <h4>ICF-gecertificeerd Coach (PCC)</h4>
+                    <p>International Coaching Federation</p>
+                </div>
+            </div>
+            <div class="opleiding-item">
+                <div class="opl-dot"></div>
+                <div class="opl-info">
+                    <h4>Systemisch Coachen</h4>
+                    <p>Bert Hellinger Instituut Nederland</p>
+                </div>
+            </div>
+            <div class="opleiding-item">
+                <div class="opl-dot"></div>
+                <div class="opl-info">
+                    <h4>Oplossingsgerichte Therapie</h4>
+                    <p>IOOK – Instituut voor Oplossings- en Omgevingsgericht Coachen</p>
+                </div>
+            </div>
+            <div class="opleiding-item">
+                <div class="opl-dot"></div>
+                <div class="opl-info">
+                    <h4>Positieve Psychologie</h4>
+                    <p>Erasmus Universiteit Rotterdam</p>
+                </div>
+            </div>
+            <div class="opleiding-item">
+                <div class="opl-dot"></div>
+                <div class="opl-info">
+                    <h4>Master Organisatiepsychologie</h4>
+                    <p>Universiteit Utrecht</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-content" data-aos="zoom-in">
+        <h2>Klaar om kennis te maken<br>met <em>Josine?</em></h2>
+        <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen, wel echte verbinding.</p>
+        <a href="contact.html" class="btn-white">Gratis gesprek plannen</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+            <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigatie</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over.html">Over Josine</a></li>
+                <li><a href="aanbod.html">Aanbod</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Diensten</h4>
+            <ul>
+                <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
+                <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
+                <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+                <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+                <li><a href="contact.html">Boek een sessie</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
+        <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 900, once: true, offset: 60 });
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+</script>
+</body>
+</html>
