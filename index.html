@@ -128,19 +128,81 @@
             display: block; width: 24px; height: 1.5px;
             background: var(--zwart); transition: all 0.3s;
         }
+        /* ── MOBILE MENU ANIMATED ── */
         .mobile-menu {
-            display: none; position: fixed; inset: 0; z-index: 99;
-            background: var(--beige); flex-direction: column;
-            align-items: center; justify-content: center; gap: 2.5rem;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; overflow: hidden;
+            background: var(--beige);
+            flex-direction: column;
+            align-items: center; justify-content: center; gap: 0;
+            /* hidden state */
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            clip-path: circle(0% at calc(100% - 44px) 40px);
+            transition: clip-path 0.55s cubic-bezier(0.77,0,0.175,1),
+                        opacity 0.2s ease;
         }
-        .mobile-menu.open { display: flex; }
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+            clip-path: circle(150% at calc(100% - 44px) 40px);
+        }
         .mobile-menu a {
             font-family: var(--font-serif);
-            font-size: 2.2rem; font-weight: 300;
+            font-size: 2.4rem; font-weight: 300;
             text-decoration: none; color: var(--zwart);
-            transition: color 0.3s;
+            padding: 0.6rem 0;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: color 0.3s, opacity 0.4s ease, transform 0.4s ease;
         }
+        .mobile-menu.open a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.18s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.24s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.30s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
+        .mobile-menu.open a:nth-child(5) { transition-delay: 0.42s; }
+        .mobile-menu.open a:nth-child(6) { transition-delay: 0.48s; }
         .mobile-menu a:hover { color: var(--olijf); }
+        .mobile-menu a.cta-mobile {
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            border: 1px solid var(--zwart);
+            padding: 0.8rem 2rem;
+            transition: background 0.3s, color 0.3s, opacity 0.4s ease, transform 0.4s ease;
+        }
+        .mobile-menu a.cta-mobile:hover { background: var(--zwart); color: var(--wit); }
+        /* Hamburger animated to X */
+        .hamburger span { transition: all 0.35s cubic-bezier(0.77,0,0.175,1); }
+        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+        /* Close button inside menu */
+        .mobile-menu-close {
+            position: absolute; top: 1.5rem; right: 1.5rem;
+            background: none; border: none; cursor: pointer;
+            font-size: 1.5rem; color: var(--zink);
+            display: none;
+        }
+        /* Decorative line between links */
+        .mobile-menu::before {
+            content: '';
+            position: absolute;
+            width: 1px; height: 0;
+            background: rgba(90,107,58,0.15);
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            transition: height 0.5s ease 0.1s;
+        }
+        .mobile-menu.open::before { height: 55%; }
 
         /* ── HERO ── */
         .hero {
@@ -553,6 +615,7 @@
             transition: transform 0.5s;
         }
         .blog-card:hover .blog-img-inner { transform: scale(1.04); }
+        .blog-card:hover .blog-img img { transform: scale(1.04); }
         .blog-cat {
             font-size: 0.6rem; letter-spacing: 0.2em;
             text-transform: uppercase; color: var(--kerrie);
@@ -623,14 +686,42 @@
             .over-badge { width: 100px; height: 100px; bottom: -1rem; right: -0.5rem; }
             .over-badge span:first-child { font-size: 1.5rem; }
         }
-    </style>
+    
+        /* ── LOGO IMAGES ── */
+        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
+        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+        .footer-logo { display: inline-block; }
+        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
+        
+        /* ── NAV OVERFLOW FIX (mobile) ── */
+        nav { width: 100%; max-width: 100vw; overflow: hidden; }
+        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
+        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
+        .nav-logo-img { flex-shrink: 0; }
+        html, body { overflow-x: hidden; max-width: 100%; }
+        /* Hero circles overflow fix */
+        .hero { overflow: hidden; }
+        .page-hero { overflow: hidden; }
+        header { overflow-x: hidden; }
+        @media (max-width: 900px) {
+            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
+            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
+            .contact-hero { overflow: hidden; }
+            .footer-inner { overflow-x: hidden; }
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr !important; }
+            .service-cards { grid-template-columns: 1fr 1fr !important; }
+            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        </style>
 </head>
 <body>
 
 <!-- ── NAVIGATION ── -->
 <nav id="mainNav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="over.html">Over Josine</a></li>
@@ -826,25 +917,9 @@
             </div>
             <a href="blog.html" class="btn-outline" data-aos="fade-up" style="margin-bottom:1.5rem;">Alle artikelen</a>
         </div>
-        <div class="blog-grid">
-            <a href="blog-post.html" class="blog-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="blog-img"><div class="blog-img-inner">Afbeelding artikel</div></div>
-                <div class="blog-cat">Persoonlijke Groei</div>
-                <h3>Waarom stilte de sleutel is tot echte groei</h3>
-                <p>In onze drukke wereld vergeten we hoe krachtig rust en reflectie kunnen zijn...</p>
-            </a>
-            <a href="blog-post.html" class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="blog-img"><div class="blog-img-inner">Afbeelding artikel</div></div>
-                <div class="blog-cat">Leiderschap</div>
-                <h3>Van manager naar leider: wat maakt het verschil?</h3>
-                <p>Leiderschap gaat niet over functietitels. Het gaat over hoe je aanwezig bent...</p>
-            </a>
-            <a href="blog-post.html" class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="blog-img"><div class="blog-img-inner">Afbeelding artikel</div></div>
-                <div class="blog-cat">Teamdynamiek</div>
-                <h3>5 signalen dat jouw team ruimte nodig heeft</h3>
-                <p>Een team dat te druk is om te groeien, is een team dat uiteindelijk vastloopt...</p>
-            </a>
+        <div class="blog-grid" id="homeBlogGrid">
+            <!-- Wordt automatisch gevuld vanuit blogs.json -->
+            <div style="grid-column:1/-1;text-align:center;padding:3rem;font-family:var(--font-serif);font-style:italic;color:var(--zink);">Artikelen laden…</div>
         </div>
     </div>
 </section>
@@ -861,8 +936,7 @@
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-inner">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
             <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
         </div>
         <div class="footer-col">
@@ -893,7 +967,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
+        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: 94754942</p>
         <div class="footer-social">
             <a href="#" aria-label="LinkedIn">in</a>
             <a href="#" aria-label="Instagram">ig</a>
@@ -917,11 +991,49 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        a.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        });
     });
+
+    // ── DYNAMISCHE BLOG PREVIEW ──
+    const CAT = {groei:'Persoonlijke Groei',leiderschap:'Leiderschap',team:'Teamdynamiek',mindset:'Mindset',werkgeluk:'Werkgeluk'};
+
+    fetch('blogs.json')
+        .then(r => r.json())
+        .then(posts => {
+            // Sorteer op datum nieuwste eerst, pak top 3
+            const recent = [...posts]
+                .sort((a, b) => b.date.localeCompare(a.date))
+                .slice(0, 3);
+
+            const grid = document.getElementById('homeBlogGrid');
+            grid.innerHTML = recent.map((p, i) => {
+                const img = p.image
+                    ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;">`
+                    : `<div class="blog-img-inner">Afbeelding artikel</div>`;
+                return `
+                <a href="blog-post.html?id=${p.id}" class="blog-card" data-aos="fade-up" data-aos-delay="${i * 100}">
+                    <div class="blog-img">${img}</div>
+                    <div class="blog-cat">${CAT[p.category] || p.category}</div>
+                    <h3>${p.title}</h3>
+                    <p>${p.summary}</p>
+                </a>`;
+            }).join('');
+
+            AOS.refresh();
+        })
+        .catch(() => {
+            // Fout bij laden — verberg de laadtekst
+            document.getElementById('homeBlogGrid').innerHTML = '';
+        });
 </script>
 </body>
 </html>

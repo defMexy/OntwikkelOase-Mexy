@@ -61,10 +61,56 @@
         .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
         .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
         .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); }
-        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--beige); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; text-decoration: none; color: var(--zwart); transition: color 0.3s; }
+        /* ── MOBILE MENU ANIMATED ── */
+        .mobile-menu {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; overflow: hidden;
+            background: var(--beige);
+            flex-direction: column;
+            align-items: center; justify-content: center; gap: 0;
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            clip-path: circle(0% at calc(100% - 44px) 40px);
+            transition: clip-path 0.55s cubic-bezier(0.77,0,0.175,1),
+                        opacity 0.2s ease;
+        }
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+            clip-path: circle(150% at calc(100% - 44px) 40px);
+        }
+        .mobile-menu a {
+            font-family: var(--font-serif);
+            font-size: 2.4rem; font-weight: 300;
+            text-decoration: none; color: var(--zwart);
+            padding: 0.6rem 0;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: color 0.3s, opacity 0.4s ease, transform 0.4s ease;
+        }
+        .mobile-menu.open a { opacity: 1; transform: translateY(0); }
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.18s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.24s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.30s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
+        .mobile-menu.open a:nth-child(5) { transition-delay: 0.42s; }
+        .mobile-menu.open a:nth-child(6) { transition-delay: 0.48s; }
         .mobile-menu a:hover { color: var(--olijf); }
+        .mobile-menu::before {
+            content: '';
+            position: absolute;
+            width: 1px; height: 0;
+            background: rgba(90,107,58,0.15);
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            transition: height 0.5s ease 0.1s;
+        }
+        .mobile-menu.open::before { height: 55%; }
+        .hamburger span { transition: all 0.35s cubic-bezier(0.77,0,0.175,1); }
+        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -310,14 +356,42 @@
             .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
             .stat-float { right: -0.5rem; }
         }
-    </style>
+    
+        /* ── LOGO IMAGES ── */
+        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
+        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+        .footer-logo { display: inline-block; }
+        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
+        
+        /* ── NAV OVERFLOW FIX (mobile) ── */
+        nav { width: 100%; max-width: 100vw; overflow: hidden; }
+        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
+        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
+        .nav-logo-img { flex-shrink: 0; }
+        html, body { overflow-x: hidden; max-width: 100%; }
+        /* Hero circles overflow fix */
+        .hero { overflow: hidden; }
+        .page-hero { overflow: hidden; }
+        header { overflow-x: hidden; }
+        @media (max-width: 900px) {
+            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
+            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
+            .contact-hero { overflow: hidden; }
+            .footer-inner { overflow-x: hidden; }
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr !important; }
+            .service-cards { grid-template-columns: 1fr 1fr !important; }
+            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="over.html">Over Josine</a></li>
@@ -353,10 +427,10 @@
 <!-- FILTER NAV -->
 <div class="filter-nav">
     <div class="filter-nav-inner">
-        <button class="filter-btn active" onclick="scrollTo('#coaching')">1-op-1 Coaching</button>
-        <button class="filter-btn" onclick="scrollTo('#team')">Teamontwikkeling</button>
-        <button class="filter-btn" onclick="scrollTo('#leiderschap')">Leiderschapstraject</button>
-        <button class="filter-btn" onclick="scrollTo('#vergelijk')">Vergelijk</button>
+        <button type="button" class="filter-btn active" onclick="scrollToSection('#coaching')">1-op-1 Coaching</button>
+        <button type="button" class="filter-btn" onclick="scrollToSection('#team')">Teamontwikkeling</button>
+        <button type="button" class="filter-btn" onclick="scrollToSection('#leiderschap')">Leiderschapstraject</button>
+        <button type="button" class="filter-btn" onclick="scrollToSection('#vergelijk')">Vergelijk</button>
     </div>
 </div>
 
@@ -367,14 +441,14 @@
             <div class="dienst-tag"><span class="dienst-tag-dot"></span> Persoonlijk</div>
             <h2>1-op-1<br><em>Coaching.</em></h2>
             <p>Diepgaande, persoonlijke begeleiding voor mensen die meer willen dan oppervlakkige antwoorden. In een-op-een sessies met Josine werk je aan zelfinzicht, richting en concrete groei.</p>
-            <p>Of je nu vastloopt, een transitie doormaakt of simpelweg het beste uit jezelf wilt halen — dit traject geeft je de ruimte en de spiegel die je nodig hebt.</p>
+            <p>Voor mensen die vastlopen door verlies, trauma of veranderingen en verlangen naar rust, inzicht en nieuwe richting.  </p>
 
             <div class="voor-wie">
                 <h4>Voor wie?</h4>
                 <ul>
-                    <li>Professionals die meer regie willen over hun loopbaan</li>
-                    <li>Mensen in persoonlijke overgangsperiodes</li>
-                    <li>Iedereen die dieper wil begrijpen waarom ze doen wat ze doen</li>
+                    <li>Professionals die meer regie willen over hun werk of loopbaan</li>
+                    <li>Organisaties en bedrijven waar begeleiding bij rouw of ingrijpende gebeurtenissen nodig is</li>
+                    <li>Teams en organisaties die met opstellingen inzicht willen krijgen in onderliggende dynamieken</li>
                 </ul>
             </div>
 
@@ -610,8 +684,7 @@
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
             <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
         </div>
         <div class="footer-col">
@@ -661,12 +734,31 @@
     // Hamburger
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
 
     // Filter nav smooth scroll
-    function scrollTo(id) {
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    function scrollToSection(id) {
+        const el = document.querySelector(id);
+        if (!el) return;
+
+        const offset = 140; // ruimte voor vaste navigatie + filterbalk
+        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+            top: top,
+            behavior: 'smooth'
+        });
     }
 
     // Update active filter btn on scroll

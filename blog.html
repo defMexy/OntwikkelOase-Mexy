@@ -1,506 +1,262 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
-    <title>Blog | Inzichten over Coaching & Groei – Ontwikkel-Oase</title>
-    <meta name="description" content="Lees de laatste artikelen van Josine Dielissen over persoonlijke ontwikkeling, leiderschap, teamdynamiek en de kunst van échte groei.">
-    <meta name="keywords" content="coaching blog, persoonlijke ontwikkeling artikelen, leiderschap tips, teamdynamiek, Josine Dielissen blog, Ontwikkel-Oase">
-    <link rel="canonical" href="https://www.ontwikkeloase.nl/blog.html">
-    <meta property="og:title" content="Blog | Ontwikkel-Oase – Inzichten over Coaching & Groei">
-    <meta property="og:description" content="Artikelen over persoonlijke groei, leiderschap en teamontwikkeling door Josine Dielissen.">
-    <meta property="og:url" content="https://www.ontwikkeloase.nl/blog.html">
-    <meta property="og:type" content="website">
-
-    <!-- Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": "Ontwikkel-Oase Blog",
-            "url": "https://www.ontwikkeloase.nl/blog.html",
-            "author": { "@type": "Person", "name": "Josine Dielissen" },
-            "description": "Inzichten over coaching, persoonlijke groei en leiderschap"
-        }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --zwart:    #111110;
-            --olijf:    #5A6B3A;
-            --olijf-lt: #8A9E62;
-            --kerrie:   #C49A1A;
-            --oudrose:  #C2867E;
-            --beige:    #F6F3EE;
-            --wit:      #FDFCFA;
-            --zink:     #6B6B67;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans:  'DM Sans', system-ui, sans-serif;
-        }
-        html { scroll-behavior: smooth; }
-        body { background: var(--beige); color: var(--zwart); font-family: var(--font-sans); font-weight: 300; line-height: 1.75; overflow-x: hidden; }
-        ::selection { background: var(--kerrie); color: #fff; }
-
-        /* NAV */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,243,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(90,107,58,0.12); transition: all 0.4s ease; }
-        nav.scrolled { background: rgba(253,252,250,0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
-        .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; height: 80px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; text-decoration: none; color: var(--zwart); letter-spacing: -0.02em; }
-        .nav-logo em { color: var(--olijf); font-style: italic; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); transition: color 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--olijf); }
-        .nav-links a.cta { border: 1px solid var(--zwart); padding: 0.6rem 1.4rem; color: var(--zwart); transition: all 0.3s; }
-        .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
-        .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); }
-        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--beige); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; text-decoration: none; color: var(--zwart); transition: color 0.3s; }
-        .mobile-menu a:hover { color: var(--olijf); }
-
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* PAGE HERO */
-        .page-hero {
-            background: var(--zwart);
-            padding: 10rem 2rem 6rem;
-            position: relative; overflow: hidden;
-        }
-        .page-hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: radial-gradient(ellipse 60% 70% at 80% 40%, rgba(90,107,58,0.18) 0%, transparent 65%);
-        }
-        .hero-deco {
-            position: absolute; right: 3%; bottom: -3rem;
-            font-family: var(--font-serif);
-            font-size: clamp(12rem, 20vw, 22rem);
-            font-style: italic; font-weight: 300;
-            color: rgba(255,255,255,0.03);
-            line-height: 1; pointer-events: none;
-        }
-        .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-        .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.9s ease 0.2s forwards; }
-        .hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; color: #fff; line-height: 1.08; letter-spacing: -0.02em; opacity: 0; animation: fadeUp 0.9s ease 0.4s forwards; }
-        .hero-title em { font-style: italic; color: var(--oudrose); }
-        .hero-sub { font-size: 1rem; color: rgba(255,255,255,0.45); max-width: 540px; margin-top: 1.4rem; line-height: 1.85; opacity: 0; animation: fadeUp 0.9s ease 0.6s forwards; }
-
-        /* CATEGORY FILTER */
-        .cat-filter {
-            background: var(--wit);
-            border-bottom: 1px solid rgba(90,107,58,0.08);
-            padding: 0 2rem;
-            position: sticky; top: 80px; z-index: 50;
-            overflow-x: auto;
-        }
-        .cat-filter-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; }
-        .cat-btn { padding: 1.2rem 1.8rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: all 0.3s; white-space: nowrap; }
-        .cat-btn:hover { color: var(--olijf); }
-        .cat-btn.active { color: var(--zwart); border-bottom-color: var(--kerrie); }
-
-        /* FEATURED POST */
-        .featured-section { padding: 5rem 2rem 3rem; background: var(--wit); }
-        .featured-inner { max-width: 1200px; margin: 0 auto; }
-        .featured-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 2rem; }
-
-        .featured-post {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 0;
-            border: 1px solid rgba(90,107,58,0.1);
-            text-decoration: none; color: inherit;
-            overflow: hidden;
-            transition: box-shadow 0.4s;
-        }
-        .featured-post:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
-
-        .featured-img {
-            background: linear-gradient(145deg, rgba(90,107,58,0.12) 0%, rgba(196,154,26,0.08) 100%);
-            min-height: 420px;
-            display: flex; align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
-        }
-        .featured-img-inner {
-            font-family: var(--font-serif); font-style: italic; color: var(--zink); font-size: 1.1rem;
-            transition: transform 0.6s;
-        }
-        .featured-post:hover .featured-img-inner { transform: scale(1.04); }
-        .featured-img-badge {
-            position: absolute; top: 1.5rem; left: 1.5rem;
-            background: var(--kerrie); color: #fff;
-            font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
-            padding: 0.35rem 0.8rem; font-weight: 500;
-        }
-
-        .featured-text { background: var(--beige); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; }
-        .post-cat { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; margin-bottom: 0.8rem; }
-        .featured-text h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
-        .featured-text p { color: var(--zink); font-size: 0.95rem; line-height: 1.85; margin-bottom: 1.8rem; }
-        .post-meta { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; }
-        .post-meta span { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--zink); }
-        .post-meta .dot { width: 3px; height: 3px; background: var(--zink); border-radius: 50%; }
-        .read-more { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zwart); transition: gap 0.3s; }
-        .featured-post:hover .read-more { gap: 1rem; color: var(--olijf); }
-
-        /* BLOG GRID */
-        .blog-section { padding: 4rem 2rem 7rem; background: var(--wit); }
-        .blog-inner { max-width: 1200px; margin: 0 auto; }
-        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-
-        .blog-card { text-decoration: none; color: inherit; display: block; }
-        .blog-card-img {
-            width: 100%; aspect-ratio: 16/9;
-            background: linear-gradient(135deg, rgba(90,107,58,0.08) 0%, rgba(196,154,26,0.06) 100%);
-            border: 1px solid rgba(90,107,58,0.08);
-            margin-bottom: 1.4rem;
-            overflow: hidden; position: relative;
-        }
-        .blog-card:nth-child(3n+2) .blog-card-img { background: linear-gradient(135deg, rgba(194,134,126,0.1) 0%, rgba(90,107,58,0.06) 100%); }
-        .blog-card:nth-child(3n+3) .blog-card-img { background: linear-gradient(135deg, rgba(196,154,26,0.1) 0%, rgba(90,107,58,0.06) 100%); }
-        .blog-card-img-inner { width: 100%; height: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); color: var(--zink); font-style: italic; transition: transform 0.5s; }
-        .blog-card:hover .blog-card-img-inner { transform: scale(1.05); }
-        .blog-card-cat { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--kerrie); margin-bottom: 0.5rem; font-weight: 500; }
-        .blog-card h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; line-height: 1.25; margin-bottom: 0.6rem; transition: color 0.3s; }
-        .blog-card:hover h3 { color: var(--olijf); }
-        .blog-card p { font-size: 0.88rem; color: var(--zink); line-height: 1.75; margin-bottom: 1rem; }
-        .blog-card-meta { display: flex; gap: 1rem; align-items: center; }
-        .blog-card-meta span { font-size: 0.68rem; color: var(--zink); letter-spacing: 0.05em; }
-        .blog-card-meta .dot { width: 2px; height: 2px; background: var(--zink); border-radius: 50%; }
-
-        /* LOAD MORE */
-        .load-more-wrap { text-align: center; margin-top: 4rem; }
-
-        /* NEWSLETTER */
-        .newsletter-section { background: var(--beige); padding: 7rem 2rem; border-top: 1px solid rgba(90,107,58,0.08); }
-        .newsletter-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-        .newsletter-inner h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
-        .newsletter-inner h2 em { font-style: italic; color: var(--olijf); }
-        .newsletter-inner p { color: var(--zink); font-size: 0.95rem; line-height: 1.85; margin-bottom: 2.5rem; }
-        .newsletter-form { display: flex; gap: 0; max-width: 480px; margin: 0 auto; }
-        .newsletter-form input {
-            flex: 1; padding: 1rem 1.4rem;
-            background: var(--wit); border: 1px solid rgba(90,107,58,0.15);
-            border-right: none;
-            font-family: var(--font-sans); font-size: 0.9rem; color: var(--zwart);
-            outline: none; transition: border-color 0.3s;
-        }
-        .newsletter-form input:focus { border-color: var(--olijf); }
-        .newsletter-form button {
-            padding: 1rem 1.8rem;
-            background: var(--zwart); color: #fff;
-            border: none; cursor: pointer;
-            font-family: var(--font-sans);
-            font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
-            font-weight: 500; transition: background 0.3s; white-space: nowrap;
-        }
-        .newsletter-form button:hover { background: var(--olijf); }
-        .newsletter-note { font-size: 0.72rem; color: var(--zink); margin-top: 1rem; }
-
-        /* Buttons */
-        .btn-outline { display: inline-block; border: 1px solid var(--zwart); color: var(--zwart); padding: 1rem 2.4rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.35s; cursor: pointer; background: none; font-family: var(--font-sans); }
-        .btn-outline:hover { background: var(--zwart); color: var(--wit); }
-
-        /* FOOTER */
-        footer { background: var(--zwart); color: rgba(255,255,255,0.4); padding: 5rem 2rem 2rem; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 1.2rem; }
-        .footer-brand p { font-size: 0.88rem; line-height: 1.85; max-width: 260px; }
-        .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 500; margin-bottom: 1.4rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.75rem; }
-        .footer-col a { text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.9rem; transition: color 0.3s; }
-        .footer-col a:hover { color: var(--kerrie); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom p { font-size: 0.68rem; letter-spacing: 0.1em; }
-        .footer-social { display: flex; gap: 1.2rem; }
-        .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.75rem; transition: all 0.3s; }
-        .footer-social a:hover { border-color: var(--kerrie); color: var(--kerrie); }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .featured-post { grid-template-columns: 1fr; }
-            .featured-img { min-height: 260px; }
-            .blog-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-inner { grid-template-columns: 1fr 1fr; }
-            .cat-filter { overflow-x: auto; }
-        }
-        @media (max-width: 600px) {
-            .blog-grid { grid-template-columns: 1fr; }
-            .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-            .newsletter-form { flex-direction: column; }
-            .newsletter-form input { border-right: 1px solid rgba(90,107,58,0.15); border-bottom: none; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Inzichten over Coaching &amp; Groei – Ontwikkel-Oase</title>
+  <meta name="description" content="Lees de laatste artikelen van Josine Dielissen over persoonlijke ontwikkeling, leiderschap, teamdynamiek en de kunst van échte groei.">
+  <link rel="canonical" href="https://www.ontwikkeloase.nl/blog.html">
+  <meta property="og:title" content="Blog | Ontwikkel-Oase">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--zwart:#111110;--olijf:#5A6B3A;--olijf-lt:#8A9E62;--kerrie:#C49A1A;--oudrose:#C2867E;--beige:#F6F3EE;--wit:#FDFCFA;--zink:#6B6B67;--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'DM Sans',system-ui,sans-serif}
+    html{scroll-behavior:smooth}html,body{overflow-x:hidden;max-width:100%}
+    body{background:var(--beige);color:var(--zwart);font-family:var(--font-sans);font-weight:300;line-height:1.75}
+    ::selection{background:var(--kerrie);color:#fff}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(246,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,107,58,0.12);transition:all .4s ease;width:100%}
+    nav.scrolled{background:rgba(253,252,250,0.97);box-shadow:0 4px 30px rgba(0,0,0,0.06)}
+    .nav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;height:80px;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box}
+    .nav-logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:400;text-decoration:none;color:var(--zwart);letter-spacing:-.02em;display:inline-flex;align-items:center;gap:.5rem}
+    .nav-logo em{color:var(--olijf);font-style:italic}
+    .nav-logo-img{height:32px;width:auto;object-fit:contain;flex-shrink:0}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+    .nav-links a{text-decoration:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--zink);transition:color .3s}
+    .nav-links a:hover,.nav-links a.active{color:var(--olijf)}
+    .nav-links a.cta{border:1px solid var(--zwart);padding:.6rem 1.4rem;color:var(--zwart);transition:all .3s}
+    .nav-links a.cta:hover{background:var(--zwart);color:var(--wit)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.25rem}
+    .hamburger span{display:block;width:24px;height:1.5px;background:var(--zwart);transition:all .35s cubic-bezier(.77,0,.175,1)}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .mobile-menu{position:fixed;top:0;left:0;width:100%;height:100%;z-index:99;background:var(--beige);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;clip-path:circle(0% at calc(100% - 44px) 40px);transition:clip-path .55s cubic-bezier(.77,0,.175,1),opacity .2s ease}
+    .mobile-menu.open{opacity:1;pointer-events:all;clip-path:circle(150% at calc(100% - 44px) 40px)}
+    .mobile-menu a{font-family:var(--font-serif);font-size:2.4rem;font-weight:300;text-decoration:none;color:var(--zwart);padding:.6rem 0;opacity:0;transform:translateY(18px);transition:color .3s,opacity .4s ease,transform .4s ease}
+    .mobile-menu.open a{opacity:1;transform:translateY(0)}
+    .mobile-menu.open a:nth-child(1){transition-delay:.18s}.mobile-menu.open a:nth-child(2){transition-delay:.24s}.mobile-menu.open a:nth-child(3){transition-delay:.30s}.mobile-menu.open a:nth-child(4){transition-delay:.36s}.mobile-menu.open a:nth-child(5){transition-delay:.42s}.mobile-menu.open a:nth-child(6){transition-delay:.48s}
+    .mobile-menu a:hover{color:var(--olijf)}
+    .mobile-menu::before{content:'';position:absolute;width:1px;height:0;background:rgba(90,107,58,.15);left:50%;top:50%;transform:translate(-50%,-50%);transition:height .5s ease .1s}
+    .mobile-menu.open::before{height:55%}
+    .page-hero{background:var(--zwart);padding:10rem 2rem 6rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 40%,rgba(90,107,58,.18) 0%,transparent 65%)}
+    .hero-deco{position:absolute;right:3%;bottom:-3rem;font-family:var(--font-serif);font-size:clamp(12rem,20vw,22rem);font-style:italic;font-weight:300;color:rgba(255,255,255,.03);line-height:1;pointer-events:none}
+    .page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+    .hero-eyebrow{font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--kerrie);font-weight:500;display:block;margin-bottom:1.2rem;opacity:0;animation:fadeUp .9s ease .2s forwards}
+    .hero-title{font-family:var(--font-serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;color:#fff;line-height:1.08;letter-spacing:-.02em;opacity:0;animation:fadeUp .9s ease .4s forwards}
+    .hero-title em{font-style:italic;color:var(--oudrose)}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,.45);max-width:540px;margin-top:1.4rem;line-height:1.85;opacity:0;animation:fadeUp .9s ease .6s forwards}
+    .cat-filter{background:var(--wit);border-bottom:1px solid rgba(90,107,58,.08);padding:0 2rem;position:sticky;top:80px;z-index:50;overflow-x:auto}
+    .cat-filter-inner{max-width:1200px;margin:0 auto;display:flex}
+    .cat-btn{padding:1.2rem 1.8rem;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--zink);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .3s;white-space:nowrap}
+    .cat-btn:hover{color:var(--olijf)}.cat-btn.active{color:var(--zwart);border-bottom-color:var(--kerrie)}
+    .featured-section{padding:5rem 2rem 3rem;background:var(--wit);min-height:100px}
+    .featured-inner{max-width:1200px;margin:0 auto}
+    .featured-label{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--kerrie);font-weight:500;display:block;margin-bottom:2rem}
+    .featured-post{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(90,107,58,.1);text-decoration:none;color:inherit;overflow:hidden;transition:box-shadow .4s}
+    .featured-post:hover{box-shadow:0 20px 60px rgba(0,0,0,.08)}
+    .featured-img{background:linear-gradient(145deg,rgba(90,107,58,.12),rgba(196,154,26,.08));min-height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .featured-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .featured-img-inner{font-family:var(--font-serif);font-style:italic;color:var(--zink);font-size:1.1rem}
+    .featured-img-badge{position:absolute;top:1.5rem;left:1.5rem;background:var(--kerrie);color:#fff;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;padding:.35rem .8rem;font-weight:500;z-index:1}
+    .featured-text{background:var(--beige);padding:3.5rem;display:flex;flex-direction:column;justify-content:center}
+    .post-cat{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--kerrie);font-weight:500;margin-bottom:.8rem}
+    .featured-text h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.2;margin-bottom:1rem}
+    .featured-text p{color:var(--zink);font-size:.95rem;line-height:1.85;margin-bottom:1.8rem}
+    .post-meta{display:flex;gap:1.5rem;align-items:center;margin-bottom:2rem}
+    .post-meta span{font-size:.7rem;letter-spacing:.1em;color:var(--zink)}
+    .post-meta .dot{width:3px;height:3px;background:var(--zink);border-radius:50%}
+    .read-more{display:inline-flex;align-items:center;gap:.6rem;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--zwart);transition:gap .3s}
+    .featured-post:hover .read-more{gap:1rem;color:var(--olijf)}
+    .blog-section{padding:4rem 2rem 7rem;background:var(--wit)}
+    .blog-inner{max-width:1200px;margin:0 auto}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .blog-card{text-decoration:none;color:inherit;display:block}
+    .blog-card-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(90,107,58,.08),rgba(196,154,26,.06));border:1px solid rgba(90,107,58,.08);margin-bottom:1.4rem;overflow:hidden;position:relative}
+    .blog-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+    .blog-card-img-inner{width:100%;height:100%;min-height:200px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);color:var(--zink);font-style:italic}
+    .blog-card:hover .blog-card-img img{transform:scale(1.05)}
+    .blog-card-cat{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--kerrie);margin-bottom:.5rem;font-weight:500}
+    .blog-card h3{font-family:var(--font-serif);font-size:1.35rem;font-weight:400;line-height:1.25;margin-bottom:.6rem;transition:color .3s}
+    .blog-card:hover h3{color:var(--olijf)}
+    .blog-card p{font-size:.88rem;color:var(--zink);line-height:1.75;margin-bottom:1rem}
+    .blog-card-meta{display:flex;gap:1rem;align-items:center}
+    .blog-card-meta span{font-size:.68rem;color:var(--zink)}
+    .blog-card-meta .dot{width:2px;height:2px;background:var(--zink);border-radius:50%}
+    .newsletter-section{background:var(--beige);padding:7rem 2rem;border-top:1px solid rgba(90,107,58,.08)}
+    .newsletter-inner{max-width:700px;margin:0 auto;text-align:center}
+    .newsletter-inner h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1rem}
+    .newsletter-inner h2 em{font-style:italic;color:var(--olijf)}
+    .newsletter-inner p{color:var(--zink);font-size:.95rem;line-height:1.85;margin-bottom:2.5rem}
+    .newsletter-form{display:flex;max-width:480px;margin:0 auto}
+    .newsletter-form input{flex:1;padding:1rem 1.4rem;background:var(--wit);border:1px solid rgba(90,107,58,.15);border-right:none;font-family:var(--font-sans);font-size:.9rem;color:var(--zwart);outline:none}
+    .newsletter-form input:focus{border-color:var(--olijf)}
+    .newsletter-form button{padding:1rem 1.8rem;background:var(--zwart);color:#fff;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:background .3s;white-space:nowrap}
+    .newsletter-form button:hover{background:var(--olijf)}
+    .newsletter-note{font-size:.72rem;color:var(--zink);margin-top:1rem}
+    footer{background:var(--zwart);color:rgba(255,255,255,.4);padding:5rem 2rem 2rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+    .footer-brand p{font-size:.88rem;line-height:1.85;max-width:260px}
+    .footer-logo{display:inline-block}.footer-logo-img{height:80px;width:auto;object-fit:contain;margin-bottom:1rem}
+    .footer-col h4{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:500;margin-bottom:1.4rem}
+    .footer-col ul{list-style:none}.footer-col li{margin-bottom:.75rem}
+    .footer-col a{text-decoration:none;color:rgba(255,255,255,.4);font-size:.9rem;transition:color .3s}
+    .footer-col a:hover{color:var(--kerrie)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center}
+    .footer-bottom p{font-size:.68rem;letter-spacing:.1em}
+    .footer-social{display:flex;gap:1.2rem}
+    .footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,.4);font-size:.75rem;transition:all .3s}
+    .footer-social a:hover{border-color:var(--kerrie);color:var(--kerrie)}
+    @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.featured-post{grid-template-columns:1fr}.featured-img{min-height:260px}.blog-grid{grid-template-columns:repeat(2,1fr)}.footer-inner{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr;gap:2.5rem}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}.newsletter-form{flex-direction:column}.newsletter-form input{border-right:1px solid rgba(90,107,58,.15);border-bottom:none}}
+  </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav id="mainNav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="over.html">Over Josine</a></li>
-            <li><a href="aanbod.html">Aanbod</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-            <li><a href="contact.html" class="cta">Boek een sessie</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="over.html">Over Josine</a></li>
+      <li><a href="aanbod.html">Aanbod</a></li><li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="over.html">Over Josine</a>
-    <a href="aanbod.html">Aanbod</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Boek een sessie</a>
+  <a href="index.html">Home</a><a href="over.html">Over Josine</a>
+  <a href="aanbod.html">Aanbod</a><a href="portfolio.html">Portfolio</a>
+  <a href="blog.html">Blog</a><a href="contact.html">Boek een sessie</a>
 </div>
-
-<!-- HERO -->
 <header class="page-hero">
-    <div class="hero-deco">Blog</div>
-    <div class="page-hero-inner">
-        <span class="hero-eyebrow">Inzichten & inspiratie</span>
-        <h1 class="hero-title">Gedachten over<br><em>groei & leven.</em></h1>
-        <p class="hero-sub">Josine deelt regelmatig inzichten over coaching, persoonlijke ontwikkeling, leiderschap en wat het betekent om écht te groeien.</p>
-    </div>
+  <div class="hero-deco">Blog</div>
+  <div class="page-hero-inner">
+    <span class="hero-eyebrow">Inzichten &amp; inspiratie</span>
+    <h1 class="hero-title">Gedachten over<br><em>groei &amp; leven.</em></h1>
+    <p class="hero-sub">Josine deelt regelmatig inzichten over coaching, persoonlijke ontwikkeling, leiderschap en wat het betekent om écht te groeien.</p>
+  </div>
 </header>
-
-<!-- CATEGORY FILTER -->
 <div class="cat-filter">
-    <div class="cat-filter-inner">
-        <button class="cat-btn active" onclick="filterCat('alle', this)">Alle artikelen</button>
-        <button class="cat-btn" onclick="filterCat('groei', this)">Persoonlijke Groei</button>
-        <button class="cat-btn" onclick="filterCat('leiderschap', this)">Leiderschap</button>
-        <button class="cat-btn" onclick="filterCat('team', this)">Teamdynamiek</button>
-        <button class="cat-btn" onclick="filterCat('mindset', this)">Mindset</button>
-        <button class="cat-btn" onclick="filterCat('werkgeluk', this)">Werkgeluk</button>
-    </div>
+  <div class="cat-filter-inner">
+    <button class="cat-btn active" onclick="filterCat('alle',this)">Alle artikelen</button>
+    <button class="cat-btn" onclick="filterCat('groei',this)">Persoonlijke Groei</button>
+    <button class="cat-btn" onclick="filterCat('leiderschap',this)">Leiderschap</button>
+    <button class="cat-btn" onclick="filterCat('team',this)">Teamdynamiek</button>
+    <button class="cat-btn" onclick="filterCat('mindset',this)">Mindset</button>
+    <button class="cat-btn" onclick="filterCat('werkgeluk',this)">Werkgeluk</button>
+  </div>
 </div>
-
-<!-- FEATURED POST -->
-<section class="featured-section">
-    <div class="featured-inner">
-        <span class="featured-label" data-aos="fade-up">Uitgelicht artikel</span>
-        <a href="blog-post.html" class="featured-post" data-aos="fade-up" data-aos-delay="80">
-            <div class="featured-img">
-                <div class="featured-img-badge">Nieuw</div>
-                <div class="featured-img-inner">Afbeelding artikel</div>
-            </div>
-            <div class="featured-text">
-                <div class="post-cat">Persoonlijke Groei</div>
-                <h2>Waarom stilte de sleutel is tot echte groei — en hoe je die ruimte schept</h2>
-                <div class="post-meta">
-                    <span>Josine Dielissen</span>
-                    <div class="dot"></div>
-                    <span>3 maart 2026</span>
-                    <div class="dot"></div>
-                    <span>7 min leestijd</span>
-                </div>
-                <p>In onze drukke, altijd-aan wereld zijn we het verleerd om stil te zijn. Maar stilte is geen leegte — het is precies de ruimte waar inzicht, helderheid en echte verandering ontstaan. In dit artikel ontdek je waarom rust de motor van groei is.</p>
-                <span class="read-more">Lees het artikel →</span>
-            </div>
-        </a>
-    </div>
-</section>
-
-<!-- BLOG GRID -->
+<section class="featured-section" id="featuredSection"></section>
 <section class="blog-section">
-    <div class="blog-inner">
-        <div class="blog-grid" id="blogGrid">
-
-            <a href="blog-post.html" class="blog-card" data-cat="leiderschap" data-aos="fade-up" data-aos-delay="0">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Leiderschap</div>
-                <h3>Van manager naar leider: wat maakt het verschil?</h3>
-                <p>Leiderschap gaat niet over functietitels. Het gaat over hoe je aanwezig bent voor de mensen om je heen.</p>
-                <div class="blog-card-meta"><span>18 feb 2026</span><div class="dot"></div><span>5 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="team" data-aos="fade-up" data-aos-delay="80">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Teamdynamiek</div>
-                <h3>5 signalen dat jouw team ruimte nodig heeft</h3>
-                <p>Een team dat te druk is om te groeien, is een team dat uiteindelijk vastloopt. Herken jij deze signalen?</p>
-                <div class="blog-card-meta"><span>5 feb 2026</span><div class="dot"></div><span>6 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="mindset" data-aos="fade-up" data-aos-delay="160">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Mindset</div>
-                <h3>De kracht van kwetsbaarheid als leider</h3>
-                <p>Kwetsbaarheid laten zien wordt vaak gezien als zwakte. Maar echte leiders weten: het is juist je grootste kracht.</p>
-                <div class="blog-card-meta"><span>24 jan 2026</span><div class="dot"></div><span>4 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="groei" data-aos="fade-up" data-aos-delay="0">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Persoonlijke Groei</div>
-                <h3>Waarom jij de coach bent die je nodig hebt</h3>
-                <p>De antwoorden zitten al in je. Coaching helpt je ze te horen — maar de kracht komt altijd van binnenuit.</p>
-                <div class="blog-card-meta"><span>10 jan 2026</span><div class="dot"></div><span>5 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="werkgeluk" data-aos="fade-up" data-aos-delay="80">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Werkgeluk</div>
-                <h3>Hoe herken je dat je werk je energie geeft in plaats van kost?</h3>
-                <p>Werkgeluk is geen luxe — het is een keuze die begint met eerlijk kijken naar wat je bezielt.</p>
-                <div class="blog-card-meta"><span>28 dec 2025</span><div class="dot"></div><span>6 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="leiderschap" data-aos="fade-up" data-aos-delay="160">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Leiderschap</div>
-                <h3>Feedback geven zonder de relatie te beschadigen</h3>
-                <p>Goede feedback is een cadeau. Maar hoe pak je het in zodat het ook als cadeau landt?</p>
-                <div class="blog-card-meta"><span>12 dec 2025</span><div class="dot"></div><span>5 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="mindset" data-aos="fade-up" data-aos-delay="0">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Mindset</div>
-                <h3>Stop met overleven — begin met leven</h3>
-                <p>Veel mensen functioneren op automatische piloot. Totdat er iets breekt. Dan begint het echte gesprek.</p>
-                <div class="blog-card-meta"><span>30 nov 2025</span><div class="dot"></div><span>7 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="team" data-aos="fade-up" data-aos-delay="80">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Teamdynamiek</div>
-                <h3>Psychologische veiligheid: de basis van elk sterk team</h3>
-                <p>Teams presteren het best als mensen zich veilig voelen om zichzelf te zijn. Hoe bouw je dat op?</p>
-                <div class="blog-card-meta"><span>15 nov 2025</span><div class="dot"></div><span>6 min</span></div>
-            </a>
-
-            <a href="blog-post.html" class="blog-card" data-cat="groei" data-aos="fade-up" data-aos-delay="160">
-                <div class="blog-card-img"><div class="blog-card-img-inner">Afbeelding</div></div>
-                <div class="blog-card-cat">Persoonlijke Groei</div>
-                <h3>3 vragen die je leven kunnen veranderen</h3>
-                <p>Soms is één goede vraag meer waard dan honderd antwoorden. Dit zijn mijn drie favorieten.</p>
-                <div class="blog-card-meta"><span>1 nov 2025</span><div class="dot"></div><span>4 min</span></div>
-            </a>
-
-        </div>
-
-        <div class="load-more-wrap" data-aos="fade-up">
-            <button class="btn-outline" onclick="loadMore()">Meer artikelen laden</button>
-        </div>
-    </div>
+  <div class="blog-inner"><div class="blog-grid" id="blogGrid"></div></div>
 </section>
-
-<!-- NEWSLETTER -->
 <section class="newsletter-section">
-    <div class="newsletter-inner" data-aos="fade-up">
-        <h2>Ontvang nieuwe inzichten<br>direct in je <em>inbox.</em></h2>
-        <p>Schrijf je in voor de nieuwsbrief van Josine en ontvang maandelijks een selectie van de beste artikelen, reflectievragen en praktische tips voor jouw groei.</p>
-        <div class="newsletter-form">
-            <input type="email" placeholder="jouw@emailadres.nl" aria-label="E-mailadres">
-            <button type="submit">Inschrijven</button>
-        </div>
-        <p class="newsletter-note">Geen spam. Afmelden kan altijd. Josine schrijft zelf elke nieuwsbrief.</p>
+  <div class="newsletter-inner" data-aos="fade-up">
+    <h2>Ontvang nieuwe inzichten<br>direct in je <em>inbox.</em></h2>
+    <p>Schrijf je in voor de nieuwsbrief van Josine en ontvang maandelijks een selectie van de beste artikelen, reflectievragen en praktische tips voor jouw groei.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="jouw@emailadres.nl" aria-label="E-mailadres">
+      <button type="submit">Inschrijven</button>
     </div>
+    <p class="newsletter-note">Geen spam. Afmelden kan altijd.</p>
+  </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
-            <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Navigatie</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="over.html">Over Josine</a></li>
-                <li><a href="aanbod.html">Aanbod</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Categorieën</h4>
-            <ul>
-                <li><a href="#">Persoonlijke Groei</a></li>
-                <li><a href="#">Leiderschap</a></li>
-                <li><a href="#">Teamdynamiek</a></li>
-                <li><a href="#">Mindset</a></li>
-                <li><a href="#">Werkgeluk</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <ul>
-                <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
-                <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
-                <li><a href="contact.html">Boek een sessie</a></li>
-            </ul>
-        </div>
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
+      <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
-        <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
-        </div>
-    </div>
+    <div class="footer-col"><h4>Navigatie</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="over.html">Over Josine</a></li>
+      <li><a href="aanbod.html">Aanbod</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Categorieën</h4><ul>
+      <li><a href="#" onclick="filterCat('groei',this);return false;">Persoonlijke Groei</a></li>
+      <li><a href="#" onclick="filterCat('leiderschap',this);return false;">Leiderschap</a></li>
+      <li><a href="#" onclick="filterCat('team',this);return false;">Teamdynamiek</a></li>
+      <li><a href="#" onclick="filterCat('mindset',this);return false;">Mindset</a></li>
+      <li><a href="#" onclick="filterCat('werkgeluk',this);return false;">Werkgeluk</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+      <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+      <li><a href="contact.html">Boek een sessie</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
+    <div class="footer-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a></div>
+  </div>
 </footer>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 900, once: true, offset: 60 });
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+const CAT={groei:'Persoonlijke Groei',leiderschap:'Leiderschap',team:'Teamdynamiek',mindset:'Mindset',werkgeluk:'Werkgeluk'};
+let allPosts=[];
+function fmtDate(d){try{return new Date(d+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});}catch{return d;}}
+function postUrl(p){return 'blog-post.html?id='+p.id;}
 
-    // Category filter
-    function filterCat(cat, btn) {
-        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cards = document.querySelectorAll('.blog-card');
-        cards.forEach(card => {
-            const show = cat === 'alle' || card.dataset.cat === cat;
-            card.style.display = show ? 'block' : 'none';
-        });
-    }
+function renderFeatured(post){
+  if(!post){document.getElementById('featuredSection').innerHTML='';return;}
+  const img=post.image?`<img src="${post.image}" alt="${post.title}">`:`<div class="featured-img-inner">Afbeelding artikel</div>`;
+  document.getElementById('featuredSection').innerHTML=`
+    <div class="featured-inner">
+      <span class="featured-label" data-aos="fade-up">Uitgelicht artikel</span>
+      <a href="${postUrl(post)}" class="featured-post" data-aos="fade-up" data-aos-delay="80">
+        <div class="featured-img"><div class="featured-img-badge">Nieuw</div>${img}</div>
+        <div class="featured-text">
+          <div class="post-cat">${CAT[post.category]||post.category}</div>
+          <h2>${post.title}</h2>
+          <div class="post-meta"><span>Josine Dielissen</span><div class="dot"></div><span>${fmtDate(post.date)}</span><div class="dot"></div><span>${post.readTime} min leestijd</span></div>
+          <p>${post.summary}</p>
+          <span class="read-more">Lees het artikel →</span>
+        </div>
+      </a>
+    </div>`;
+  AOS.refresh();
+}
 
-    // Load more (demo)
-    function loadMore() {
-        const btn = document.querySelector('.load-more-wrap button');
-        btn.textContent = 'Alle artikelen geladen';
-        btn.disabled = true;
-        btn.style.opacity = '0.4';
-        btn.style.cursor = 'default';
-    }
+function renderGrid(posts){
+  const grid=document.getElementById('blogGrid');
+  if(!posts.length){grid.innerHTML='';return;}
+  grid.innerHTML=posts.map((p,i)=>{
+    const img=p.image?`<img src="${p.image}" alt="${p.title}">`:`<div class="blog-card-img-inner">Afbeelding</div>`;
+    return`<a href="${postUrl(p)}" class="blog-card" data-cat="${p.category}" data-aos="fade-up" data-aos-delay="${(i%3)*80}">
+      <div class="blog-card-img">${img}</div>
+      <div class="blog-card-cat">${CAT[p.category]||p.category}</div>
+      <h3>${p.title}</h3><p>${p.summary}</p>
+      <div class="blog-card-meta"><span>${fmtDate(p.date)}</span><div class="dot"></div><span>${p.readTime} min</span></div>
+    </a>`;
+  }).join('');
+  AOS.refresh();
+}
 
-    // Newsletter
-    document.querySelector('.newsletter-form button').addEventListener('click', function() {
-        const input = document.querySelector('.newsletter-form input');
-        if (input.value.includes('@')) {
-            input.value = '';
-            input.placeholder = '✓ Ingeschreven! Tot snel.';
-            this.textContent = '✓';
-            this.style.background = 'var(--olijf)';
-        }
-    });
+function filterCat(cat,btn){
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  if(btn&&btn.classList)btn.classList.add('active');
+  const filtered=cat==='alle'?allPosts:allPosts.filter(p=>p.category===cat);
+  const sorted=[...filtered].sort((a,b)=>b.date.localeCompare(a.date));
+  renderFeatured(sorted[0]||null);
+  renderGrid(sorted.slice(1));
+}
+
+fetch('blogs.json').then(r=>r.json()).then(data=>{
+  allPosts=data;
+  filterCat('alle',document.querySelector('.cat-btn.active'));
+}).catch(()=>{
+  document.getElementById('featuredSection').innerHTML='<div style="text-align:center;padding:4rem;font-family:var(--font-serif);font-style:italic;color:var(--zink);font-size:1.2rem;">Blogs laden mislukt.</div>';
+});
+
+AOS.init({duration:900,once:true,offset:60});
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{const o=mobileMenu.classList.toggle('open');hamburger.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}));
+document.querySelector('.newsletter-form button').addEventListener('click',function(){const i=document.querySelector('.newsletter-form input');if(i.value.includes('@')){i.value='';i.placeholder='✓ Ingeschreven!';this.textContent='✓';this.style.background='var(--olijf)';}});
 </script>
 </body>
 </html>

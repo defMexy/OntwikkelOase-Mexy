@@ -85,10 +85,56 @@
         .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
         .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
         .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); transition: all 0.3s; }
-        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--beige); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; text-decoration: none; color: var(--zwart); transition: color 0.3s; }
+        /* ── MOBILE MENU ANIMATED ── */
+        .mobile-menu {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; overflow: hidden;
+            background: var(--beige);
+            flex-direction: column;
+            align-items: center; justify-content: center; gap: 0;
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            clip-path: circle(0% at calc(100% - 44px) 40px);
+            transition: clip-path 0.55s cubic-bezier(0.77,0,0.175,1),
+                        opacity 0.2s ease;
+        }
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+            clip-path: circle(150% at calc(100% - 44px) 40px);
+        }
+        .mobile-menu a {
+            font-family: var(--font-serif);
+            font-size: 2.4rem; font-weight: 300;
+            text-decoration: none; color: var(--zwart);
+            padding: 0.6rem 0;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: color 0.3s, opacity 0.4s ease, transform 0.4s ease;
+        }
+        .mobile-menu.open a { opacity: 1; transform: translateY(0); }
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.18s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.24s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.30s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
+        .mobile-menu.open a:nth-child(5) { transition-delay: 0.42s; }
+        .mobile-menu.open a:nth-child(6) { transition-delay: 0.48s; }
         .mobile-menu a:hover { color: var(--olijf); }
+        .mobile-menu::before {
+            content: '';
+            position: absolute;
+            width: 1px; height: 0;
+            background: rgba(90,107,58,0.15);
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            transition: height 0.5s ease 0.1s;
+        }
+        .mobile-menu.open::before { height: 55%; }
+        .hamburger span { transition: all 0.35s cubic-bezier(0.77,0,0.175,1); }
+        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
         /* ── PAGE HERO ── */
         .page-hero {
@@ -387,14 +433,52 @@
             .tijdlijn-item { grid-template-columns: 60px 1fr; }
             .tijdlijn::before { left: 60px; }
         }
-    </style>
+    
+        /* ── LOGO IMAGES ── */
+        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
+        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+        .footer-logo { display: inline-block; }
+        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
+        
+        .portrait-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+        
+        /* ── NAV OVERFLOW FIX (mobile) ── */
+        nav { width: 100%; max-width: 100vw; overflow: hidden; }
+        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
+        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
+        .nav-logo-img { flex-shrink: 0; }
+        html, body { overflow-x: hidden; max-width: 100%; }
+        /* Hero circles overflow fix */
+        .hero { overflow: hidden; }
+        .page-hero { overflow: hidden; }
+        header { overflow-x: hidden; }
+        @media (max-width: 900px) {
+            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
+            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
+            .contact-hero { overflow: hidden; }
+            .footer-inner { overflow-x: hidden; }
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr !important; }
+            .service-cards { grid-template-columns: 1fr 1fr !important; }
+            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="over.html" class="active">Over Josine</a></li>
@@ -432,7 +516,7 @@
     <div class="intro-grid">
         <div class="intro-text" data-aos="fade-right">
             <h2>Begeleiding vanuit<br><em>echte verbinding.</em></h2>
-            <p>Josine Dielissen is de drijvende kracht achter Ontwikkel-Oase. Met meer dan tien jaar ervaring als coach en begeleider weet ze als geen ander hoe transformatie eruitziet van binnenuit.</p>
+            <p>Josine Dielissen is de drijvende kracht achter Ontwikkel-Oase. Met meer dan 45 jaar ervaring als coach en begeleider weet ze als geen ander hoe transformatie eruitziet van binnenuit.</p>
             <p>Haar aanpak is <strong>warm en menselijk</strong>, maar ook direct en helder. Ze gelooft niet in kant-en-klare oplossingen, maar in de kracht die al aanwezig is — bij mensen én bij teams. Haar rol is die ruimte te creëren.</p>
             <p>Of het nu gaat om een persoonlijk keerpunt, een carrièrevraagstuk of een team dat vastloopt: Josine brengt rust, inzicht en beweging.</p>
             <div class="cta-row">
@@ -441,7 +525,7 @@
             </div>
         </div>
         <div class="intro-visual" data-aos="fade-left" data-aos-delay="150">
-            <div class="portrait-wrap">Foto Josine Dielissen</div>
+            <div class="portrait-wrap"><img src="assets/images/Josine.jpeg" class="portrait-img" alt="Josine Dielissen"></div>
             <div class="quote-card">
                 <p>"Groei vraagt geen kracht. Groei vraagt ruimte."</p>
                 <cite>— Josine Dielissen</cite>
@@ -633,8 +717,7 @@
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo">Ontwikkel<em>-Oase</em></a>
+        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
             <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
         </div>
         <div class="footer-col">
@@ -680,8 +763,18 @@
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
 </script>
 </body>
 </html>
