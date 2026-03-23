@@ -1,395 +1,1286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ontwikkel-Oase – Resultaten & Succesverhalen van Josine Dielissen</title>
-    <meta name="description" content="Ontdek de resultaten en succesverhalen van Ontwikkel-Oase. Echte verhalen van mensen en teams die groeiden door coaching van Josine Dielissen.">
-    <meta name="keywords" content="coaching resultaten, succesverhalen, portfolio coaching, Josine Dielissen, Ontwikkel-Oase ervaringen">
-    <meta name="author" content="Josine Dielissen - Ontwikkel-Oase">
-    <link rel="canonical" href="https://www.ontwikkeloase.nl/portfolio.html">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ontwikkeloase.nl/portfolio.html">
-    <meta property="og:title" content="Portfolio | Ontwikkel-Oase">
-    <meta property="og:description" content="Echte verhalen van mensen en teams die groeiden door coaching van Josine Dielissen.">
-    <meta property="og:image" content="assets/og-image.jpg">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Portfolio Ontwikkel-Oase","url":"https://www.ontwikkeloase.nl/portfolio.html"}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | OntwikkelOase – Resultaten & Succesverhalen van Josine Dielissen</title>
+    <meta
+      name="description"
+      content="Ontdek de resultaten en succesverhalen van OntwikkelOase. Echte verhalen van mensen en teams die groeiden door coaching van Josine Dielissen."
+    />
+    <meta
+      name="keywords"
+      content="coaching resultaten, succesverhalen, portfolio coaching, Josine Dielissen, OntwikkelOase ervaringen"
+    />
+    <meta name="author" content="Josine Dielissen - OntwikkelOase" />
+    <link rel="canonical" href="https://www.ontwikkeloase.nl/portfolio.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ontwikkeloase.nl/portfolio.html" />
+    <meta property="og:title" content="Portfolio | OntwikkelOase" />
+    <meta
+      property="og:description"
+      content="Echte verhalen van mensen en teams die groeiden door coaching van Josine Dielissen."
+    />
+    <meta property="og:image" content="assets/og-image.jpg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Portfolio OntwikkelOase",
+        "url": "https://www.ontwikkeloase.nl/portfolio.html"
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{--zwart:#111110;--olijf:#5A6B3A;--olijf-lt:#8A9E62;--kerrie:#C49A1A;--oudrose:#C2867E;--beige:#F6F3EE;--wit:#FDFCFA;--zink:#6B6B67;--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'DM Sans',system-ui,sans-serif}
-        html{scroll-behavior:smooth}
-        body{background:var(--beige);color:var(--zwart);font-family:var(--font-sans);font-weight:300;line-height:1.75;overflow-x:hidden}
-        ::selection{background:var(--kerrie);color:#fff}
-        nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(246,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,107,58,0.12);transition:all 0.4s}
-        nav.scrolled{background:rgba(253,252,250,0.97);box-shadow:0 4px 30px rgba(0,0,0,0.06)}
-        .nav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;height:80px;display:flex;align-items:center;justify-content:space-between}
-        .nav-logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:400;text-decoration:none;color:var(--zwart);letter-spacing:-0.02em}
-        .nav-logo em{color:var(--olijf);font-style:italic}
-        .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
-        .nav-links a{text-decoration:none;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;color:var(--zink);transition:color 0.3s}
-        .nav-links a:hover,.nav-links a.active{color:var(--olijf)}
-        .nav-links a.cta{border:1px solid var(--zwart);padding:0.6rem 1.4rem;color:var(--zwart);transition:all 0.3s}
-        .nav-links a.cta:hover{background:var(--zwart);color:var(--wit)}
-        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0.25rem}
-        .hamburger span{display:block;width:24px;height:1.5px;background:var(--zwart);transition:all 0.3s}
-        /* ── MOBILE MENU ANIMATED ── */
-        .mobile-menu{position:fixed;top:0;left:0;width:100%;height:100%;z-index:99;overflow:hidden;background:var(--beige);flex-direction:column;align-items:center;justify-content:center;gap:0;display:flex;opacity:0;pointer-events:none;clip-path:circle(0% at calc(100% - 44px) 40px);transition:clip-path 0.55s cubic-bezier(0.77,0,0.175,1),opacity 0.2s ease}
-        .mobile-menu.open{opacity:1;pointer-events:all;clip-path:circle(150% at calc(100% - 44px) 40px)}
-        .mobile-menu a{font-family:var(--font-serif);font-size:2.4rem;font-weight:300;text-decoration:none;color:var(--zwart);padding:0.6rem 0;letter-spacing:-0.01em;opacity:0;transform:translateY(18px);transition:color 0.3s,opacity 0.4s ease,transform 0.4s ease}
-        .mobile-menu.open a{opacity:1;transform:translateY(0)}
-        .mobile-menu.open a:nth-child(1){transition-delay:0.18s}
-        .mobile-menu.open a:nth-child(2){transition-delay:0.24s}
-        .mobile-menu.open a:nth-child(3){transition-delay:0.30s}
-        .mobile-menu.open a:nth-child(4){transition-delay:0.36s}
-        .mobile-menu.open a:nth-child(5){transition-delay:0.42s}
-        .mobile-menu.open a:nth-child(6){transition-delay:0.48s}
-        .mobile-menu a:hover{color:var(--olijf)}
-        .mobile-menu::before{content:'';position:absolute;width:1px;height:0;background:rgba(90,107,58,0.15);left:50%;top:50%;transform:translate(-50%,-50%);transition:height 0.5s ease 0.1s}
-        .mobile-menu.open::before{height:55%}
-        .hamburger span{transition:all 0.35s cubic-bezier(0.77,0,0.175,1)}
-        .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-        .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-        .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-        .page-hero{padding:12rem 2rem 7rem;text-align:center;position:relative;overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(90,107,58,0.06) 0%,transparent 70%)}
-        .page-hero-content{position:relative;z-index:1;max-width:700px;margin:0 auto}
-        .page-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--kerrie);font-weight:500;display:block;margin-bottom:1.2rem}
-        .page-title{font-family:var(--font-serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.5rem}
-        .page-title em{font-style:italic;color:var(--oudrose)}
-        .page-intro{color:var(--zink);font-size:1.05rem;max-width:560px;margin:0 auto;line-height:1.85}
-        .stats-strip{background:var(--zwart);color:var(--wit);padding:4rem 2rem}
-        .stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
-        .stat-num{font-family:var(--font-serif);font-size:3.5rem;font-weight:300;color:var(--kerrie);line-height:1}
-        .stat-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:0.5rem}
-        .filter-section{padding:4rem 2rem 2rem;max-width:1200px;margin:0 auto}
-        .filter-tabs{display:flex;gap:0.5rem;flex-wrap:wrap}
-        .filter-btn{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;padding:0.6rem 1.4rem;border:1px solid rgba(0,0,0,0.15);background:none;cursor:pointer;transition:all 0.3s;color:var(--zink)}
-        .filter-btn:hover,.filter-btn.active{background:var(--zwart);color:var(--wit);border-color:var(--zwart)}
-        .cases-section{padding:2rem 2rem 7rem}
-        .cases-inner{max-width:1200px;margin:0 auto}
-        .cases-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem}
-        .case-card{text-decoration:none;color:inherit;background:var(--wit);display:block;overflow:hidden;position:relative;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1)}
-        .case-card:hover{transform:translateY(-4px)}
-        .case-card.wide{grid-column:span 8}
-        .case-card.narrow{grid-column:span 4}
-        .case-card.half{grid-column:span 6}
-        .case-card.full{grid-column:span 12}
-        .case-img{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative}
-        .case-card.narrow .case-img{aspect-ratio:4/5}
-        .case-card.full .case-img{aspect-ratio:21/7}
-        .case-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1)}
-        .case-card:hover .case-img-inner{transform:scale(1.05)}
-        .case-icon{font-size:3rem;opacity:0.3}
-        .case-body{padding:2.2rem}
-        .case-tag{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--kerrie);font-weight:500;display:block;margin-bottom:0.7rem}
-        .case-card h3{font-family:var(--font-serif);font-size:1.5rem;font-weight:400;line-height:1.2;margin-bottom:0.8rem;transition:color 0.3s}
-        .case-card:hover h3{color:var(--olijf)}
-        .case-card p{font-size:0.9rem;color:var(--zink);line-height:1.8;margin-bottom:1.5rem}
-        .case-result{display:flex;align-items:center;gap:1rem;padding-top:1.2rem;border-top:1px solid rgba(0,0,0,0.06)}
-        .case-result-num{font-family:var(--font-serif);font-size:2.2rem;font-weight:300;color:var(--olijf);line-height:1}
-        .case-result-label{font-size:0.78rem;color:var(--zink);line-height:1.4}
-        .testimonials-section{background:var(--wit);padding:8rem 2rem}
-        .testimonials-inner{max-width:1200px;margin:0 auto}
-        .section-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--kerrie);font-weight:500;display:block;margin-bottom:1rem}
-        .section-title{font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;margin-bottom:3.5rem}
-        .section-title em{font-style:italic;color:var(--olijf)}
-        .testimonials-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-        .t-card{background:var(--beige);padding:2.5rem;border-bottom:3px solid transparent;transition:border-color 0.3s}
-        .t-card:hover{border-color:var(--kerrie)}
-        .t-stars{color:var(--kerrie);font-size:0.85rem;margin-bottom:1.2rem}
-        .t-quote{font-family:var(--font-serif);font-size:1.08rem;font-style:italic;font-weight:300;line-height:1.8;color:var(--zwart);margin-bottom:1.8rem}
-        .t-meta{display:flex;align-items:center;gap:1rem}
-        .t-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--olijf-lt),var(--kerrie));display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;color:#fff;flex-shrink:0}
-        .t-name{font-size:0.75rem;font-weight:500;color:var(--zwart)}
-        .t-role{font-size:0.65rem;letter-spacing:0.08em;color:var(--zink);text-transform:uppercase}
-        .logos-section{padding:5rem 2rem;background:var(--beige);text-align:center}
-        .logos-inner{max-width:900px;margin:0 auto}
-        .logos-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--zink);margin-bottom:3rem;display:block}
-        .logos-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:3rem 4rem}
-        .logo-placeholder{font-family:var(--font-serif);font-size:1.1rem;color:rgba(0,0,0,0.2);letter-spacing:0.1em;font-style:italic}
-        .cta-section{padding:8rem 2rem;background:var(--olijf);text-align:center;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(255,255,255,0.05) 0%,transparent 70%)}
-        .cta-content{position:relative;z-index:1}
-        .cta-content h2{font-family:var(--font-serif);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:1.4rem}
-        .cta-content h2 em{font-style:italic;color:rgba(255,255,255,0.7)}
-        .cta-content p{color:rgba(255,255,255,0.75);font-size:1rem;max-width:500px;margin:0 auto 2.8rem}
-        .btn-white{display:inline-block;background:#fff;color:var(--olijf);padding:1.1rem 2.8rem;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all 0.3s}
-        .btn-white:hover{background:var(--zwart);color:#fff}
-        footer{background:var(--zwart);color:rgba(255,255,255,0.4);padding:5rem 2rem 2rem}
-        .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
-        .footer-brand .nav-logo{color:#fff;display:block;margin-bottom:1.2rem}
-        .footer-brand p{font-size:0.88rem;line-height:1.85;max-width:260px}
-        .footer-col h4{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:500;margin-bottom:1.4rem}
-        .footer-col ul{list-style:none}
-        .footer-col li{margin-bottom:0.75rem}
-        .footer-col a{text-decoration:none;color:rgba(255,255,255,0.4);font-size:0.9rem;transition:color 0.3s}
-        .footer-col a:hover{color:var(--kerrie)}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center}
-        .footer-bottom p{font-size:0.68rem;letter-spacing:0.1em}
-        .footer-social{display:flex;gap:1.2rem}
-        .footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,0.4);font-size:0.75rem;transition:all 0.3s}
-        .footer-social a:hover{border-color:var(--kerrie);color:var(--kerrie)}
-        @media(max-width:1024px){.case-card.wide{grid-column:span 12}.case-card.narrow{grid-column:span 6}.stats-inner{grid-template-columns:repeat(2,1fr)}.testimonials-masonry{grid-template-columns:repeat(2,1fr)}}
-        @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.footer-inner{grid-template-columns:1fr 1fr}}
-        @media(max-width:600px){.case-card.wide,.case-card.narrow,.case-card.half,.case-card.full{grid-column:span 12}.testimonials-masonry{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr;gap:2.5rem}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
-    
-        /* ── LOGO IMAGES ── */
-        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
-        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
-        .footer-logo { display: inline-block; }
-        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
-        
-        /* ── NAV OVERFLOW FIX (mobile) ── */
-        nav { width: 100%; max-width: 100vw; overflow: hidden; }
-        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
-        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
-        .nav-logo-img { flex-shrink: 0; }
-        html, body { overflow-x: hidden; max-width: 100%; }
-        /* Hero circles overflow fix */
-        .hero { overflow: hidden; }
-        .page-hero { overflow: hidden; }
-        header { overflow-x: hidden; }
-        @media (max-width: 900px) {
-            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
-            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
-            .contact-hero { overflow: hidden; }
-            .footer-inner { overflow-x: hidden; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --zwart: #111110;
+        --olijf: #5a6b3a;
+        --olijf-lt: #8a9e62;
+        --kerrie: #c49a1a;
+        --oudrose: #c2867e;
+        --beige: #f6f3ee;
+        --wit: #fdfcfa;
+        --zink: #6b6b67;
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-sans: "DM Sans", system-ui, sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--beige);
+        color: var(--zwart);
+        font-family: var(--font-sans);
+        font-weight: 300;
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--kerrie);
+        color: #fff;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(246, 243, 238, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(90, 107, 58, 0.12);
+        transition: all 0.4s;
+      }
+      nav.scrolled {
+        background: rgba(253, 252, 250, 0.97);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+      }
+      .nav-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: var(--zwart);
+        letter-spacing: -0.02em;
+      }
+      .nav-logo em {
+        color: var(--olijf);
+        font-style: italic;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--zink);
+        transition: color 0.3s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--olijf);
+      }
+      .nav-links a.cta {
+        border: 1px solid var(--zwart);
+        padding: 0.6rem 1.4rem;
+        color: var(--zwart);
+        transition: all 0.3s;
+      }
+      .nav-links a.cta:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.25rem;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background: var(--zwart);
+        transition: all 0.3s;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        overflow: hidden;
+        background: var(--beige);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        clip-path: circle(0% at calc(100% - 44px) 40px);
+        transition:
+          clip-path 0.55s cubic-bezier(0.77, 0, 0.175, 1),
+          opacity 0.2s ease;
+      }
+      .mobile-menu.open {
+        opacity: 1;
+        pointer-events: all;
+        clip-path: circle(150% at calc(100% - 44px) 40px);
+      }
+      .mobile-menu a {
+        font-family: var(--font-serif);
+        font-size: 2.4rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--zwart);
+        padding: 0.6rem 0;
+        letter-spacing: -0.01em;
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          color 0.3s,
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .mobile-menu.open a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .mobile-menu.open a:nth-child(1) {
+        transition-delay: 0.18s;
+      }
+      .mobile-menu.open a:nth-child(2) {
+        transition-delay: 0.24s;
+      }
+      .mobile-menu.open a:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .mobile-menu.open a:nth-child(4) {
+        transition-delay: 0.36s;
+      }
+      .mobile-menu.open a:nth-child(5) {
+        transition-delay: 0.42s;
+      }
+      .mobile-menu.open a:nth-child(6) {
+        transition-delay: 0.48s;
+      }
+      .mobile-menu a:hover {
+        color: var(--olijf);
+      }
+      .mobile-menu::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 0;
+        background: rgba(90, 107, 58, 0.15);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: height 0.5s ease 0.1s;
+      }
+      .mobile-menu.open::before {
+        height: 55%;
+      }
+      .hamburger span {
+        transition: all 0.35s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+      .page-hero {
+        padding: 12rem 2rem 7rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(90, 107, 58, 0.06) 0%, transparent 70%);
+      }
+      .page-hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .page-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+      }
+      .page-title em {
+        font-style: italic;
+        color: var(--oudrose);
+      }
+      .page-intro {
+        color: var(--zink);
+        font-size: 1.05rem;
+        max-width: 560px;
+        margin: 0 auto;
+        line-height: 1.85;
+      }
+      .stats-strip {
+        background: var(--zwart);
+        color: var(--wit);
+        padding: 4rem 2rem;
+      }
+      .stats-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        text-align: center;
+      }
+      .stat-num {
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: var(--kerrie);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 0.5rem;
+      }
+      .filter-section {
+        padding: 4rem 2rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .filter-tabs {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .filter-btn {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0.6rem 1.4rem;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        color: var(--zink);
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--zwart);
+        color: var(--wit);
+        border-color: var(--zwart);
+      }
+      .cases-section {
+        padding: 2rem 2rem 7rem;
+      }
+      .cases-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .cases-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+      }
+      .case-card {
+        text-decoration: none;
+        color: inherit;
+        background: var(--wit);
+        display: block;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .case-card:hover {
+        transform: translateY(-4px);
+      }
+      .case-card.wide {
+        grid-column: span 8;
+      }
+      .case-card.narrow {
+        grid-column: span 4;
+      }
+      .case-card.half {
+        grid-column: span 6;
+      }
+      .case-card.full {
+        grid-column: span 12;
+      }
+      .case-img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        position: relative;
+      }
+      .case-card.narrow .case-img {
+        aspect-ratio: 4/5;
+      }
+      .case-card.full .case-img {
+        aspect-ratio: 21/7;
+      }
+      .case-img-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .case-card:hover .case-img-inner {
+        transform: scale(1.05);
+      }
+      .case-icon {
+        font-size: 3rem;
+        opacity: 0.3;
+      }
+      .case-body {
+        padding: 2.2rem;
+      }
+      .case-tag {
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 0.7rem;
+      }
+      .case-card h3 {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+        transition: color 0.3s;
+      }
+      .case-card:hover h3 {
+        color: var(--olijf);
+      }
+      .case-card p {
+        font-size: 0.9rem;
+        color: var(--zink);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .case-result {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .case-result-num {
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--olijf);
+        line-height: 1;
+      }
+      .case-result-label {
+        font-size: 0.78rem;
+        color: var(--zink);
+        line-height: 1.4;
+      }
+      .testimonials-section {
+        background: var(--wit);
+        padding: 8rem 2rem;
+      }
+      .testimonials-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 300;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+        margin-bottom: 3.5rem;
+      }
+      .section-title em {
+        font-style: italic;
+        color: var(--olijf);
+      }
+      .testimonials-masonry {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .t-card {
+        background: var(--beige);
+        padding: 2.5rem;
+        border-bottom: 3px solid transparent;
+        transition: border-color 0.3s;
+      }
+      .t-card:hover {
+        border-color: var(--kerrie);
+      }
+      .t-stars {
+        color: var(--kerrie);
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+      }
+      .t-quote {
+        font-family: var(--font-serif);
+        font-size: 1.08rem;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.8;
+        color: var(--zwart);
+        margin-bottom: 1.8rem;
+      }
+      .t-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .t-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--olijf-lt), var(--kerrie));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-serif);
+        font-size: 1rem;
+        color: #fff;
+        flex-shrink: 0;
+      }
+      .t-name {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--zwart);
+      }
+      .t-role {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        color: var(--zink);
+        text-transform: uppercase;
+      }
+      .logos-section {
+        padding: 5rem 2rem;
+        background: var(--beige);
+        text-align: center;
+      }
+      .logos-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .logos-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--zink);
+        margin-bottom: 3rem;
+        display: block;
+      }
+      .logos-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem 4rem;
+      }
+      .logo-placeholder {
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        color: rgba(0, 0, 0, 0.2);
+        letter-spacing: 0.1em;
+        font-style: italic;
+      }
+      .cta-section {
+        padding: 8rem 2rem;
+        background: var(--olijf);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      }
+      .cta-content {
+        position: relative;
+        z-index: 1;
+      }
+      .cta-content h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 1.4rem;
+      }
+      .cta-content h2 em {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .cta-content p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+        max-width: 500px;
+        margin: 0 auto 2.8rem;
+      }
+      .btn-white {
+        display: inline-block;
+        background: #fff;
+        color: var(--olijf);
+        padding: 1.1rem 2.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .btn-white:hover {
+        background: var(--zwart);
+        color: #fff;
+      }
+      footer {
+        background: var(--zwart);
+        color: rgba(255, 255, 255, 0.4);
+        padding: 5rem 2rem 2rem;
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-brand .nav-logo {
+        color: #fff;
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .footer-brand p {
+        font-size: 0.88rem;
+        line-height: 1.85;
+        max-width: 260px;
+      }
+      .footer-col h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+        margin-bottom: 1.4rem;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col li {
+        margin-bottom: 0.75rem;
+      }
+      .footer-col a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9rem;
+        transition: color 0.3s;
+      }
+      .footer-col a:hover {
+        color: var(--kerrie);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-bottom p {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+      }
+      .footer-social {
+        display: flex;
+        gap: 1.2rem;
+      }
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        transition: all 0.3s;
+      }
+      .footer-social a:hover {
+        border-color: var(--kerrie);
+        color: var(--kerrie);
+      }
+      @media (max-width: 1024px) {
+        .case-card.wide {
+          grid-column: span 12;
         }
-        @media (max-width: 600px) {
-            .form-row { grid-template-columns: 1fr !important; }
-            .service-cards { grid-template-columns: 1fr 1fr !important; }
-            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .case-card.narrow {
+          grid-column: span 6;
         }
-        </style>
-</head>
-<body>
-<nav id="mainNav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
+        .stats-inner {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .testimonials-masonry {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .case-card.wide,
+        .case-card.narrow,
+        .case-card.half,
+        .case-card.full {
+          grid-column: span 12;
+        }
+        .testimonials-masonry {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+
+      .nav-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-logo-img {
+        height: 32px;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+      .footer-logo {
+        display: inline-block;
+      }
+      .footer-logo-img {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+      .nav-inner {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .nav-logo {
+        max-width: calc(100vw - 100px);
+        overflow: hidden;
+      }
+      .nav-logo-img {
+        flex-shrink: 0;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      .hero {
+        overflow: hidden;
+      }
+      .page-hero {
+        overflow: hidden;
+      }
+      header {
+        overflow-x: hidden;
+      }
+      @media (max-width: 900px) {
+        .hero-circle {
+          width: min(520px, 90vw) !important;
+          height: min(520px, 90vw) !important;
+        }
+        .hero-circle-2 {
+          width: min(380px, 90vw) !important;
+          height: min(380px, 90vw) !important;
+        }
+        .contact-hero {
+          overflow: hidden;
+        }
+        .footer-inner {
+          overflow-x: hidden;
+        }
+      }
+      @media (max-width: 600px) {
+        .form-row {
+          grid-template-columns: 1fr !important;
+        }
+        .service-cards {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .avail-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="OntwikkelOase logo" class="nav-logo-img" />
+          Ontwikkel
+          <em>Oase</em>
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="over.html">Over Josine</a></li>
-            <li><a href="aanbod.html">Aanbod</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over.html">Over Josine</a></li>
+          <li><a href="aanbod.html">Aanbod</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="cta">Boek een sessie</a></li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu openen"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu openen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="over.html">Over Josine</a>
+      <a href="aanbod.html">Aanbod</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Boek een sessie</a>
     </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a><a href="over.html">Over Josine</a><a href="aanbod.html">Aanbod</a>
-    <a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="contact.html">Boek een sessie</a>
-</div>
 
-<header class="page-hero">
-    <div class="page-hero-content">
+    <header class="page-hero">
+      <div class="page-hero-content">
         <span class="page-label" data-aos="fade-up">Portfolio & Resultaten</span>
-        <h1 class="page-title" data-aos="fade-up" data-aos-delay="80">Verhalen van<br><em>echte groei.</em></h1>
-        <p class="page-intro" data-aos="fade-up" data-aos-delay="160">Elke samenwerking is uniek. Hieronder vind je een selectie van trajecten en de resultaten die zijn bereikt — in vertrouwen en met respect voor ieders privacy.</p>
-    </div>
-</header>
+        <h1 class="page-title" data-aos="fade-up" data-aos-delay="80">
+          Verhalen van
+          <br />
+          <em>echte groei.</em>
+        </h1>
+        <p class="page-intro" data-aos="fade-up" data-aos-delay="160">
+          Elke samenwerking is uniek. Hieronder vind je een selectie van trajecten en de resultaten die zijn bereikt —
+          in vertrouwen en met respect voor ieders privacy.
+        </p>
+      </div>
+    </header>
 
-<div class="stats-strip">
-    <div class="stats-inner">
-        <div data-aos="fade-up"><div class="stat-num">200+</div><div class="stat-label">Individuen begeleid</div></div>
-        <div data-aos="fade-up" data-aos-delay="80"><div class="stat-num">50+</div><div class="stat-label">Teams geholpen</div></div>
-        <div data-aos="fade-up" data-aos-delay="160"><div class="stat-num">15+</div><div class="stat-label">Sectoren</div></div>
-        <div data-aos="fade-up" data-aos-delay="240"><div class="stat-num">98%</div><div class="stat-label">Beveelt aan</div></div>
+    <div class="stats-strip">
+      <div class="stats-inner">
+        <div data-aos="fade-up">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Individuen begeleid</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="80">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Teams geholpen</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="160">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Sectoren</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="240">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Beveelt aan</div>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="filter-section">
-    <div class="filter-tabs" data-aos="fade-up">
+    <div class="filter-section">
+      <div class="filter-tabs" data-aos="fade-up">
         <button class="filter-btn active">Alle trajecten</button>
         <button class="filter-btn">1-op-1 Coaching</button>
         <button class="filter-btn">Teamontwikkeling</button>
         <button class="filter-btn">Leiderschap</button>
         <button class="filter-btn">Organisatieverandering</button>
+      </div>
     </div>
-</div>
 
-<section class="cases-section">
-    <div class="cases-inner">
+    <section class="cases-section">
+      <div class="cases-inner">
         <div class="cases-grid">
-            <a href="#" class="case-card wide" data-aos="fade-up">
-                <div class="case-img" style="background:linear-gradient(135deg,rgba(90,107,58,0.12),rgba(196,154,26,0.08))">
-                    <div class="case-img-inner"><span class="case-icon">🌱</span></div>
-                </div>
-                <div class="case-body">
-                    <span class="case-tag">1-op-1 Coaching · 6 maanden</span>
-                    <h3>Van burnout naar bloei — het verhaal van een manager</h3>
-                    <p>Na jarenlang voor anderen zorgen, was de balans volledig zoek. In een intensief traject werkte ze aan haar grenzen, haar identiteit en haar ambities. Vandaag leidt ze haar team met rust en zelfvertrouwen.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">6 mnd</div>
-                        <div class="case-result-label">Traject duur<br><span style="color:var(--olijf);font-weight:500">Terugkeer naar werk met nieuwe balans</span></div>
-                    </div>
-                </div>
-            </a>
-            <div class="case-card narrow" data-aos="fade-up" data-aos-delay="80">
-                <div class="case-img" style="background:linear-gradient(160deg,rgba(194,134,126,0.15),rgba(90,107,58,0.08))">
-                    <div class="case-img-inner"><span class="case-icon">🤝</span></div>
-                </div>
-                <div class="case-body">
-                    <span class="case-tag">Teamontwikkeling · Workshop serie</span>
-                    <h3>Een verdeeld team dat één geheel werd</h3>
-                    <p>Drie workshops over drie maanden transformeerden een team met wrijving in een cultuur van openheid en vertrouwen.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">↑40%</div>
-                        <div class="case-result-label">Hogere teamscore<br>medewerkerstevredenheid</div>
-                    </div>
-                </div>
+          <a href="#" class="case-card wide" data-aos="fade-up">
+            <div
+              class="case-img"
+              style="background: linear-gradient(135deg, rgba(90, 107, 58, 0.12), rgba(196, 154, 26, 0.08))"
+            >
+              <div class="case-img-inner"><span class="case-icon">🌱</span></div>
             </div>
-            <div class="case-card half" data-aos="fade-up">
-                <div class="case-img" style="background:linear-gradient(135deg,rgba(196,154,26,0.12),rgba(90,107,58,0.06))">
-                    <div class="case-img-inner"><span class="case-icon">👑</span></div>
+            <div class="case-body">
+              <span class="case-tag">1-op-1 Coaching · 6 maanden</span>
+              <h3>Van burnout naar bloei — het verhaal van een manager</h3>
+              <p>
+                Na jarenlang voor anderen zorgen, was de balans volledig zoek. In een intensief traject werkte ze aan
+                haar grenzen, haar identiteit en haar ambities. Vandaag leidt ze haar team met rust en zelfvertrouwen.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">6 mnd</div>
+                <div class="case-result-label">
+                  Traject duur
+                  <br />
+                  <span style="color: var(--olijf); font-weight: 500">Terugkeer naar werk met nieuwe balans</span>
                 </div>
-                <div class="case-body">
-                    <span class="case-tag">Leiderschapstraject · 9 maanden</span>
-                    <h3>De directeur die zijn team leerde los te laten</h3>
-                    <p>Controle loslaten bleek de sleutel tot meer impact. Een intensief traject over vertrouwen, delegeren en authenticiteit.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">9 mnd</div>
-                        <div class="case-result-label">Team zelfstandigheid<br>verviervoudigd</div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="case-card half" data-aos="fade-up" data-aos-delay="100">
-                <div class="case-img" style="background:linear-gradient(135deg,rgba(90,107,58,0.08),rgba(194,134,126,0.12))">
-                    <div class="case-img-inner"><span class="case-icon">🏢</span></div>
-                </div>
-                <div class="case-body">
-                    <span class="case-tag">Organisatieverandering · 12 maanden</span>
-                    <h3>Cultuurverandering bij een zorginstelling</h3>
-                    <p>Van top-down naar samenwerkend. Een jaar lang begeleid Josine het management en de teams bij een fundamentele cultuurswitch.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">12 mnd</div>
-                        <div class="case-result-label">Verloop medewerkers<br>gehalveerd</div>
-                    </div>
-                </div>
+          </a>
+          <div class="case-card narrow" data-aos="fade-up" data-aos-delay="80">
+            <div
+              class="case-img"
+              style="background: linear-gradient(160deg, rgba(194, 134, 126, 0.15), rgba(90, 107, 58, 0.08))"
+            >
+              <div class="case-img-inner"><span class="case-icon">🤝</span></div>
             </div>
-            <div class="case-card full" data-aos="fade-up">
-                <div class="case-img" style="background:linear-gradient(90deg,rgba(90,107,58,0.1),rgba(196,154,26,0.08),rgba(194,134,126,0.1))">
-                    <div class="case-img-inner"><span class="case-icon">✨</span></div>
+            <div class="case-body">
+              <span class="case-tag">Teamontwikkeling · Workshop serie</span>
+              <h3>Een verdeeld team dat één geheel werd</h3>
+              <p>
+                Drie workshops over drie maanden transformeerden een team met wrijving in een cultuur van openheid en
+                vertrouwen.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">↑40%</div>
+                <div class="case-result-label">
+                  Hogere teamscore
+                  <br />
+                  medewerkerstevredenheid
                 </div>
-                <div class="case-body">
-                    <span class="case-tag">Innovatietraject · Startup omgeving</span>
-                    <h3>Ruimte voor nieuwe ideeën: van idee naar impact</h3>
-                    <p>Een tech-startup worstelde met creativiteit onder druk. Ontwikkel-Oase creëerde een veilige oase voor innovatie: wekelijkse sessies die de cultuur van experimenteren deden herleven. Binnen zes maanden stonden drie nieuwe productideeën klaar voor lancering.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">3x</div>
-                        <div class="case-result-label">Nieuwe producten gelanceerd na het traject &nbsp;·&nbsp; Team van 12 personen &nbsp;·&nbsp; 6 maanden begeleiding</div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="case-card narrow" data-aos="fade-up">
-                <div class="case-img" style="background:linear-gradient(135deg,rgba(196,154,26,0.1),rgba(90,107,58,0.08))">
-                    <div class="case-img-inner"><span class="case-icon">🎯</span></div>
-                </div>
-                <div class="case-body">
-                    <span class="case-tag">1-op-1 Coaching · 3 maanden</span>
-                    <h3>De ondernemer die haar koers terugvond</h3>
-                    <p>Na vijf jaar draaien verloor ze het waarom. Coaching bracht haar terug bij haar kern en gaf richting aan haar nieuwe strategie.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">3 mnd</div>
-                        <div class="case-result-label">Nieuwe strategie<br>en herprioritering</div>
-                    </div>
-                </div>
+          </div>
+          <div class="case-card half" data-aos="fade-up">
+            <div
+              class="case-img"
+              style="background: linear-gradient(135deg, rgba(196, 154, 26, 0.12), rgba(90, 107, 58, 0.06))"
+            >
+              <div class="case-img-inner"><span class="case-icon">👑</span></div>
             </div>
-            <div class="case-card wide" data-aos="fade-up" data-aos-delay="80">
-                <div class="case-img" style="background:linear-gradient(135deg,rgba(194,134,126,0.12),rgba(196,154,26,0.08))">
-                    <div class="case-img-inner"><span class="case-icon">🌿</span></div>
+            <div class="case-body">
+              <span class="case-tag">Leiderschapstraject · 9 maanden</span>
+              <h3>De directeur die zijn team leerde los te laten</h3>
+              <p>
+                Controle loslaten bleek de sleutel tot meer impact. Een intensief traject over vertrouwen, delegeren en
+                authenticiteit.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">9 mnd</div>
+                <div class="case-result-label">
+                  Team zelfstandigheid
+                  <br />
+                  verviervoudigd
                 </div>
-                <div class="case-body">
-                    <span class="case-tag">Teamontwikkeling + Leiderschap · 6 maanden</span>
-                    <h3>Leiderschapsteam van een gemeente: samen sterker sturen</h3>
-                    <p>Zes maanden lang werkte Josine met het MT van een gemeente aan gedeeld leiderschap, besluitvorming en onderlinge vertrouwen. Het resultaat: meer daadkracht, minder overlegcultuur en een duidelijkere richting voor de gehele organisatie.</p>
-                    <div class="case-result">
-                        <div class="case-result-num">18</div>
-                        <div class="case-result-label">Leidinggevenden deelgenomen &nbsp;·&nbsp; Besluitvorming versneld met 35%</div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="case-card half" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="case-img"
+              style="background: linear-gradient(135deg, rgba(90, 107, 58, 0.08), rgba(194, 134, 126, 0.12))"
+            >
+              <div class="case-img-inner"><span class="case-icon">🏢</span></div>
+            </div>
+            <div class="case-body">
+              <span class="case-tag">Organisatieverandering · 12 maanden</span>
+              <h3>Cultuurverandering bij een zorginstelling</h3>
+              <p>
+                Van top-down naar samenwerkend. Een jaar lang begeleid Josine het management en de teams bij een
+                fundamentele cultuurswitch.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">12 mnd</div>
+                <div class="case-result-label">
+                  Verloop medewerkers
+                  <br />
+                  gehalveerd
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card full" data-aos="fade-up">
+            <div
+              class="case-img"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  rgba(90, 107, 58, 0.1),
+                  rgba(196, 154, 26, 0.08),
+                  rgba(194, 134, 126, 0.1)
+                );
+              "
+            >
+              <div class="case-img-inner"><span class="case-icon">✨</span></div>
+            </div>
+            <div class="case-body">
+              <span class="case-tag">Innovatietraject · Startup omgeving</span>
+              <h3>Ruimte voor nieuwe ideeën: van idee naar impact</h3>
+              <p>
+                Een tech-startup worstelde met creativiteit onder druk. OntwikkelOase creëerde een veilige oase voor
+                innovatie: wekelijkse sessies die de cultuur van experimenteren deden herleven. Binnen zes maanden
+                stonden drie nieuwe productideeën klaar voor lancering.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">3x</div>
+                <div class="case-result-label">
+                  Nieuwe producten gelanceerd na het traject &nbsp;·&nbsp; Team van 12 personen &nbsp;·&nbsp; 6 maanden
+                  begeleiding
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card narrow" data-aos="fade-up">
+            <div
+              class="case-img"
+              style="background: linear-gradient(135deg, rgba(196, 154, 26, 0.1), rgba(90, 107, 58, 0.08))"
+            >
+              <div class="case-img-inner"><span class="case-icon">🎯</span></div>
+            </div>
+            <div class="case-body">
+              <span class="case-tag">1-op-1 Coaching · 3 maanden</span>
+              <h3>De ondernemer die haar koers terugvond</h3>
+              <p>
+                Na vijf jaar draaien verloor ze het waarom. Coaching bracht haar terug bij haar kern en gaf richting aan
+                haar nieuwe strategie.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">3 mnd</div>
+                <div class="case-result-label">
+                  Nieuwe strategie
+                  <br />
+                  en herprioritering
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card wide" data-aos="fade-up" data-aos-delay="80">
+            <div
+              class="case-img"
+              style="background: linear-gradient(135deg, rgba(194, 134, 126, 0.12), rgba(196, 154, 26, 0.08))"
+            >
+              <div class="case-img-inner"><span class="case-icon">🌿</span></div>
+            </div>
+            <div class="case-body">
+              <span class="case-tag">Teamontwikkeling + Leiderschap · 6 maanden</span>
+              <h3>Leiderschapsteam van een gemeente: samen sterker sturen</h3>
+              <p>
+                Zes maanden lang werkte Josine met het MT van een gemeente aan gedeeld leiderschap, besluitvorming en
+                onderlinge vertrouwen. Het resultaat: meer daadkracht, minder overlegcultuur en een duidelijkere
+                richting voor de gehele organisatie.
+              </p>
+              <div class="case-result">
+                <div class="case-result-num">18</div>
+                <div class="case-result-label">
+                  Leidinggevenden deelgenomen &nbsp;·&nbsp; Besluitvorming versneld met 35%
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="testimonials-section">
-    <div class="testimonials-inner">
+    <section class="testimonials-section">
+      <div class="testimonials-inner">
         <span class="section-label" data-aos="fade-up">Wat anderen zeggen</span>
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Ervaringen uit de <em>praktijk.</em></h2>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+          Ervaringen uit de
+          <em>praktijk.</em>
+        </h2>
         <div class="testimonials-masonry">
-            <div class="t-card" data-aos="fade-up"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"Josine heeft mij geholpen om eindelijk mijn eigen stem te vinden. Het traject was intens, eerlijk en ontzettend waardevol."</p><div class="t-meta"><div class="t-avatar">S</div><div><div class="t-name">Sarah V.</div><div class="t-role">Manager · Gezondheidszorg</div></div></div></div>
-            <div class="t-card" data-aos="fade-up" data-aos-delay="80"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"Ons team heeft een enorme transformatie doorgemaakt. De sfeer, het vertrouwen en de samenwerking zijn compleet veranderd."</p><div class="t-meta"><div class="t-avatar">M</div><div><div class="t-name">Mark T.</div><div class="t-role">Directeur · Technologie</div></div></div></div>
-            <div class="t-card" data-aos="fade-up" data-aos-delay="160"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"Ik had nooit gedacht dat coaching zoveel impact kon hebben. Josine creëert een veiligheid die ik nergens anders heb ervaren."</p><div class="t-meta"><div class="t-avatar">L</div><div><div class="t-name">Lisa B.</div><div class="t-role">Ondernemer · Retail</div></div></div></div>
-            <div class="t-card" data-aos="fade-up"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"Als leidinggevende leerde ik loslaten wat me tegenhield. Het leiderschapstraject was een keerpunt in mijn carrière."</p><div class="t-meta"><div class="t-avatar">R</div><div><div class="t-name">Rob H.</div><div class="t-role">MT-lid · Overheid</div></div></div></div>
-            <div class="t-card" data-aos="fade-up" data-aos-delay="80"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"De teamworkshops waren een eye-opener. We praten nu écht met elkaar in plaats van langs elkaar heen."</p><div class="t-meta"><div class="t-avatar">A</div><div><div class="t-name">Anna K.</div><div class="t-role">Teamlead · Finance</div></div></div></div>
-            <div class="t-card" data-aos="fade-up" data-aos-delay="160"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-quote">"Wat Josine bijzonder maakt? Ze stelt de vragen die je zelf niet durft te stellen. Daarin zit haar kracht."</p><div class="t-meta"><div class="t-avatar">P</div><div><div class="t-name">Peter W.</div><div class="t-role">Ondernemer · Dienstverlening</div></div></div></div>
+          <div class="t-card" data-aos="fade-up">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "Josine heeft mij geholpen om eindelijk mijn eigen stem te vinden. Het traject was intens, eerlijk en
+              ontzettend waardevol."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">S</div>
+              <div>
+                <div class="t-name">Sarah V.</div>
+                <div class="t-role">Manager · Gezondheidszorg</div>
+              </div>
+            </div>
+          </div>
+          <div class="t-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "Ons team heeft een enorme transformatie doorgemaakt. De sfeer, het vertrouwen en de samenwerking zijn
+              compleet veranderd."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">M</div>
+              <div>
+                <div class="t-name">Mark T.</div>
+                <div class="t-role">Directeur · Technologie</div>
+              </div>
+            </div>
+          </div>
+          <div class="t-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "Ik had nooit gedacht dat coaching zoveel impact kon hebben. Josine creëert een veiligheid die ik nergens
+              anders heb ervaren."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">L</div>
+              <div>
+                <div class="t-name">Lisa B.</div>
+                <div class="t-role">Ondernemer · Retail</div>
+              </div>
+            </div>
+          </div>
+          <div class="t-card" data-aos="fade-up">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "Als leidinggevende leerde ik loslaten wat me tegenhield. Het leiderschapstraject was een keerpunt in mijn
+              carrière."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">R</div>
+              <div>
+                <div class="t-name">Rob H.</div>
+                <div class="t-role">MT-lid · Overheid</div>
+              </div>
+            </div>
+          </div>
+          <div class="t-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "De teamworkshops waren een eye-opener. We praten nu écht met elkaar in plaats van langs elkaar heen."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">A</div>
+              <div>
+                <div class="t-name">Anna K.</div>
+                <div class="t-role">Teamlead · Finance</div>
+              </div>
+            </div>
+          </div>
+          <div class="t-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-quote">
+              "Wat Josine bijzonder maakt? Ze stelt de vragen die je zelf niet durft te stellen. Daarin zit haar
+              kracht."
+            </p>
+            <div class="t-meta">
+              <div class="t-avatar">P</div>
+              <div>
+                <div class="t-name">Peter W.</div>
+                <div class="t-role">Ondernemer · Dienstverlening</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<div class="logos-section">
-    <div class="logos-inner">
-        <span class="logos-label" data-aos="fade-up">Organisaties waarmee Ontwikkel-Oase heeft samengewerkt</span>
+    <div class="logos-section">
+      <div class="logos-inner">
+        <span class="logos-label" data-aos="fade-up">Organisaties waarmee OntwikkelOase heeft samengewerkt</span>
         <div class="logos-row" data-aos="fade-up" data-aos-delay="80">
-            <span class="logo-placeholder">Gemeente</span>
-            <span class="logo-placeholder">Zorginstelling</span>
-            <span class="logo-placeholder">Tech Startup</span>
-            <span class="logo-placeholder">Onderwijs</span>
-            <span class="logo-placeholder">Finance</span>
-            <span class="logo-placeholder">Retail</span>
+          <span class="logo-placeholder">Gemeente</span>
+          <span class="logo-placeholder">Zorginstelling</span>
+          <span class="logo-placeholder">Tech Startup</span>
+          <span class="logo-placeholder">Onderwijs</span>
+          <span class="logo-placeholder">Finance</span>
+          <span class="logo-placeholder">Retail</span>
         </div>
+      </div>
     </div>
-</div>
 
-<section class="cta-section">
-    <div class="cta-content" data-aos="zoom-in">
-        <h2>Jouw verhaal begint <em>hier.</em></h2>
+    <section class="cta-section">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>
+          Jouw verhaal begint
+          <em>hier.</em>
+        </h2>
         <p>Klaar om jouw eigen succesverhaal te schrijven? Plan een gratis kennismakingsgesprek.</p>
         <a href="contact.html" class="btn-white">Gratis gesprek plannen</a>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    <div class="footer-inner">
-        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a><p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p></div>
-        <div class="footer-col"><h4>Navigatie</h4><ul><li><a href="index.html">Home</a></li><li><a href="over.html">Over Josine</a></li><li><a href="aanbod.html">Aanbod</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-        <div class="footer-col"><h4>Diensten</h4><ul><li><a href="coaching-1op1.html">1-op-1 Coaching</a></li><li><a href="teamontwikkeling.html">Teamontwikkeling</a></li><li><a href="leiderschapstraject.html">Leiderschapstraject</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li><li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li><li><a href="contact.html">Boek een sessie</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Ontwikkel-Oase &nbsp;&middot;&nbsp; Josine Dielissen</p>
-        <div class="footer-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a></div>
-    </div>
-</footer>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo">
+            <img src="assets/full-logo.png" alt="OntwikkelOase" class="footer-logo-img" />
+          </a>
+          <p>
+            Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigatie</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over.html">Over Josine</a></li>
+            <li><a href="aanbod.html">Aanbod</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
+            <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
+            <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+            <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+            <li><a href="contact.html">Boek een sessie</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 OntwikkelOase &nbsp;&middot;&nbsp; Josine Dielissen</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+    </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({duration:900,once:true,offset:60});
-    const nav=document.getElementById('mainNav');
-    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-    const hamburger=document.getElementById('hamburger');
-    const mobileMenu=document.getElementById('mobileMenu');
-    hamburger.addEventListener('click',()=>{
-        const isOpen=mobileMenu.classList.toggle('open');
-        hamburger.classList.toggle('open',isOpen);
-        document.body.style.overflow=isOpen?'hidden':'';
-    });
-    mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow='';
-    }));
-    document.querySelectorAll('.filter-btn').forEach(btn=>{
-        btn.addEventListener('click',()=>{
-            document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-            btn.classList.add('active');
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 900, once: true, offset: 60 });
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+          document.body.style.overflow = "";
+        }),
+      );
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
         });
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>

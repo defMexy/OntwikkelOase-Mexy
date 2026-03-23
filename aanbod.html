@@ -1,787 +1,1679 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
-    <title>Aanbod | Coaching, Teamontwikkeling & Leiderschap – Ontwikkel-Oase</title>
-    <meta name="description" content="Ontdek het volledige aanbod van Ontwikkel-Oase: 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten. Op maat gemaakt voor mensen en organisaties die willen groeien.">
-    <meta name="keywords" content="coaching aanbod, 1 op 1 coaching, teamontwikkeling, leiderschapstraject, groeitraject, Josine Dielissen, Ontwikkel-Oase">
-    <link rel="canonical" href="https://www.ontwikkeloase.nl/aanbod.html">
-    <meta property="og:title" content="Aanbod | Ontwikkel-Oase">
-    <meta property="og:description" content="1-op-1 coaching, teamontwikkeling en leiderschapstrajecten door Josine Dielissen.">
-    <meta property="og:url" content="https://www.ontwikkeloase.nl/aanbod.html">
-    <meta property="og:type" content="website">
+    <title>Aanbod | Coaching, Teamontwikkeling & Leiderschap – OntwikkelOase</title>
+    <meta
+      name="description"
+      content="Ontdek het volledige aanbod van OntwikkelOase: 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten. Op maat gemaakt voor mensen en organisaties die willen groeien."
+    />
+    <meta
+      name="keywords"
+      content="coaching aanbod, 1 op 1 coaching, teamontwikkeling, leiderschapstraject, groeitraject, Josine Dielissen, OntwikkelOase"
+    />
+    <link rel="canonical" href="https://www.ontwikkeloase.nl/aanbod.html" />
+    <meta property="og:title" content="Aanbod | OntwikkelOase" />
+    <meta
+      property="og:description"
+      content="1-op-1 coaching, teamontwikkeling en leiderschapstrajecten door Josine Dielissen."
+    />
+    <meta property="og:url" content="https://www.ontwikkeloase.nl/aanbod.html" />
+    <meta property="og:type" content="website" />
 
-    <!-- Schema -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "provider": { "@type": "Organization", "name": "Ontwikkel-Oase" },
-            "serviceType": ["1-op-1 Coaching", "Teamontwikkeling", "Leiderschapstraject"],
-            "areaServed": "NL",
-            "url": "https://www.ontwikkeloase.nl/aanbod.html"
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": { "@type": "Organization", "name": "OntwikkelOase" },
+        "serviceType": ["1-op-1 Coaching", "Teamontwikkeling", "Leiderschapstraject"],
+        "areaServed": "NL",
+        "url": "https://www.ontwikkeloase.nl/aanbod.html"
+      }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --zwart:    #111110;
-            --olijf:    #5A6B3A;
-            --olijf-lt: #8A9E62;
-            --kerrie:   #C49A1A;
-            --oudrose:  #C2867E;
-            --beige:    #F6F3EE;
-            --wit:      #FDFCFA;
-            --zink:     #6B6B67;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans:  'DM Sans', system-ui, sans-serif;
-        }
-        html { scroll-behavior: smooth; }
-        body { background: var(--beige); color: var(--zwart); font-family: var(--font-sans); font-weight: 300; line-height: 1.75; overflow-x: hidden; }
-        ::selection { background: var(--kerrie); color: #fff; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --zwart: #111110;
+        --olijf: #5a6b3a;
+        --olijf-lt: #8a9e62;
+        --kerrie: #c49a1a;
+        --oudrose: #c2867e;
+        --beige: #f6f3ee;
+        --wit: #fdfcfa;
+        --zink: #6b6b67;
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-sans: "DM Sans", system-ui, sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--beige);
+        color: var(--zwart);
+        font-family: var(--font-sans);
+        font-weight: 300;
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--kerrie);
+        color: #fff;
+      }
 
-        /* NAV */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,243,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(90,107,58,0.12); transition: all 0.4s ease; }
-        nav.scrolled { background: rgba(253,252,250,0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
-        .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; height: 80px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; text-decoration: none; color: var(--zwart); letter-spacing: -0.02em; }
-        .nav-logo em { color: var(--olijf); font-style: italic; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); transition: color 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--olijf); }
-        .nav-links a.cta { border: 1px solid var(--zwart); padding: 0.6rem 1.4rem; color: var(--zwart); transition: all 0.3s; }
-        .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.25rem; }
-        .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--zwart); }
-        /* ── MOBILE MENU ANIMATED ── */
-        .mobile-menu {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; overflow: hidden;
-            background: var(--beige);
-            flex-direction: column;
-            align-items: center; justify-content: center; gap: 0;
-            display: flex;
-            opacity: 0;
-            pointer-events: none;
-            clip-path: circle(0% at calc(100% - 44px) 40px);
-            transition: clip-path 0.55s cubic-bezier(0.77,0,0.175,1),
-                        opacity 0.2s ease;
-        }
-        .mobile-menu.open {
-            opacity: 1;
-            pointer-events: all;
-            clip-path: circle(150% at calc(100% - 44px) 40px);
-        }
-        .mobile-menu a {
-            font-family: var(--font-serif);
-            font-size: 2.4rem; font-weight: 300;
-            text-decoration: none; color: var(--zwart);
-            padding: 0.6rem 0;
-            letter-spacing: -0.01em;
-            opacity: 0;
-            transform: translateY(18px);
-            transition: color 0.3s, opacity 0.4s ease, transform 0.4s ease;
-        }
-        .mobile-menu.open a { opacity: 1; transform: translateY(0); }
-        .mobile-menu.open a:nth-child(1) { transition-delay: 0.18s; }
-        .mobile-menu.open a:nth-child(2) { transition-delay: 0.24s; }
-        .mobile-menu.open a:nth-child(3) { transition-delay: 0.30s; }
-        .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
-        .mobile-menu.open a:nth-child(5) { transition-delay: 0.42s; }
-        .mobile-menu.open a:nth-child(6) { transition-delay: 0.48s; }
-        .mobile-menu a:hover { color: var(--olijf); }
-        .mobile-menu::before {
-            content: '';
-            position: absolute;
-            width: 1px; height: 0;
-            background: rgba(90,107,58,0.15);
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            transition: height 0.5s ease 0.1s;
-        }
-        .mobile-menu.open::before { height: 55%; }
-        .hamburger span { transition: all 0.35s cubic-bezier(0.77,0,0.175,1); }
-        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(246, 243, 238, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(90, 107, 58, 0.12);
+        transition: all 0.4s ease;
+      }
+      nav.scrolled {
+        background: rgba(253, 252, 250, 0.97);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+      }
+      .nav-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: var(--zwart);
+        letter-spacing: -0.02em;
+      }
+      .nav-logo em {
+        color: var(--olijf);
+        font-style: italic;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--zink);
+        transition: color 0.3s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--olijf);
+      }
+      .nav-links a.cta {
+        border: 1px solid var(--zwart);
+        padding: 0.6rem 1.4rem;
+        color: var(--zwart);
+        transition: all 0.3s;
+      }
+      .nav-links a.cta:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.25rem;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background: var(--zwart);
+      }
 
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        overflow: hidden;
+        background: var(--beige);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        clip-path: circle(0% at calc(100% - 44px) 40px);
+        transition:
+          clip-path 0.55s cubic-bezier(0.77, 0, 0.175, 1),
+          opacity 0.2s ease;
+      }
+      .mobile-menu.open {
+        opacity: 1;
+        pointer-events: all;
+        clip-path: circle(150% at calc(100% - 44px) 40px);
+      }
+      .mobile-menu a {
+        font-family: var(--font-serif);
+        font-size: 2.4rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--zwart);
+        padding: 0.6rem 0;
+        letter-spacing: -0.01em;
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          color 0.3s,
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .mobile-menu.open a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .mobile-menu.open a:nth-child(1) {
+        transition-delay: 0.18s;
+      }
+      .mobile-menu.open a:nth-child(2) {
+        transition-delay: 0.24s;
+      }
+      .mobile-menu.open a:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .mobile-menu.open a:nth-child(4) {
+        transition-delay: 0.36s;
+      }
+      .mobile-menu.open a:nth-child(5) {
+        transition-delay: 0.42s;
+      }
+      .mobile-menu.open a:nth-child(6) {
+        transition-delay: 0.48s;
+      }
+      .mobile-menu a:hover {
+        color: var(--olijf);
+      }
+      .mobile-menu::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 0;
+        background: rgba(90, 107, 58, 0.15);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: height 0.5s ease 0.1s;
+      }
+      .mobile-menu.open::before {
+        height: 55%;
+      }
+      .hamburger span {
+        transition: all 0.35s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
 
-        /* PAGE HERO */
-        .page-hero {
-            min-height: 55vh;
-            background: var(--beige);
-            display: flex; align-items: flex-end;
-            padding: 9rem 2rem 5rem;
-            position: relative; overflow: hidden;
-            border-bottom: 1px solid rgba(90,107,58,0.1);
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
         }
-        .hero-bg-text {
-            position: absolute; right: 3%; top: 52%;
-            transform: translateY(-50%);
-            font-family: var(--font-serif);
-            font-size: clamp(10rem, 18vw, 18rem);
-            font-weight: 300; font-style: italic;
-            color: rgba(90,107,58,0.05);
-            line-height: 1; pointer-events: none;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        .page-hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
-        .page-hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.2s forwards; }
-        .page-hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.08; letter-spacing: -0.02em; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.4s forwards; }
-        .page-hero-title em { font-style: italic; color: var(--olijf); }
-        .page-hero-sub { font-size: 1rem; color: var(--zink); max-width: 520px; margin-top: 1.4rem; line-height: 1.85; opacity: 0; animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.6s forwards; }
+      }
 
-        /* FILTER NAV */
-        .filter-nav { background: var(--wit); border-bottom: 1px solid rgba(90,107,58,0.08); padding: 0 2rem; position: sticky; top: 80px; z-index: 50; }
-        .filter-nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; }
-        .filter-btn { padding: 1.2rem 2rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--zink); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: all 0.3s; white-space: nowrap; }
-        .filter-btn:hover { color: var(--olijf); }
-        .filter-btn.active { color: var(--zwart); border-bottom-color: var(--kerrie); }
+      .page-hero {
+        min-height: 55vh;
+        background: var(--beige);
+        display: flex;
+        align-items: flex-end;
+        padding: 9rem 2rem 5rem;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(90, 107, 58, 0.1);
+      }
+      .hero-bg-text {
+        position: absolute;
+        right: 3%;
+        top: 52%;
+        transform: translateY(-50%);
+        font-family: var(--font-serif);
+        font-size: clamp(10rem, 18vw, 18rem);
+        font-weight: 300;
+        font-style: italic;
+        color: rgba(90, 107, 58, 0.05);
+        line-height: 1;
+        pointer-events: none;
+      }
+      .page-hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .page-hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1.2rem;
+        opacity: 0;
+        animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+      }
+      .page-hero-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        opacity: 0;
+        animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+      }
+      .page-hero-title em {
+        font-style: italic;
+        color: var(--olijf);
+      }
+      .page-hero-sub {
+        font-size: 1rem;
+        color: var(--zink);
+        max-width: 520px;
+        margin-top: 1.4rem;
+        line-height: 1.85;
+        opacity: 0;
+        animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+      }
 
-        /* DIENST FEATURE BLOCKS */
-        .dienst-block {
-            padding: 8rem 2rem;
-            position: relative;
+      .filter-nav {
+        background: var(--wit);
+        border-bottom: 1px solid rgba(90, 107, 58, 0.08);
+        padding: 0 2rem;
+        position: sticky;
+        top: 80px;
+        z-index: 50;
+      }
+      .filter-nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0;
+      }
+      .filter-btn {
+        padding: 1.2rem 2rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--zink);
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+        white-space: nowrap;
+      }
+      .filter-btn:hover {
+        color: var(--olijf);
+      }
+      .filter-btn.active {
+        color: var(--zwart);
+        border-bottom-color: var(--kerrie);
+      }
+
+      .dienst-block {
+        padding: 8rem 2rem;
+        position: relative;
+      }
+      .dienst-block:nth-child(even) {
+        background: var(--wit);
+      }
+      .dienst-block:nth-child(odd) {
+        background: var(--beige);
+      }
+
+      .dienst-block-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7rem;
+        align-items: center;
+      }
+      .dienst-block:nth-child(even) .dienst-block-inner {
+        direction: rtl;
+      }
+      .dienst-block:nth-child(even) .dienst-text {
+        direction: ltr;
+      }
+      .dienst-block:nth-child(even) .dienst-visual {
+        direction: ltr;
+      }
+
+      .dienst-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--kerrie);
+        margin-bottom: 1.4rem;
+      }
+      .dienst-tag-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--kerrie);
+      }
+
+      .dienst-text h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 300;
+        line-height: 1.15;
+        margin-bottom: 1.4rem;
+        letter-spacing: -0.01em;
+      }
+      .dienst-text h2 em {
+        font-style: italic;
+        color: var(--olijf);
+      }
+      .dienst-text p {
+        color: var(--zink);
+        line-height: 1.95;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .voor-wie {
+        margin: 2rem 0;
+        padding: 1.5rem 2rem;
+        background: rgba(90, 107, 58, 0.06);
+        border-left: 3px solid var(--olijf);
+      }
+      .voor-wie h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--olijf);
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+      }
+      .voor-wie ul {
+        list-style: none;
+      }
+      .voor-wie li {
+        font-size: 0.9rem;
+        color: var(--zink);
+        padding: 0.2rem 0;
+        padding-left: 1rem;
+        position: relative;
+      }
+      .voor-wie li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--olijf-lt);
+        font-size: 0.75rem;
+      }
+
+      .dienst-includes {
+        margin: 2rem 0;
+      }
+      .dienst-includes h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--zink);
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      .include-item {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .include-item:last-child {
+        border-bottom: none;
+      }
+      .include-check {
+        color: var(--olijf);
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .include-item span {
+        font-size: 0.9rem;
+        color: var(--zink);
+      }
+
+      .dienst-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+      }
+
+      .dienst-visual {
+        position: relative;
+      }
+      .dienst-visual-card {
+        aspect-ratio: 4/5;
+        background: linear-gradient(145deg, rgba(90, 107, 58, 0.1) 0%, rgba(196, 154, 26, 0.07) 100%);
+        border: 1px solid rgba(90, 107, 58, 0.12);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .dienst-visual-card.rose {
+        background: linear-gradient(145deg, rgba(194, 134, 126, 0.12) 0%, rgba(90, 107, 58, 0.06) 100%);
+        border-color: rgba(194, 134, 126, 0.2);
+      }
+      .dienst-visual-card.kerrie {
+        background: linear-gradient(145deg, rgba(196, 154, 26, 0.12) 0%, rgba(90, 107, 58, 0.07) 100%);
+        border-color: rgba(196, 154, 26, 0.2);
+      }
+
+      .visual-number {
+        position: absolute;
+        top: 2rem;
+        left: 2.5rem;
+        font-family: var(--font-serif);
+        font-size: 7rem;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.06);
+        line-height: 1;
+      }
+      .visual-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--zink);
+        margin-bottom: 0.6rem;
+      }
+      .visual-quote {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.4;
+        color: var(--zwart);
+      }
+
+      .price-badge {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background: var(--zwart);
+        color: var(--wit);
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+      }
+      .price-badge span:first-child {
+        display: block;
+        font-size: 0.55rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 0.2rem;
+      }
+      .price-badge strong {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+
+      .stat-float {
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1.5rem;
+        background: var(--kerrie);
+        color: #fff;
+        padding: 1.5rem;
+        text-align: center;
+        min-width: 110px;
+      }
+      .stat-float strong {
+        display: block;
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+      .stat-float span {
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .vergelijk-section {
+        padding: 7rem 2rem;
+        background: var(--zwart);
+        color: var(--wit);
+      }
+      .vergelijk-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .vergelijk-inner .section-label {
+        color: var(--kerrie);
+      }
+      .vergelijk-inner .section-title {
+        color: var(--wit);
+      }
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 300;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+        margin-bottom: 1.2rem;
+      }
+      .section-title em {
+        font-style: italic;
+        color: var(--olijf);
+      }
+
+      .vergelijk-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-top: 3.5rem;
+      }
+      .vergelijk-col {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 2.8rem 2.2rem;
+        transition: background 0.3s;
+        position: relative;
+      }
+      .vergelijk-col.featured {
+        background: var(--olijf);
+        border-color: var(--olijf);
+      }
+      .featured-badge {
+        position: absolute;
+        top: -1px;
+        right: 2rem;
+        background: var(--kerrie);
+        color: #fff;
+        font-size: 0.58rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.8rem;
+        font-weight: 500;
+      }
+      .vergelijk-col h3 {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 0.4rem;
+      }
+      .vergelijk-col .tagline {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 2rem;
+      }
+      .vergelijk-col .featured .tagline {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .vergelijk-rows {
+        list-style: none;
+        margin-bottom: 2.5rem;
+      }
+      .vergelijk-rows li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .vergelijk-rows li:last-child {
+        border-bottom: none;
+      }
+      .vergelijk-rows .check {
+        color: var(--kerrie);
+      }
+      .vergelijk-rows .cross {
+        color: rgba(255, 255, 255, 0.2);
+      }
+      .vergelijk-col .btn-vergelijk {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.9rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        transition: all 0.3s;
+      }
+      .vergelijk-col .btn-vergelijk:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .vergelijk-col.featured .btn-vergelijk {
+        background: #fff;
+        color: var(--olijf);
+        border-color: #fff;
+      }
+      .vergelijk-col.featured .btn-vergelijk:hover {
+        background: var(--zwart);
+        color: #fff;
+        border-color: var(--zwart);
+      }
+
+      .faq-section {
+        padding: 7rem 2rem;
+        background: var(--wit);
+      }
+      .faq-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .faq-list {
+        margin-top: 3.5rem;
+      }
+      .faq-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      }
+      .faq-question {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 1.8rem 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--zwart);
+        transition: color 0.3s;
+      }
+      .faq-question:hover {
+        color: var(--olijf);
+      }
+      .faq-icon {
+        font-size: 1.4rem;
+        color: var(--kerrie);
+        transition: transform 0.4s;
+        font-weight: 300;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+          padding 0.3s;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 400px;
+        padding-bottom: 1.8rem;
+      }
+      .faq-answer p {
+        color: var(--zink);
+        font-size: 0.95rem;
+        line-height: 1.9;
+      }
+
+      .cta-section {
+        padding: 8rem 2rem;
+        background: var(--olijf);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      }
+      .cta-content {
+        position: relative;
+        z-index: 1;
+      }
+      .cta-content h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 1.4rem;
+      }
+      .cta-content h2 em {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .cta-content p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        max-width: 480px;
+        margin: 0 auto 2.8rem;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        background: var(--olijf);
+        color: var(--wit);
+        padding: 1rem 2.4rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition:
+          background 0.35s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        background: var(--zwart);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        display: inline-block;
+        border: 1px solid var(--zwart);
+        color: var(--zwart);
+        padding: 1rem 2.4rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.35s;
+      }
+      .btn-outline:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
+      .btn-white {
+        display: inline-block;
+        background: #fff;
+        color: var(--olijf);
+        padding: 1.1rem 2.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .btn-white:hover {
+        background: var(--zwart);
+        color: #fff;
+      }
+      .btn-outline-white {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        padding: 1.1rem 2.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      footer {
+        background: var(--zwart);
+        color: rgba(255, 255, 255, 0.4);
+        padding: 5rem 2rem 2rem;
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-brand .nav-logo {
+        color: #fff;
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .footer-brand p {
+        font-size: 0.88rem;
+        line-height: 1.85;
+        max-width: 260px;
+      }
+      .footer-col h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+        margin-bottom: 1.4rem;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col li {
+        margin-bottom: 0.75rem;
+      }
+      .footer-col a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9rem;
+        transition: color 0.3s;
+      }
+      .footer-col a:hover {
+        color: var(--kerrie);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-bottom p {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+      }
+      .footer-social {
+        display: flex;
+        gap: 1.2rem;
+      }
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        transition: all 0.3s;
+      }
+      .footer-social a:hover {
+        border-color: var(--kerrie);
+        color: var(--kerrie);
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
         }
-        .dienst-block:nth-child(even) { background: var(--wit); }
-        .dienst-block:nth-child(odd) { background: var(--beige); }
-
+        .hamburger {
+          display: flex;
+        }
         .dienst-block-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 7rem; align-items: center;
+          grid-template-columns: 1fr;
+          gap: 3.5rem;
         }
-        .dienst-block:nth-child(even) .dienst-block-inner { direction: rtl; }
-        .dienst-block:nth-child(even) .dienst-text { direction: ltr; }
-        .dienst-block:nth-child(even) .dienst-visual { direction: ltr; }
-
-        .dienst-tag {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
-            font-weight: 500; color: var(--kerrie); margin-bottom: 1.4rem;
+        .dienst-block:nth-child(even) .dienst-block-inner {
+          direction: ltr;
         }
-        .dienst-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--kerrie); }
-
-        .dienst-text h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.4rem; letter-spacing: -0.01em; }
-        .dienst-text h2 em { font-style: italic; color: var(--olijf); }
-        .dienst-text p { color: var(--zink); line-height: 1.95; margin-bottom: 1rem; font-size: 1rem; }
-
-        .voor-wie {
-            margin: 2rem 0;
-            padding: 1.5rem 2rem;
-            background: rgba(90,107,58,0.06);
-            border-left: 3px solid var(--olijf);
-        }
-        .voor-wie h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--olijf); font-weight: 500; margin-bottom: 0.8rem; }
-        .voor-wie ul { list-style: none; }
-        .voor-wie li { font-size: 0.9rem; color: var(--zink); padding: 0.2rem 0; padding-left: 1rem; position: relative; }
-        .voor-wie li::before { content: '—'; position: absolute; left: 0; color: var(--olijf-lt); font-size: 0.75rem; }
-
-        .dienst-includes { margin: 2rem 0; }
-        .dienst-includes h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--zink); font-weight: 500; margin-bottom: 1rem; }
-        .include-item { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .include-item:last-child { border-bottom: none; }
-        .include-check { color: var(--olijf); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
-        .include-item span { font-size: 0.9rem; color: var(--zink); }
-
-        .dienst-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
-
-        /* Visual card */
-        .dienst-visual { position: relative; }
-        .dienst-visual-card {
-            aspect-ratio: 4/5;
-            background: linear-gradient(145deg, rgba(90,107,58,0.1) 0%, rgba(196,154,26,0.07) 100%);
-            border: 1px solid rgba(90,107,58,0.12);
-            display: flex; flex-direction: column;
-            justify-content: flex-end;
-            padding: 2.5rem;
-            position: relative; overflow: hidden;
-        }
-        .dienst-visual-card.rose { background: linear-gradient(145deg, rgba(194,134,126,0.12) 0%, rgba(90,107,58,0.06) 100%); border-color: rgba(194,134,126,0.2); }
-        .dienst-visual-card.kerrie { background: linear-gradient(145deg, rgba(196,154,26,0.12) 0%, rgba(90,107,58,0.07) 100%); border-color: rgba(196,154,26,0.2); }
-
-        .visual-number {
-            position: absolute; top: 2rem; left: 2.5rem;
-            font-family: var(--font-serif);
-            font-size: 7rem; font-weight: 300;
-            color: rgba(0,0,0,0.06); line-height: 1;
-        }
-        .visual-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--zink); margin-bottom: 0.6rem; }
-        .visual-quote { font-family: var(--font-serif); font-size: 1.4rem; font-style: italic; font-weight: 300; line-height: 1.4; color: var(--zwart); }
-
-        /* Price badge */
-        .price-badge {
-            position: absolute; top: 2rem; right: 2rem;
-            background: var(--zwart); color: var(--wit);
-            padding: 0.8rem 1.2rem; text-align: center;
-        }
-        .price-badge span:first-child { display: block; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.2rem; }
-        .price-badge strong { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 300; }
-
-        /* Floating stat */
-        .stat-float {
-            position: absolute; bottom: -1.5rem; right: -1.5rem;
-            background: var(--kerrie); color: #fff;
-            padding: 1.5rem; text-align: center; min-width: 110px;
-        }
-        .stat-float strong { display: block; font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; line-height: 1; }
-        .stat-float span { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
-
-        /* VERGELIJK TABEL */
-        .vergelijk-section { padding: 7rem 2rem; background: var(--zwart); color: var(--wit); }
-        .vergelijk-inner { max-width: 1100px; margin: 0 auto; }
-        .vergelijk-inner .section-label { color: var(--kerrie); }
-        .vergelijk-inner .section-title { color: var(--wit); }
-        .section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--kerrie); font-weight: 500; display: block; margin-bottom: 1rem; }
-        .section-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1.2rem; }
-        .section-title em { font-style: italic; color: var(--olijf); }
-
         .vergelijk-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 2px; margin-top: 3.5rem;
+          grid-template-columns: 1fr;
         }
-        .vergelijk-col {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            padding: 2.8rem 2.2rem;
-            transition: background 0.3s;
-            position: relative;
+        .footer-inner {
+          grid-template-columns: 1fr 1fr;
         }
-        .vergelijk-col.featured {
-            background: var(--olijf);
-            border-color: var(--olijf);
+        .filter-nav {
+          overflow-x: auto;
         }
-        .featured-badge {
-            position: absolute; top: -1px; right: 2rem;
-            background: var(--kerrie); color: #fff;
-            font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
-            padding: 0.35rem 0.8rem; font-weight: 500;
+      }
+      @media (max-width: 600px) {
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
         }
-        .vergelijk-col h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem; }
-        .vergelijk-col .tagline { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 2rem; }
-        .vergelijk-col .featured .tagline { color: rgba(255,255,255,0.7); }
-        .vergelijk-rows { list-style: none; margin-bottom: 2.5rem; }
-        .vergelijk-rows li {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0.85rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-            font-size: 0.88rem; color: rgba(255,255,255,0.6);
+        .footer-bottom {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
         }
-        .vergelijk-rows li:last-child { border-bottom: none; }
-        .vergelijk-rows .check { color: var(--kerrie); }
-        .vergelijk-rows .cross { color: rgba(255,255,255,0.2); }
-        .vergelijk-col .btn-vergelijk {
-            display: block; text-align: center; text-decoration: none;
-            padding: 0.9rem; font-size: 0.65rem; letter-spacing: 0.18em;
-            text-transform: uppercase; font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.2); color: #fff;
-            transition: all 0.3s;
+        .stat-float {
+          right: -0.5rem;
         }
-        .vergelijk-col .btn-vergelijk:hover { background: rgba(255,255,255,0.1); }
-        .vergelijk-col.featured .btn-vergelijk { background: #fff; color: var(--olijf); border-color: #fff; }
-        .vergelijk-col.featured .btn-vergelijk:hover { background: var(--zwart); color: #fff; border-color: var(--zwart); }
+      }
 
-        /* FAQ */
-        .faq-section { padding: 7rem 2rem; background: var(--wit); }
-        .faq-inner { max-width: 800px; margin: 0 auto; }
-        .faq-list { margin-top: 3.5rem; }
-        .faq-item { border-bottom: 1px solid rgba(0,0,0,0.07); }
-        .faq-question {
-            width: 100%; text-align: left; background: none; border: none;
-            padding: 1.8rem 0; cursor: pointer;
-            display: flex; justify-content: space-between; align-items: center;
-            font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400;
-            color: var(--zwart); transition: color 0.3s;
-        }
-        .faq-question:hover { color: var(--olijf); }
-        .faq-icon { font-size: 1.4rem; color: var(--kerrie); transition: transform 0.4s; font-weight: 300; }
-        .faq-item.open .faq-icon { transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.22,1,0.36,1), padding 0.3s; }
-        .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 1.8rem; }
-        .faq-answer p { color: var(--zink); font-size: 0.95rem; line-height: 1.9; }
+      .nav-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-logo-img {
+        height: 32px;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+      .footer-logo {
+        display: inline-block;
+      }
+      .footer-logo-img {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 1rem;
+      }
 
-        /* CTA */
-        .cta-section { padding: 8rem 2rem; background: var(--olijf); text-align: center; position: relative; overflow: hidden; }
-        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%); }
-        .cta-content { position: relative; z-index: 1; }
-        .cta-content h2 { font-family: var(--font-serif); font-size: clamp(2.2rem, 4.5vw, 3.8rem); font-weight: 300; color: #fff; line-height: 1.15; margin-bottom: 1.4rem; }
-        .cta-content h2 em { font-style: italic; color: rgba(255,255,255,0.65); }
-        .cta-content p { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 480px; margin: 0 auto 2.8rem; }
+      nav {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+      .nav-inner {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .nav-logo {
+        max-width: calc(100vw - 100px);
+        overflow: hidden;
+      }
+      .nav-logo-img {
+        flex-shrink: 0;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
 
-        /* Buttons */
-        .btn-primary { display: inline-block; background: var(--zwart); color: var(--wit); padding: 1rem 2.4rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.35s, transform 0.2s; }
-        .btn-primary:hover { background: var(--olijf); transform: translateY(-1px); }
-        .btn-outline { display: inline-block; border: 1px solid var(--zwart); color: var(--zwart); padding: 1rem 2.4rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.35s; }
-        .btn-outline:hover { background: var(--zwart); color: var(--wit); }
-        .btn-white { display: inline-block; background: #fff; color: var(--olijf); padding: 1.1rem 2.8rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.3s; }
-        .btn-white:hover { background: var(--zwart); color: #fff; }
-        .btn-outline-white { display: inline-block; border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 1.1rem 2.8rem; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.3s; }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-
-        /* FOOTER */
-        footer { background: var(--zwart); color: rgba(255,255,255,0.4); padding: 5rem 2rem 2rem; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 1.2rem; }
-        .footer-brand p { font-size: 0.88rem; line-height: 1.85; max-width: 260px; }
-        .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 500; margin-bottom: 1.4rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.75rem; }
-        .footer-col a { text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.9rem; transition: color 0.3s; }
-        .footer-col a:hover { color: var(--kerrie); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom p { font-size: 0.68rem; letter-spacing: 0.1em; }
-        .footer-social { display: flex; gap: 1.2rem; }
-        .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); font-size: 0.75rem; transition: all 0.3s; }
-        .footer-social a:hover { border-color: var(--kerrie); color: var(--kerrie); }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .dienst-block-inner { grid-template-columns: 1fr; gap: 3.5rem; }
-            .dienst-block:nth-child(even) .dienst-block-inner { direction: ltr; }
-            .vergelijk-grid { grid-template-columns: 1fr; }
-            .footer-inner { grid-template-columns: 1fr 1fr; }
-            .filter-nav { overflow-x: auto; }
+      .hero {
+        overflow: hidden;
+      }
+      .page-hero {
+        overflow: hidden;
+      }
+      header {
+        overflow-x: hidden;
+      }
+      @media (max-width: 900px) {
+        .hero-circle {
+          width: min(520px, 90vw) !important;
+          height: min(520px, 90vw) !important;
         }
-        @media (max-width: 600px) {
-            .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-            .stat-float { right: -0.5rem; }
+        .hero-circle-2 {
+          width: min(380px, 90vw) !important;
+          height: min(380px, 90vw) !important;
         }
-    
-        /* ── LOGO IMAGES ── */
-        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
-        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
-        .footer-logo { display: inline-block; }
-        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
-        
-        /* ── NAV OVERFLOW FIX (mobile) ── */
-        nav { width: 100%; max-width: 100vw; overflow: hidden; }
-        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
-        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
-        .nav-logo-img { flex-shrink: 0; }
-        html, body { overflow-x: hidden; max-width: 100%; }
-        /* Hero circles overflow fix */
-        .hero { overflow: hidden; }
-        .page-hero { overflow: hidden; }
-        header { overflow-x: hidden; }
-        @media (max-width: 900px) {
-            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
-            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
-            .contact-hero { overflow: hidden; }
-            .footer-inner { overflow-x: hidden; }
+        .contact-hero {
+          overflow: hidden;
         }
-        @media (max-width: 600px) {
-            .form-row { grid-template-columns: 1fr !important; }
-            .service-cards { grid-template-columns: 1fr 1fr !important; }
-            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .footer-inner {
+          overflow-x: hidden;
         }
-        </style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav id="mainNav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
+      }
+      @media (max-width: 600px) {
+        .form-row {
+          grid-template-columns: 1fr !important;
+        }
+        .service-cards {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .avail-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="OntwikkelOase logo" class="nav-logo-img" />
+          Ontwikkel
+          <em>Oase</em>
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="over.html">Over Josine</a></li>
-            <li><a href="aanbod.html" class="active">Aanbod</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over.html">Over Josine</a></li>
+          <li><a href="aanbod.html" class="active">Aanbod</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="cta">Boek een sessie</a></li>
         </ul>
         <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="over.html">Over Josine</a>
+      <a href="aanbod.html">Aanbod</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Boek een sessie</a>
     </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="over.html">Over Josine</a>
-    <a href="aanbod.html">Aanbod</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Boek een sessie</a>
-</div>
 
-<!-- PAGE HERO -->
-<header class="page-hero">
-    <div class="hero-bg-text">Groei</div>
-    <div class="page-hero-inner">
-        <span class="page-hero-eyebrow">Wat Ontwikkel-Oase biedt</span>
-        <h1 class="page-hero-title">Het <em>aanbod.</em></h1>
-        <p class="page-hero-sub">Van diepgaande 1-op-1 begeleiding tot krachtige teamtrajecten. Elk traject is op maat, persoonlijk en gericht op echte, duurzame groei.</p>
-    </div>
-</header>
+    <header class="page-hero">
+      <div class="hero-bg-text">Groei</div>
+      <div class="page-hero-inner">
+        <span class="page-hero-eyebrow">Wat OntwikkelOase biedt</span>
+        <h1 class="page-hero-title">
+          Het
+          <em>aanbod.</em>
+        </h1>
+        <p class="page-hero-sub">
+          Van diepgaande 1-op-1 begeleiding tot krachtige teamtrajecten. Elk traject is op maat, persoonlijk en gericht
+          op echte, duurzame groei.
+        </p>
+      </div>
+    </header>
 
-<!-- FILTER NAV -->
-<div class="filter-nav">
-    <div class="filter-nav-inner">
+    <div class="filter-nav">
+      <div class="filter-nav-inner">
         <button type="button" class="filter-btn active" onclick="scrollToSection('#coaching')">1-op-1 Coaching</button>
         <button type="button" class="filter-btn" onclick="scrollToSection('#team')">Teamontwikkeling</button>
         <button type="button" class="filter-btn" onclick="scrollToSection('#leiderschap')">Leiderschapstraject</button>
         <button type="button" class="filter-btn" onclick="scrollToSection('#vergelijk')">Vergelijk</button>
+      </div>
     </div>
-</div>
 
-<!-- DIENST 1: 1-OP-1 COACHING -->
-<section class="dienst-block" id="coaching">
-    <div class="dienst-block-inner">
+    <section class="dienst-block" id="coaching">
+      <div class="dienst-block-inner">
         <div class="dienst-text" data-aos="fade-right">
-            <div class="dienst-tag"><span class="dienst-tag-dot"></span> Persoonlijk</div>
-            <h2>1-op-1<br><em>Coaching.</em></h2>
-            <p>Diepgaande, persoonlijke begeleiding voor mensen die meer willen dan oppervlakkige antwoorden. In een-op-een sessies met Josine werk je aan zelfinzicht, richting en concrete groei.</p>
-            <p>Voor mensen die vastlopen door verlies, trauma of veranderingen en verlangen naar rust, inzicht en nieuwe richting.  </p>
+          <div class="dienst-tag">
+            <span class="dienst-tag-dot"></span>
+            Persoonlijk
+          </div>
+          <h2>
+            1-op-1
+            <br />
+            <em>Coaching.</em>
+          </h2>
+          <p>
+            Diepgaande, persoonlijke begeleiding voor mensen die meer willen dan oppervlakkige antwoorden. In een-op-een
+            sessies met Josine werk je aan zelfinzicht, richting en concrete groei.
+          </p>
+          <p>
+            Voor mensen die vastlopen door verlies, trauma of veranderingen en verlangen naar rust, inzicht en nieuwe
+            richting.  
+          </p>
 
-            <div class="voor-wie">
-                <h4>Voor wie?</h4>
-                <ul>
-                    <li>Professionals die meer regie willen over hun werk of loopbaan</li>
-                    <li>Organisaties en bedrijven waar begeleiding bij rouw of ingrijpende gebeurtenissen nodig is</li>
-                    <li>Teams en organisaties die met opstellingen inzicht willen krijgen in onderliggende dynamieken</li>
-                </ul>
-            </div>
+          <div class="voor-wie">
+            <h4>Voor wie?</h4>
+            <ul>
+              <li>Professionals die meer regie willen over hun werk of loopbaan</li>
+              <li>Organisaties en bedrijven waar begeleiding bij rouw of ingrijpende gebeurtenissen nodig is</li>
+              <li>Teams en organisaties die met opstellingen inzicht willen krijgen in onderliggende dynamieken</li>
+            </ul>
+          </div>
 
-            <div class="dienst-includes">
-                <h4>Wat is inbegrepen</h4>
-                <div class="include-item"><span class="include-check">✓</span><span>Gratis intakegesprek (30 min)</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>6 of 10 sessies van elk 60–90 minuten</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Persoonlijk groeiplan na intake</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Tussentijdse reflectieopdrachten</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>WhatsApp-bereikbaarheid tussen sessies</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Eindreflectie en borging</span></div>
+          <div class="dienst-includes">
+            <h4>Wat is inbegrepen</h4>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Gratis intakegesprek, alle tijd die nodig is - want een goede klik en vetrouwen staan voorop</span>
             </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Persoonlijk groeiplan na intake</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Tussentijdse reflectieopdrachten</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>WhatsApp-bereikbaarheid tussen sessies</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Eindreflectie en borging</span>
+            </div>
+          </div>
 
-            <div class="dienst-actions">
-                <a href="coaching-1op1.html" class="btn-primary">Meer over dit traject</a>
-                <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
-            </div>
+          <div class="dienst-actions">
+            <a href="coaching-1op1.html" class="btn-primary">Meer over dit traject</a>
+            <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
+          </div>
         </div>
         <div class="dienst-visual" data-aos="fade-left" data-aos-delay="150">
-            <div class="dienst-visual-card">
-                <div class="visual-number">01</div>
-                <div class="price-badge">
-                    <span>Vanaf</span>
-                    <strong>€135</strong>
-                </div>
-                <div class="visual-label">1-op-1 Coaching</div>
-                <div class="visual-quote">"De ruimte om eindelijk jezelf te horen."</div>
-            </div>
-            <div class="stat-float">
-                <strong>98%</strong>
-                <span>Aanrader</span>
-            </div>
+          <div class="dienst-visual-card">
+            <div class="visual-number">01</div>
+
+            <div class="visual-label">1-op-1 Coaching</div>
+            <div class="visual-quote">"De ruimte om eindelijk jezelf te horen."</div>
+          </div>
+          <div class="stat-float">
+            <strong>98%</strong>
+            <span>Aanrader</span>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- DIENST 2: TEAMONTWIKKELING -->
-<section class="dienst-block" id="team">
-    <div class="dienst-block-inner">
+    <section class="dienst-block" id="team">
+      <div class="dienst-block-inner">
         <div class="dienst-text" data-aos="fade-left">
-            <div class="dienst-tag" style="color:var(--oudrose);"><span class="dienst-tag-dot" style="background:var(--oudrose);"></span> Collectief</div>
-            <h2>Team&shy;<em>ontwikkeling.</em></h2>
-            <p>Een sterk team is meer dan een groep talenten. Het gaat om vertrouwen, open communicatie en gedeeld leiderschap. Josine begeleidt teams in het ontdekken van hun kracht als geheel.</p>
-            <p>Met praktische workshops, diepgaande teamanalyses en op maat gemaakte trajecten brengt ze beweging waar teams vastlopen en energie waar dynamieken doven.</p>
+          <div class="dienst-tag" style="color: var(--oudrose)">
+            <span class="dienst-tag-dot" style="background: var(--oudrose)"></span>
+            Collectief
+          </div>
+          <h2>
+            Team&shy;
+            <em>ontwikkeling.</em>
+          </h2>
+          <p>
+            Een sterk team is meer dan een groep talenten. Het gaat om vertrouwen, open communicatie en gedeeld
+            leiderschap. Josine begeleidt teams in het ontdekken van hun kracht als geheel.
+          </p>
+          <p>
+            Met praktische workshops, diepgaande teamanalyses en op maat gemaakte trajecten brengt ze beweging waar
+            teams vastlopen en energie waar dynamieken doven.
+          </p>
 
-            <div class="voor-wie" style="border-left-color: var(--oudrose); background: rgba(194,134,126,0.06);">
-                <h4 style="color:var(--oudrose);">Voor wie?</h4>
-                <ul>
-                    <li>Teams die meer willen samenwerken dan naast elkaar werken</li>
-                    <li>Organisaties in verandering of groei</li>
-                    <li>HR-managers die hun teams structureel willen versterken</li>
-                </ul>
-            </div>
+          <div class="voor-wie" style="border-left-color: var(--oudrose); background: rgba(194, 134, 126, 0.06)">
+            <h4 style="color: var(--oudrose)">Voor wie?</h4>
+            <ul>
+              <li>Teams die meer willen samenwerken dan naast elkaar werken</li>
+              <li>Organisaties in verandering of groei</li>
+              <li>HR-managers die hun teams structureel willen versterken</li>
+            </ul>
+          </div>
 
-            <div class="dienst-includes">
-                <h4>Wat is inbegrepen</h4>
-                <div class="include-item"><span class="include-check">✓</span><span>Intakegesprek met leidinggevende & teamleden</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Teamanalyse en diagnose (stijl & dynamieken)</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>2 tot 4 teamdagen op locatie of online</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Individuele coachingssessies voor kernleden</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Terugkommoment na 3 maanden</span></div>
+          <div class="dienst-includes">
+            <h4>Wat is inbegrepen</h4>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Intakegesprek met leidinggevende & teamleden</span>
             </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Teamanalyse en diagnose (stijl & dynamieken)</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>2 tot 4 teamdagen op locatie of online</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Individuele coachingssessies voor kernleden</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Terugkommoment na 3 maanden</span>
+            </div>
+          </div>
 
-            <div class="dienst-actions">
-                <a href="teamontwikkeling.html" class="btn-primary">Meer over dit traject</a>
-                <a href="contact.html" class="btn-outline">Vrijblijvend overleggen</a>
-            </div>
+          <div class="dienst-actions">
+            <a href="teamontwikkeling.html" class="btn-primary">Meer over dit traject</a>
+            <a href="contact.html" class="btn-outline">Vrijblijvend overleggen</a>
+          </div>
         </div>
         <div class="dienst-visual" data-aos="fade-right" data-aos-delay="150">
-            <div class="dienst-visual-card rose">
-                <div class="visual-number">02</div>
-                <div class="price-badge">
-                    <span>Vanaf</span>
-                    <strong>Op maat</strong>
-                </div>
-                <div class="visual-label">Teamontwikkeling</div>
-                <div class="visual-quote">"Een team dat samen groeit, beweegt als één."</div>
+          <div class="dienst-visual-card rose">
+            <div class="visual-number">02</div>
+            <div class="price-badge">
+              <span>Vanaf</span>
+              <strong>Op maat</strong>
             </div>
-            <div class="stat-float" style="background: var(--oudrose);">
-                <strong>50+</strong>
-                <span>Teams</span>
-            </div>
+            <div class="visual-label">Teamontwikkeling</div>
+            <div class="visual-quote">"Een team dat samen groeit, beweegt als één."</div>
+          </div>
+          <div class="stat-float" style="background: var(--oudrose)">
+            <strong>50+</strong>
+            <span>Teams</span>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- DIENST 3: LEIDERSCHAPSTRAJECT -->
-<section class="dienst-block" id="leiderschap">
-    <div class="dienst-block-inner">
+    <section class="dienst-block" id="leiderschap">
+      <div class="dienst-block-inner">
         <div class="dienst-text" data-aos="fade-right">
-            <div class="dienst-tag" style="color: #8A9E62;"><span class="dienst-tag-dot" style="background: #8A9E62;"></span> Intensief</div>
-            <h2>Leiderschap&shy;<em>traject.</em></h2>
-            <p>Leiderschap begint van binnenuit. Dit intensieve traject is voor leiders die meer impact willen maken — niet door harder te duwen, maar door authentieker aanwezig te zijn.</p>
-            <p>Josine combineert diepgaand persoonlijk werk met praktische leiderschapsontwikkeling. Het resultaat: een leider die zichzelf kent, teams inspireert en organisaties in beweging brengt.</p>
+          <div class="dienst-tag" style="color: #8a9e62">
+            <span class="dienst-tag-dot" style="background: #8a9e62"></span>
+            Intensief
+          </div>
+          <h2>
+            Leiderschap&shy;
+            <em>traject.</em>
+          </h2>
+          <p>
+            Leiderschap begint van binnenuit. Dit intensieve traject is voor leiders die meer impact willen maken — niet
+            door harder te duwen, maar door authentieker aanwezig te zijn.
+          </p>
+          <p>
+            Josine combineert diepgaand persoonlijk werk met praktische leiderschapsontwikkeling. Het resultaat: een
+            leider die zichzelf kent, teams inspireert en organisaties in beweging brengt.
+          </p>
 
-            <div class="voor-wie" style="border-left-color: #8A9E62; background: rgba(138,158,98,0.08);">
-                <h4 style="color: #8A9E62;">Voor wie?</h4>
-                <ul>
-                    <li>(Aankomend) managers en directeuren</li>
-                    <li>Leiders in overgang of nieuwe rol</li>
-                    <li>Mensen met leiderschapsambitie die willen groeien</li>
-                </ul>
-            </div>
+          <div class="voor-wie" style="border-left-color: #8a9e62; background: rgba(138, 158, 98, 0.08)">
+            <h4 style="color: #8a9e62">Voor wie?</h4>
+            <ul>
+              <li>(Aankomend) managers en directeuren</li>
+              <li>Leiders in overgang of nieuwe rol</li>
+              <li>Mensen met leiderschapsambitie die willen groeien</li>
+            </ul>
+          </div>
 
-            <div class="dienst-includes">
-                <h4>Wat is inbegrepen</h4>
-                <div class="include-item"><span class="include-check">✓</span><span>Uitgebreid intakegesprek & 360° feedback</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>8 diepgaande coachingssessies (90 min)</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Persoonlijk leiderschapsprofiel</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>Leiderschapsmateriaal & zelfreflectietools</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>2 gezamenlijke sessies met HR of manager</span></div>
-                <div class="include-item"><span class="include-check">✓</span><span>6 maanden begeleiding inclusief terugkommomenten</span></div>
+          <div class="dienst-includes">
+            <h4>Wat is inbegrepen</h4>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Uitgebreid intakegesprek & 360° feedback</span>
             </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>8 diepgaande coachingssessies (90 min)</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Persoonlijk leiderschapsprofiel</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Leiderschapsmateriaal & zelfreflectietools</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>2 gezamenlijke sessies met HR of manager</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>6 maanden begeleiding inclusief terugkommomenten</span>
+            </div>
+          </div>
 
-            <div class="dienst-actions">
-                <a href="leiderschapstraject.html" class="btn-primary">Meer over dit traject</a>
-                <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
-            </div>
+          <div class="dienst-actions">
+            <a href="leiderschapstraject.html" class="btn-primary">Meer over dit traject</a>
+            <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
+          </div>
         </div>
         <div class="dienst-visual" data-aos="fade-left" data-aos-delay="150">
-            <div class="dienst-visual-card kerrie">
-                <div class="visual-number">03</div>
-                <div class="price-badge">
-                    <span>Vanaf</span>
-                    <strong>€1.850</strong>
-                </div>
-                <div class="visual-label">Leiderschapstraject</div>
-                <div class="visual-quote">"Authentiek leiderschap verandert alles om je heen."</div>
+          <div class="dienst-visual-card kerrie">
+            <div class="visual-number">03</div>
+            <div class="price-badge">
+              <span>Vanaf</span>
+              <strong>€1.850</strong>
             </div>
-            <div class="stat-float" style="background: #5A6B3A;">
-                <strong>6 mnd</strong>
-                <span>Traject</span>
-            </div>
+            <div class="visual-label">Leiderschapstraject</div>
+            <div class="visual-quote">"Authentiek leiderschap verandert alles om je heen."</div>
+          </div>
+          <div class="stat-float" style="background: #5a6b3a">
+            <strong>6 mnd</strong>
+            <span>Traject</span>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- VERGELIJK -->
-<section class="vergelijk-section" id="vergelijk">
-    <div class="vergelijk-inner">
+    <section class="vergelijk-section" id="vergelijk">
+      <div class="vergelijk-inner">
         <span class="section-label" data-aos="fade-up">Overzicht</span>
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Welk traject<br>past bij <em>jou?</em></h2>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+          Welk traject
+          <br />
+          past bij
+          <em>jou?</em>
+        </h2>
         <div class="vergelijk-grid">
-            <div class="vergelijk-col" data-aos="fade-up" data-aos-delay="0">
-                <h3>1-op-1 Coaching</h3>
-                <p class="tagline">Persoonlijke groei & zelfinzicht</p>
-                <ul class="vergelijk-rows">
-                    <li><span>Individueel</span><span class="check">✓</span></li>
-                    <li><span>Intakegesprek</span><span class="check">✓</span></li>
-                    <li><span>Groeiplan op maat</span><span class="check">✓</span></li>
-                    <li><span>6 of 10 sessies</span><span class="check">✓</span></li>
-                    <li><span>Team betrokken</span><span class="cross">—</span></li>
-                    <li><span>360° feedback</span><span class="cross">—</span></li>
-                    <li><span>Teamdagen</span><span class="cross">—</span></li>
-                </ul>
-                <a href="coaching-1op1.html" class="btn-vergelijk">Meer info</a>
-            </div>
-            <div class="vergelijk-col featured" data-aos="fade-up" data-aos-delay="100">
-                <div class="featured-badge">Meest gekozen</div>
-                <h3>Leiderschapstraject</h3>
-                <p class="tagline">Intensief & transformerend</p>
-                <ul class="vergelijk-rows">
-                    <li><span>Individueel</span><span class="check">✓</span></li>
-                    <li><span>Intakegesprek</span><span class="check">✓</span></li>
-                    <li><span>Groeiplan op maat</span><span class="check">✓</span></li>
-                    <li><span>8 sessies (90 min)</span><span class="check">✓</span></li>
-                    <li><span>HR-sessies</span><span class="check">✓</span></li>
-                    <li><span>360° feedback</span><span class="check">✓</span></li>
-                    <li><span>6 maanden traject</span><span class="check">✓</span></li>
-                </ul>
-                <a href="leiderschapstraject.html" class="btn-vergelijk">Meer info</a>
-            </div>
-            <div class="vergelijk-col" data-aos="fade-up" data-aos-delay="200">
-                <h3>Teamontwikkeling</h3>
-                <p class="tagline">Collectief & organisatiegericht</p>
-                <ul class="vergelijk-rows">
-                    <li><span>Individueel</span><span class="cross">—</span></li>
-                    <li><span>Teamanalyse</span><span class="check">✓</span></li>
-                    <li><span>Teamdagen</span><span class="check">✓</span></li>
-                    <li><span>Kernleden coaching</span><span class="check">✓</span></li>
-                    <li><span>Terugkommomenten</span><span class="check">✓</span></li>
-                    <li><span>Maatwerk offerte</span><span class="check">✓</span></li>
-                    <li><span>HR-rapportage</span><span class="check">✓</span></li>
-                </ul>
-                <a href="teamontwikkeling.html" class="btn-vergelijk">Meer info</a>
-            </div>
+          <div class="vergelijk-col" data-aos="fade-up" data-aos-delay="0">
+            <h3>1-op-1 Coaching</h3>
+            <p class="tagline">Persoonlijke groei & zelfinzicht</p>
+            <ul class="vergelijk-rows">
+              <li>
+                <span>Individueel</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Intakegesprek</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Groeiplan op maat</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>6 of 10 sessies</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Team betrokken</span>
+                <span class="cross">—</span>
+              </li>
+              <li>
+                <span>360° feedback</span>
+                <span class="cross">—</span>
+              </li>
+              <li>
+                <span>Teamdagen</span>
+                <span class="cross">—</span>
+              </li>
+            </ul>
+            <a href="coaching-1op1.html" class="btn-vergelijk">Meer info</a>
+          </div>
+          <div class="vergelijk-col featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="featured-badge">Meest gekozen</div>
+            <h3>Leiderschapstraject</h3>
+            <p class="tagline">Intensief & transformerend</p>
+            <ul class="vergelijk-rows">
+              <li>
+                <span>Individueel</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Intakegesprek</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Groeiplan op maat</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>8 sessies (90 min)</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>HR-sessies</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>360° feedback</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>6 maanden traject</span>
+                <span class="check">✓</span>
+              </li>
+            </ul>
+            <a href="leiderschapstraject.html" class="btn-vergelijk">Meer info</a>
+          </div>
+          <div class="vergelijk-col" data-aos="fade-up" data-aos-delay="200">
+            <h3>Teamontwikkeling</h3>
+            <p class="tagline">Collectief & organisatiegericht</p>
+            <ul class="vergelijk-rows">
+              <li>
+                <span>Individueel</span>
+                <span class="cross">—</span>
+              </li>
+              <li>
+                <span>Teamanalyse</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Teamdagen</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Kernleden coaching</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Terugkommomenten</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>Maatwerk offerte</span>
+                <span class="check">✓</span>
+              </li>
+              <li>
+                <span>HR-rapportage</span>
+                <span class="check">✓</span>
+              </li>
+            </ul>
+            <a href="teamontwikkeling.html" class="btn-vergelijk">Meer info</a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- FAQ -->
-<section class="faq-section">
-    <div class="faq-inner">
+    <section class="faq-section">
+      <div class="faq-inner">
         <span class="section-label" data-aos="fade-up">Veelgestelde vragen</span>
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Jouw vragen<br><em>beantwoord.</em></h2>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+          Jouw vragen
+          <br />
+          <em>beantwoord.</em>
+        </h2>
         <div class="faq-list" data-aos="fade-up" data-aos-delay="140">
-            <div class="faq-item">
-                <button class="faq-question">Hoe begint een traject bij Ontwikkel-Oase? <span class="faq-icon">+</span></button>
-                <div class="faq-answer"><p>Elk traject begint met een gratis kennismakingsgesprek van 30 minuten. Daarin verkennen we jouw situatie, wensen en of er een klik is. Pas daarna beslissen we samen of en hoe we verder gaan.</p></div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Hoe begint een traject bij OntwikkelOase?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Elk traject begint met een gratis kennismakingsgesprek van 30 minuten. Daarin verkennen we jouw
+                situatie, wensen en of er een klik is. Pas daarna beslissen we samen of en hoe we verder gaan.
+              </p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question">Zijn de sessies online of op locatie? <span class="faq-icon">+</span></button>
-                <div class="faq-answer"><p>Beide opties zijn mogelijk. 1-op-1 coachingssessies vinden plaats op een rustige locatie of via video. Teamtrajecten worden bij voorkeur fysiek georganiseerd voor maximale impact, maar hybride vormen zijn ook bespreekbaar.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Zijn de sessies online of op locatie?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Beide opties zijn mogelijk. 1-op-1 coachingssessies vinden plaats op een rustige locatie of via video.
+                Teamtrajecten worden bij voorkeur fysiek georganiseerd voor maximale impact, maar hybride vormen zijn
+                ook bespreekbaar.
+              </p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question">Wat kost een traject? <span class="faq-icon">+</span></button>
-                <div class="faq-answer"><p>1-op-1 coaching start vanaf €135 per sessie. Leiderschapstrajecten starten vanaf €1.850 voor het volledige traject. Teamtrajecten zijn altijd maatwerk en worden na een intake geoffreerd. In alle gevallen geldt: transparante prijzen, geen verborgen kosten.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Wat kost een traject?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                1-op-1 coaching start vanaf €135 per sessie. Leiderschapstrajecten starten vanaf €1.850 voor het
+                volledige traject. Teamtrajecten zijn altijd maatwerk en worden na een intake geoffreerd. In alle
+                gevallen geldt: transparante prijzen, geen verborgen kosten.
+              </p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question">Hoe lang duurt een coachingstraject? <span class="faq-icon">+</span></button>
-                <div class="faq-answer"><p>Een standaard 1-op-1 traject bestaat uit 6 of 10 sessies over een periode van 3 tot 6 maanden. Het leiderschapstraject loopt 6 maanden. De intensiteit en het tempo stemmen we altijd af op jouw situatie.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Hoe lang duurt een coachingstraject?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Een standaard 1-op-1 traject bestaat uit 6 of 10 sessies over een periode van 3 tot 6 maanden. Het
+                leiderschapstraject loopt 6 maanden. De intensiteit en het tempo stemmen we altijd af op jouw situatie.
+              </p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question">Kan mijn werkgever dit vergoeden? <span class="faq-icon">+</span></button>
-                <div class="faq-answer"><p>In veel gevallen wel. Coaching voor professionele ontwikkeling wordt door veel werkgevers vergoed via het opleidingsbudget of persoonlijk ontwikkelingsbudget (POB). Josine kan je helpen om dit intern bespreekbaar te maken en voorziet desgewenst facturen op naam van de organisatie.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Kan mijn werkgever dit vergoeden?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                In veel gevallen wel. Coaching voor professionele ontwikkeling wordt door veel werkgevers vergoed via
+                het opleidingsbudget of persoonlijk ontwikkelingsbudget (POB). Josine kan je helpen om dit intern
+                bespreekbaar te maken en voorziet desgewenst facturen op naam van de organisatie.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section class="cta-section">
-    <div class="cta-content" data-aos="zoom-in">
-        <h2>Nog niet zeker welk<br>traject bij jou <em>past?</em></h2>
+    <section class="cta-section">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>
+          Nog niet zeker welk
+          <br />
+          traject bij jou
+          <em>past?</em>
+        </h2>
         <p>Plan een gratis gesprek en ontdek samen met Josine wat jouw volgende stap is.</p>
-        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-            <a href="contact.html" class="btn-white">Gratis kennismaken</a>
-            <a href="over.html" class="btn-outline-white">Over Josine</a>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap">
+          <a href="contact.html" class="btn-white">Gratis kennismaken</a>
+          <a href="over.html" class="btn-outline-white">Over Josine</a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
-            <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo">
+            <img src="assets/full-logo.png" alt="OntwikkelOase" class="footer-logo-img" />
+          </a>
+          <p>
+            Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.
+          </p>
         </div>
         <div class="footer-col">
-            <h4>Navigatie</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="over.html">Over Josine</a></li>
-                <li><a href="aanbod.html">Aanbod</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+          <h4>Navigatie</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over.html">Over Josine</a></li>
+            <li><a href="aanbod.html">Aanbod</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-            <h4>Diensten</h4>
-            <ul>
-                <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
-                <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
-                <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
-            </ul>
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
+            <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
+            <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-            <h4>Contact</h4>
-            <ul>
-                <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
-                <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
-                <li><a href="contact.html">Boek een sessie</a></li>
-            </ul>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+            <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+            <li><a href="contact.html">Boek een sessie</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 OntwikkelOase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: XXXXXXXX</p>
         <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 900, once: true, offset: 60 });
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 900, once: true, offset: 60 });
 
-    // Nav scroll
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
 
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('open');
-        hamburger.classList.toggle('open', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            hamburger.classList.remove('open');
-            document.body.style.overflow = '';
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+          document.body.style.overflow = "";
         });
-    });
+      });
 
-    // Filter nav smooth scroll
-    function scrollToSection(id) {
+      function scrollToSection(id) {
         const el = document.querySelector(id);
         if (!el) return;
 
-        const offset = 140; // ruimte voor vaste navigatie + filterbalk
+        const offset = 140;
         const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
 
         window.scrollTo({
-            top: top,
-            behavior: 'smooth'
+          top: top,
+          behavior: "smooth",
         });
-    }
+      }
 
-    // Update active filter btn on scroll
-    const sections = ['#coaching', '#team', '#leiderschap', '#vergelijk'];
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    window.addEventListener('scroll', () => {
+      const sections = ["#coaching", "#team", "#leiderschap", "#vergelijk"];
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      window.addEventListener("scroll", () => {
         let current = 0;
         sections.forEach((id, i) => {
-            const el = document.querySelector(id);
-            if (el && window.scrollY >= el.offsetTop - 160) current = i;
+          const el = document.querySelector(id);
+          if (el && window.scrollY >= el.offsetTop - 160) current = i;
         });
-        filterBtns.forEach((btn, i) => btn.classList.toggle('active', i === current));
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const item = btn.parentElement;
-            const isOpen = item.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            if (!isOpen) item.classList.add('open');
-        });
-    });
-</script>
-</body>
+        filterBtns.forEach((btn, i) => btn.classList.toggle("active", i === current));
+      });
+    </script>
+  </body>
 </html>

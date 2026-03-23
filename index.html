@@ -1,1039 +1,1523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Primary -->
-    <title>Ontwikkel-Oase | Coaching & Persoonlijke Groei – Josine Dielissen</title>
-    <meta name="description" content="Ontwikkel-Oase is dé plek voor persoonlijke groei, 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten. Begeleid door Josine Dielissen in een veilige, inspirerende omgeving.">
-    <meta name="keywords" content="coaching, persoonlijke ontwikkeling, 1 op 1 coaching, teamontwikkeling, leiderschap, Josine Dielissen, Ontwikkel-Oase">
-    <meta name="author" content="Josine Dielissen – Ontwikkel-Oase">
-    <link rel="canonical" href="https://www.ontwikkeloase.nl/">
+    <title>OntwikkelOase | Coaching & Persoonlijke Groei – Josine Dielissen</title>
+    <meta
+      name="description"
+      content="OntwikkelOase is dé plek voor persoonlijke groei, 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten. Begeleid door Josine Dielissen in een veilige, inspirerende omgeving."
+    />
+    <meta
+      name="keywords"
+      content="coaching, persoonlijke ontwikkeling, 1 op 1 coaching, teamontwikkeling, leiderschap, Josine Dielissen, OntwikkelOase"
+    />
+    <meta name="author" content="Josine Dielissen – OntwikkelOase" />
+    <link rel="canonical" href="https://www.ontwikkeloase.nl/" />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ontwikkeloase.nl/">
-    <meta property="og:title" content="Ontwikkel-Oase | Coaching & Persoonlijke Groei">
-    <meta property="og:description" content="Groei mogelijk maken in een veilige en stimulerende omgeving. 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten.">
-    <meta property="og:image" content="assets/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ontwikkeloase.nl/" />
+    <meta property="og:title" content="OntwikkelOase | Coaching & Persoonlijke Groei" />
+    <meta
+      property="og:description"
+      content="Groei mogelijk maken in een veilige en stimulerende omgeving. 1-op-1 coaching, teamontwikkeling en leiderschapstrajecten."
+    />
+    <meta property="og:image" content="assets/og-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Ontwikkel-Oase",
-            "description": "Coaching en persoonlijke ontwikkeling door Josine Dielissen",
-            "url": "https://www.ontwikkeloase.nl",
-            "telephone": "+31683234386",
-            "email": "info@ontwikkeloase.nl",
-            "founder": { "@type": "Person", "name": "Josine Dielissen" },
-            "serviceType": ["Persoonlijke coaching", "Teamontwikkeling", "Leiderschapstraject"]
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "OntwikkelOase",
+        "description": "Coaching en persoonlijke ontwikkeling door Josine Dielissen",
+        "url": "https://www.ontwikkeloase.nl",
+        "telephone": "+31683234386",
+        "email": "info@ontwikkeloase.nl",
+        "founder": { "@type": "Person", "name": "Josine Dielissen" },
+        "serviceType": ["Persoonlijke coaching", "Teamontwikkeling", "Leiderschapstraject"]
+      }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
-        /* ── RESET & BASE ── */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        :root {
-            --zwart:    #111110;
-            --olijf:    #5A6B3A;
-            --olijf-lt: #8A9E62;
-            --kerrie:   #C49A1A;
-            --oudrose:  #C2867E;
-            --beige:    #F6F3EE;
-            --wit:      #FDFCFA;
-            --zink:     #6B6B67;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans:  'DM Sans', system-ui, sans-serif;
-        }
+      :root {
+        --zwart: #111110;
+        --olijf: #5a6b3a;
+        --olijf-lt: #8a9e62;
+        --kerrie: #c49a1a;
+        --oudrose: #c2867e;
+        --beige: #f6f3ee;
+        --wit: #fdfcfa;
+        --zink: #6b6b67;
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-sans: "DM Sans", system-ui, sans-serif;
+      }
 
-        html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            background: var(--beige);
-            color: var(--zwart);
-            font-family: var(--font-sans);
-            font-weight: 300;
-            line-height: 1.75;
-            overflow-x: hidden;
-        }
+      body {
+        background: var(--beige);
+        color: var(--zwart);
+        font-family: var(--font-sans);
+        font-weight: 300;
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
 
-        /* ── SELECTION ── */
-        ::selection { background: var(--kerrie); color: #fff; }
+      ::selection {
+        background: var(--kerrie);
+        color: #fff;
+      }
 
-        /* ── NAV ── */
-        nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(246,243,238,0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(90,107,58,0.12);
-            transition: all 0.4s ease;
-        }
-        nav.scrolled {
-            background: rgba(253,252,250,0.97);
-            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
-        }
-        .nav-inner {
-            max-width: 1280px; margin: 0 auto;
-            padding: 0 2.5rem;
-            height: 80px;
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            font-weight: 400;
-            text-decoration: none;
-            color: var(--zwart);
-            letter-spacing: -0.02em;
-        }
-        .nav-logo em { color: var(--olijf); font-style: italic; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-        .nav-links a {
-            text-decoration: none;
-            font-size: 0.68rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: var(--zink);
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--olijf); }
-        .nav-links a.cta {
-            border: 1px solid var(--zwart);
-            padding: 0.6rem 1.4rem;
-            color: var(--zwart);
-            transition: all 0.3s;
-        }
-        .nav-links a.cta:hover { background: var(--zwart); color: var(--wit); }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(246, 243, 238, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(90, 107, 58, 0.12);
+        transition: all 0.4s ease;
+      }
+      nav.scrolled {
+        background: rgba(253, 252, 250, 0.97);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+      }
+      .nav-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: var(--zwart);
+        letter-spacing: -0.02em;
+      }
+      .nav-logo em {
+        color: var(--olijf);
+        font-style: italic;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--zink);
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--olijf);
+      }
+      .nav-links a.cta {
+        border: 1px solid var(--zwart);
+        padding: 0.6rem 1.4rem;
+        color: var(--zwart);
+        transition: all 0.3s;
+      }
+      .nav-links a.cta:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
 
-        /* Mobile menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.25rem;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background: var(--zwart);
+        transition: all 0.3s;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        overflow: hidden;
+        background: var(--beige);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        clip-path: circle(0% at calc(100% - 44px) 40px);
+        transition:
+          clip-path 0.55s cubic-bezier(0.77, 0, 0.175, 1),
+          opacity 0.2s ease;
+      }
+      .mobile-menu.open {
+        opacity: 1;
+        pointer-events: all;
+        clip-path: circle(150% at calc(100% - 44px) 40px);
+      }
+      .mobile-menu a {
+        font-family: var(--font-serif);
+        font-size: 2.4rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--zwart);
+        padding: 0.6rem 0;
+        letter-spacing: -0.01em;
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          color 0.3s,
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .mobile-menu.open a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .mobile-menu.open a:nth-child(1) {
+        transition-delay: 0.18s;
+      }
+      .mobile-menu.open a:nth-child(2) {
+        transition-delay: 0.24s;
+      }
+      .mobile-menu.open a:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .mobile-menu.open a:nth-child(4) {
+        transition-delay: 0.36s;
+      }
+      .mobile-menu.open a:nth-child(5) {
+        transition-delay: 0.42s;
+      }
+      .mobile-menu.open a:nth-child(6) {
+        transition-delay: 0.48s;
+      }
+      .mobile-menu a:hover {
+        color: var(--olijf);
+      }
+      .mobile-menu a.cta-mobile {
+        margin-top: 1.2rem;
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        border: 1px solid var(--zwart);
+        padding: 0.8rem 2rem;
+        transition:
+          background 0.3s,
+          color 0.3s,
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .mobile-menu a.cta-mobile:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
+
+      .hamburger span {
+        transition: all 0.35s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+
+      .mobile-menu-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--zink);
+        display: none;
+      }
+
+      .mobile-menu::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 0;
+        background: rgba(90, 107, 58, 0.15);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: height 0.5s ease 0.1s;
+      }
+      .mobile-menu.open::before {
+        height: 55%;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 8rem 2rem 4rem;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image:
+          radial-gradient(ellipse 80% 60% at 70% 40%, rgba(90, 107, 58, 0.07) 0%, transparent 70%),
+          radial-gradient(ellipse 50% 50% at 20% 80%, rgba(196, 154, 26, 0.06) 0%, transparent 60%);
+      }
+
+      .hero-circle {
+        position: absolute;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        border: 1px solid rgba(90, 107, 58, 0.12);
+        top: 50%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        animation: pulseRing 6s ease-in-out infinite;
+      }
+      .hero-circle-2 {
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        border: 1px solid rgba(196, 154, 26, 0.1);
+        top: 50%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        animation: pulseRing 6s ease-in-out infinite 1.5s;
+      }
+      @keyframes pulseRing {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.04);
+          opacity: 0.5;
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 760px;
+        animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        opacity: 0;
+      }
+      @keyframes heroReveal {
+        from {
+          opacity: 0;
+          transform: translateY(36px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--olijf);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1.6rem;
+        animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+        opacity: 0;
+      }
+
+      .hero-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3.2rem, 7vw, 6.8rem);
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.8rem;
+        animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+        opacity: 0;
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--oudrose);
+        font-weight: 300;
+      }
+
+      .hero-sub {
+        font-size: 1.05rem;
+        color: var(--zink);
+        font-weight: 300;
+        max-width: 480px;
+        margin-bottom: 2.8rem;
+        line-height: 1.85;
+        animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+        opacity: 0;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.65s forwards;
+        opacity: 0;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        background: var(--olijf);
+        color: var(--wit);
+        padding: 1rem 2.4rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition:
+          background 0.35s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        background: var(--zwart);
+        transform: translateY(-1px);
+      }
+
+      .btn-outline {
+        display: inline-block;
+        border: 1px solid var(--zwart);
+        color: var(--zwart);
+        padding: 1rem 2.4rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.35s;
+      }
+      .btn-outline:hover {
+        background: var(--zwart);
+        color: var(--wit);
+      }
+
+      .hero-scroll {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--zink);
+        animation: heroReveal 1.4s ease 1.2s forwards;
+        opacity: 0;
+      }
+      .scroll-line {
+        width: 1px;
+        height: 48px;
+        background: linear-gradient(to bottom, var(--zink), transparent);
+        animation: scrollDrop 2s ease-in-out infinite;
+      }
+      @keyframes scrollDrop {
+        0%,
+        100% {
+          transform: scaleY(1);
+          transform-origin: top;
+        }
+        50% {
+          transform: scaleY(0.4);
+          transform-origin: top;
+        }
+      }
+
+      .quote-strip {
+        background: var(--zwart);
+        color: var(--wit);
+        padding: 3.5rem 2rem;
+        text-align: center;
+        overflow: hidden;
+      }
+      .quote-strip blockquote {
+        font-family: var(--font-serif);
+        font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+        font-style: italic;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+        line-height: 1.5;
+      }
+      .quote-strip cite {
+        display: block;
+        margin-top: 1rem;
+        font-family: var(--font-sans);
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-style: normal;
+      }
+
+      .section {
+        padding: 7rem 2rem;
+      }
+      .section-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 300;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+        margin-bottom: 1.2rem;
+      }
+      .section-title em {
+        font-style: italic;
+        color: var(--olijf);
+      }
+      .section-intro {
+        color: var(--zink);
+        font-size: 1rem;
+        max-width: 520px;
+        line-height: 1.85;
+        margin-bottom: 4rem;
+      }
+
+      .diensten-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5px;
+        background: rgba(90, 107, 58, 0.1);
+      }
+
+      .dienst-card {
+        background: var(--wit);
+        padding: 3rem 2.5rem;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition:
+          background 0.35s,
+          transform 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .dienst-card::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: var(--kerrie);
+        transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .dienst-card:hover::before {
+        width: 100%;
+      }
+      .dienst-card:hover {
+        background: var(--beige);
+        transform: translateY(-3px);
+      }
+
+      .dienst-num {
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: rgba(90, 107, 58, 0.15);
+        line-height: 1;
+        margin-bottom: 1.2rem;
+      }
+      .dienst-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1.5rem;
+        color: var(--olijf);
+      }
+      .dienst-card h3 {
+        font-family: var(--font-serif);
+        font-size: 1.55rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+        line-height: 1.2;
+      }
+      .dienst-card p {
+        font-size: 0.9rem;
+        color: var(--zink);
+        line-height: 1.8;
+        margin-bottom: 1.8rem;
+      }
+      .dienst-link {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--zwart);
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .dienst-link::after {
+        content: "→";
+        transition: transform 0.3s;
+      }
+      .dienst-card:hover .dienst-link::after {
+        transform: translateX(4px);
+      }
+
+      .over-section {
+        background: var(--wit);
+        padding: 8rem 2rem;
+      }
+      .over-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+      }
+      .over-visual {
+        position: relative;
+      }
+      .over-img-placeholder {
+        width: 100%;
+        aspect-ratio: 3/4;
+        background: linear-gradient(135deg, rgba(90, 107, 58, 0.08) 0%, rgba(196, 154, 26, 0.06) 100%);
+        border: 1px solid rgba(90, 107, 58, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        color: var(--zink);
+        font-style: italic;
+      }
+      .over-badge {
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1.5rem;
+        width: 130px;
+        height: 130px;
+        background: var(--kerrie);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .over-badge span:first-child {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        color: #fff;
+        line-height: 1;
+      }
+      .over-badge span:last-child {
+        font-size: 0.55rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .over-text .section-label {
+        margin-bottom: 1.4rem;
+      }
+      .over-text h2 {
+        margin-bottom: 1.5rem;
+      }
+      .over-text p {
+        color: var(--zink);
+        line-height: 1.9;
+        margin-bottom: 1.2rem;
+      }
+      .over-stats {
+        display: flex;
+        gap: 3rem;
+        margin: 2.5rem 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.07);
+        padding-top: 2rem;
+      }
+      .stat-item {
+      }
+      .stat-num {
+        font-family: var(--font-serif);
+        font-size: 2.6rem;
+        font-weight: 300;
+        color: var(--olijf);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--zink);
+        margin-top: 0.25rem;
+      }
+
+      .werkwijze-section {
+        padding: 7rem 2rem;
+      }
+      .werkwijze-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .werkwijze-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        margin-top: 4rem;
+      }
+      .stap {
+        padding: 2.5rem 2rem;
+        border-left: 1px solid rgba(90, 107, 58, 0.12);
+        position: relative;
+      }
+      .stap:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+      .stap-num {
+        font-family: var(--font-serif);
+        font-size: 4rem;
+        font-weight: 300;
+        color: rgba(196, 154, 26, 0.2);
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      .stap h3 {
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+      }
+      .stap p {
+        font-size: 0.88rem;
+        color: var(--zink);
+        line-height: 1.8;
+      }
+
+      .testimonial-section {
+        background: var(--zwart);
+        color: var(--wit);
+        padding: 7rem 2rem;
+      }
+      .testimonial-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .testimonial-inner .section-label {
+        color: var(--kerrie);
+      }
+      .testimonial-inner .section-title {
+        color: var(--wit);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2px;
+        margin-top: 3rem;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 2.8rem 2.5rem;
+        transition: background 0.3s;
+      }
+      .testimonial-card:hover {
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .testimonial-stars {
+        color: var(--kerrie);
+        font-size: 0.9rem;
+        margin-bottom: 1.4rem;
+      }
+      .testimonial-card blockquote {
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 1.8rem;
+      }
+      .testimonial-name {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .cta-section {
+        padding: 8rem 2rem;
+        background: var(--olijf);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      }
+      .cta-content {
+        position: relative;
+        z-index: 1;
+      }
+      .cta-content h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 1.4rem;
+      }
+      .cta-content h2 em {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .cta-content p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+        max-width: 500px;
+        margin: 0 auto 2.8rem;
+      }
+      .btn-white {
+        display: inline-block;
+        background: #fff;
+        color: var(--olijf);
+        padding: 1.1rem 2.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .btn-white:hover {
+        background: var(--zwart);
+        color: #fff;
+      }
+
+      .blog-section {
+        padding: 7rem 2rem;
+        background: var(--wit);
+      }
+      .blog-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3.5rem;
+      }
+      .blog-card {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      .blog-img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: linear-gradient(135deg, rgba(90, 107, 58, 0.1) 0%, rgba(196, 154, 26, 0.07) 100%);
+        border: 1px solid rgba(90, 107, 58, 0.1);
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        position: relative;
+      }
+      .blog-img-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-serif);
+        color: var(--zink);
+        font-style: italic;
+        transition: transform 0.5s;
+      }
+      .blog-card:hover .blog-img-inner {
+        transform: scale(1.04);
+      }
+      .blog-card:hover .blog-img img {
+        transform: scale(1.04);
+      }
+      .blog-cat {
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--kerrie);
+        margin-bottom: 0.6rem;
+        font-weight: 500;
+      }
+      .blog-card h3 {
+        font-family: var(--font-serif);
+        font-size: 1.35rem;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+        transition: color 0.3s;
+      }
+      .blog-card:hover h3 {
+        color: var(--olijf);
+      }
+      .blog-card p {
+        font-size: 0.88rem;
+        color: var(--zink);
+        line-height: 1.75;
+      }
+
+      footer {
+        background: var(--zwart);
+        color: rgba(255, 255, 255, 0.4);
+        padding: 5rem 2rem 2rem;
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-brand .nav-logo {
+        color: #fff;
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .footer-brand p {
+        font-size: 0.88rem;
+        line-height: 1.85;
+        max-width: 260px;
+      }
+      .footer-col h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+        margin-bottom: 1.4rem;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col li {
+        margin-bottom: 0.75rem;
+      }
+      .footer-col a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9rem;
+        transition: color 0.3s;
+      }
+      .footer-col a:hover {
+        color: var(--kerrie);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-bottom p {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+      }
+      .footer-social {
+        display: flex;
+        gap: 1.2rem;
+      }
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        transition: all 0.3s;
+      }
+      .footer-social a:hover {
+        border-color: var(--kerrie);
+        color: var(--kerrie);
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
         .hamburger {
-            display: none; flex-direction: column; gap: 5px;
-            cursor: pointer; background: none; border: none; padding: 0.25rem;
-        }
-        .hamburger span {
-            display: block; width: 24px; height: 1.5px;
-            background: var(--zwart); transition: all 0.3s;
-        }
-        /* ── MOBILE MENU ANIMATED ── */
-        .mobile-menu {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; overflow: hidden;
-            background: var(--beige);
-            flex-direction: column;
-            align-items: center; justify-content: center; gap: 0;
-            /* hidden state */
-            display: flex;
-            opacity: 0;
-            pointer-events: none;
-            clip-path: circle(0% at calc(100% - 44px) 40px);
-            transition: clip-path 0.55s cubic-bezier(0.77,0,0.175,1),
-                        opacity 0.2s ease;
-        }
-        .mobile-menu.open {
-            opacity: 1;
-            pointer-events: all;
-            clip-path: circle(150% at calc(100% - 44px) 40px);
-        }
-        .mobile-menu a {
-            font-family: var(--font-serif);
-            font-size: 2.4rem; font-weight: 300;
-            text-decoration: none; color: var(--zwart);
-            padding: 0.6rem 0;
-            letter-spacing: -0.01em;
-            opacity: 0;
-            transform: translateY(18px);
-            transition: color 0.3s, opacity 0.4s ease, transform 0.4s ease;
-        }
-        .mobile-menu.open a {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .mobile-menu.open a:nth-child(1) { transition-delay: 0.18s; }
-        .mobile-menu.open a:nth-child(2) { transition-delay: 0.24s; }
-        .mobile-menu.open a:nth-child(3) { transition-delay: 0.30s; }
-        .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
-        .mobile-menu.open a:nth-child(5) { transition-delay: 0.42s; }
-        .mobile-menu.open a:nth-child(6) { transition-delay: 0.48s; }
-        .mobile-menu a:hover { color: var(--olijf); }
-        .mobile-menu a.cta-mobile {
-            margin-top: 1.2rem;
-            font-size: 1rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            font-family: var(--font-sans);
-            font-weight: 500;
-            border: 1px solid var(--zwart);
-            padding: 0.8rem 2rem;
-            transition: background 0.3s, color 0.3s, opacity 0.4s ease, transform 0.4s ease;
-        }
-        .mobile-menu a.cta-mobile:hover { background: var(--zwart); color: var(--wit); }
-        /* Hamburger animated to X */
-        .hamburger span { transition: all 0.35s cubic-bezier(0.77,0,0.175,1); }
-        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-        /* Close button inside menu */
-        .mobile-menu-close {
-            position: absolute; top: 1.5rem; right: 1.5rem;
-            background: none; border: none; cursor: pointer;
-            font-size: 1.5rem; color: var(--zink);
-            display: none;
-        }
-        /* Decorative line between links */
-        .mobile-menu::before {
-            content: '';
-            position: absolute;
-            width: 1px; height: 0;
-            background: rgba(90,107,58,0.15);
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            transition: height 0.5s ease 0.1s;
-        }
-        .mobile-menu.open::before { height: 55%; }
-
-        /* ── HERO ── */
-        .hero {
-            min-height: 100vh;
-            display: flex; align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
-            padding: 8rem 2rem 4rem;
-        }
-
-        /* Subtle grain texture overlay */
-        .hero::before {
-            content: '';
-            position: absolute; inset: 0; z-index: 0;
-            background-image:
-                    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(90,107,58,0.07) 0%, transparent 70%),
-                    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(196,154,26,0.06) 0%, transparent 60%);
-        }
-
-        /* Decorative circle */
-        .hero-circle {
-            position: absolute;
-            width: 520px; height: 520px;
-            border-radius: 50%;
-            border: 1px solid rgba(90,107,58,0.12);
-            top: 50%; left: 58%;
-            transform: translate(-50%, -50%);
-            animation: pulseRing 6s ease-in-out infinite;
-        }
-        .hero-circle-2 {
-            position: absolute;
-            width: 380px; height: 380px;
-            border-radius: 50%;
-            border: 1px solid rgba(196,154,26,0.1);
-            top: 50%; left: 58%;
-            transform: translate(-50%, -50%);
-            animation: pulseRing 6s ease-in-out infinite 1.5s;
-        }
-        @keyframes pulseRing {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            50% { transform: translate(-50%, -50%) scale(1.04); opacity: 0.5; }
-        }
-
-        .hero-content {
-            position: relative; z-index: 2;
-            max-width: 760px;
-            animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-            opacity: 0;
-        }
-        @keyframes heroReveal {
-            from { opacity: 0; transform: translateY(36px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-eyebrow {
-            font-size: 0.68rem;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--olijf);
-            font-weight: 500;
-            display: block;
-            margin-bottom: 1.6rem;
-            animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
-            opacity: 0;
-        }
-
-        .hero-title {
-            font-family: var(--font-serif);
-            font-size: clamp(3.2rem, 7vw, 6.8rem);
-            font-weight: 300;
-            line-height: 1.08;
-            letter-spacing: -0.02em;
-            margin-bottom: 1.8rem;
-            animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
-            opacity: 0;
-        }
-        .hero-title em {
-            font-style: italic;
-            color: var(--oudrose);
-            font-weight: 300;
-        }
-
-        .hero-sub {
-            font-size: 1.05rem;
-            color: var(--zink);
-            font-weight: 300;
-            max-width: 480px;
-            margin-bottom: 2.8rem;
-            line-height: 1.85;
-            animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-            opacity: 0;
-        }
-
-        .hero-actions {
-            display: flex; gap: 1rem; flex-wrap: wrap;
-            animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.65s forwards;
-            opacity: 0;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background: var(--zwart); color: var(--wit);
-            padding: 1rem 2.4rem;
-            font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background 0.35s, transform 0.2s;
-        }
-        .btn-primary:hover { background: var(--olijf); transform: translateY(-1px); }
-
-        .btn-outline {
-            display: inline-block;
-            border: 1px solid var(--zwart); color: var(--zwart);
-            padding: 1rem 2.4rem;
-            font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.35s;
-        }
-        .btn-outline:hover { background: var(--zwart); color: var(--wit); }
-
-        .hero-scroll {
-            position: absolute; bottom: 2.5rem; left: 50%;
-            transform: translateX(-50%);
-            display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-            font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--zink);
-            animation: heroReveal 1.4s ease 1.2s forwards; opacity: 0;
-        }
-        .scroll-line {
-            width: 1px; height: 48px;
-            background: linear-gradient(to bottom, var(--zink), transparent);
-            animation: scrollDrop 2s ease-in-out infinite;
-        }
-        @keyframes scrollDrop {
-            0%, 100% { transform: scaleY(1); transform-origin: top; }
-            50% { transform: scaleY(0.4); transform-origin: top; }
-        }
-
-        /* ── QUOTE STRIP ── */
-        .quote-strip {
-            background: var(--zwart); color: var(--wit);
-            padding: 3.5rem 2rem;
-            text-align: center;
-            overflow: hidden;
-        }
-        .quote-strip blockquote {
-            font-family: var(--font-serif);
-            font-size: clamp(1.5rem, 3.5vw, 2.4rem);
-            font-style: italic;
-            font-weight: 300;
-            letter-spacing: 0.01em;
-            line-height: 1.5;
-        }
-        .quote-strip cite {
-            display: block; margin-top: 1rem;
-            font-family: var(--font-sans);
-            font-size: 0.65rem; letter-spacing: 0.22em;
-            text-transform: uppercase; color: var(--kerrie);
-            font-style: normal;
-        }
-
-        /* ── DIENSTEN ── */
-        .section { padding: 7rem 2rem; }
-        .section-inner { max-width: 1200px; margin: 0 auto; }
-
-        .section-label {
-            font-size: 0.65rem; letter-spacing: 0.25em;
-            text-transform: uppercase; color: var(--kerrie);
-            font-weight: 500; display: block; margin-bottom: 1rem;
-        }
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
-            font-weight: 300; line-height: 1.15;
-            letter-spacing: -0.01em;
-            margin-bottom: 1.2rem;
-        }
-        .section-title em { font-style: italic; color: var(--olijf); }
-        .section-intro {
-            color: var(--zink); font-size: 1rem; max-width: 520px;
-            line-height: 1.85; margin-bottom: 4rem;
-        }
-
-        .diensten-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5px;
-            background: rgba(90,107,58,0.1);
-        }
-
-        .dienst-card {
-            background: var(--wit);
-            padding: 3rem 2.5rem;
-            text-decoration: none; color: inherit;
-            display: block;
-            transition: background 0.35s, transform 0.3s;
-            position: relative; overflow: hidden;
-        }
-        .dienst-card::before {
-            content: '';
-            position: absolute; bottom: 0; left: 0;
-            height: 3px; width: 0;
-            background: var(--kerrie);
-            transition: width 0.5s cubic-bezier(0.22,1,0.36,1);
-        }
-        .dienst-card:hover::before { width: 100%; }
-        .dienst-card:hover { background: var(--beige); transform: translateY(-3px); }
-
-        .dienst-num {
-            font-family: var(--font-serif);
-            font-size: 3.5rem; font-weight: 300;
-            color: rgba(90,107,58,0.15);
-            line-height: 1; margin-bottom: 1.2rem;
-        }
-        .dienst-icon {
-            width: 40px; height: 40px; margin-bottom: 1.5rem;
-            color: var(--olijf);
-        }
-        .dienst-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.55rem; font-weight: 400;
-            margin-bottom: 0.8rem; line-height: 1.2;
-        }
-        .dienst-card p {
-            font-size: 0.9rem; color: var(--zink);
-            line-height: 1.8; margin-bottom: 1.8rem;
-        }
-        .dienst-link {
-            font-size: 0.65rem; letter-spacing: 0.18em;
-            text-transform: uppercase; color: var(--zwart);
-            font-weight: 500;
-            display: inline-flex; align-items: center; gap: 0.6rem;
-        }
-        .dienst-link::after {
-            content: '→';
-            transition: transform 0.3s;
-        }
-        .dienst-card:hover .dienst-link::after { transform: translateX(4px); }
-
-        /* ── OVER JOSINE ── */
-        .over-section {
-            background: var(--wit);
-            padding: 8rem 2rem;
+          display: flex;
         }
         .over-grid {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 6rem; align-items: center;
+          grid-template-columns: 1fr;
+          gap: 3rem;
         }
-        .over-visual {
-            position: relative;
-        }
-        .over-img-placeholder {
-            width: 100%; aspect-ratio: 3/4;
-            background: linear-gradient(135deg, rgba(90,107,58,0.08) 0%, rgba(196,154,26,0.06) 100%);
-            border: 1px solid rgba(90,107,58,0.15);
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 1.1rem; color: var(--zink);
-            font-style: italic;
-        }
-        .over-badge {
-            position: absolute; bottom: -1.5rem; right: -1.5rem;
-            width: 130px; height: 130px;
-            background: var(--kerrie);
-            border-radius: 50%;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            text-align: center;
-        }
-        .over-badge span:first-child {
-            font-family: var(--font-serif);
-            font-size: 2rem; color: #fff; line-height: 1;
-        }
-        .over-badge span:last-child {
-            font-size: 0.55rem; letter-spacing: 0.12em;
-            text-transform: uppercase; color: rgba(255,255,255,0.75);
-        }
-        .over-text .section-label { margin-bottom: 1.4rem; }
-        .over-text h2 { margin-bottom: 1.5rem; }
-        .over-text p { color: var(--zink); line-height: 1.9; margin-bottom: 1.2rem; }
-        .over-stats {
-            display: flex; gap: 3rem; margin: 2.5rem 0;
-            border-top: 1px solid rgba(0,0,0,0.07);
-            padding-top: 2rem;
-        }
-        .stat-item {}
-        .stat-num {
-            font-family: var(--font-serif);
-            font-size: 2.6rem; font-weight: 300;
-            color: var(--olijf); line-height: 1;
-        }
-        .stat-label {
-            font-size: 0.68rem; letter-spacing: 0.12em;
-            text-transform: uppercase; color: var(--zink);
-            margin-top: 0.25rem;
-        }
-
-        /* ── WERKWIJZE ── */
-        .werkwijze-section { padding: 7rem 2rem; }
-        .werkwijze-inner { max-width: 1100px; margin: 0 auto; }
         .werkwijze-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 0; margin-top: 4rem;
-        }
-        .stap {
-            padding: 2.5rem 2rem;
-            border-left: 1px solid rgba(90,107,58,0.12);
-            position: relative;
-        }
-        .stap:first-child { border-left: none; padding-left: 0; }
-        .stap-num {
-            font-family: var(--font-serif);
-            font-size: 4rem; font-weight: 300;
-            color: rgba(196,154,26,0.2); line-height: 1;
-            margin-bottom: 1rem;
-        }
-        .stap h3 {
-            font-family: var(--font-serif);
-            font-size: 1.2rem; font-weight: 400;
-            margin-bottom: 0.8rem;
-        }
-        .stap p { font-size: 0.88rem; color: var(--zink); line-height: 1.8; }
-
-        /* ── TESTIMONIALS ── */
-        .testimonial-section {
-            background: var(--zwart); color: var(--wit);
-            padding: 7rem 2rem;
-        }
-        .testimonial-inner { max-width: 1200px; margin: 0 auto; }
-        .testimonial-inner .section-label { color: var(--kerrie); }
-        .testimonial-inner .section-title { color: var(--wit); }
-        .testimonials-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2px; margin-top: 3rem;
-        }
-        .testimonial-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            padding: 2.8rem 2.5rem;
-            transition: background 0.3s;
-        }
-        .testimonial-card:hover { background: rgba(255,255,255,0.07); }
-        .testimonial-stars { color: var(--kerrie); font-size: 0.9rem; margin-bottom: 1.4rem; }
-        .testimonial-card blockquote {
-            font-family: var(--font-serif);
-            font-size: 1.1rem; font-style: italic; font-weight: 300;
-            line-height: 1.75; color: rgba(255,255,255,0.85);
-            margin-bottom: 1.8rem;
-        }
-        .testimonial-name {
-            font-size: 0.65rem; letter-spacing: 0.18em;
-            text-transform: uppercase; color: rgba(255,255,255,0.4);
-        }
-
-        /* ── CTA BANNER ── */
-        .cta-section {
-            padding: 8rem 2rem;
-            background: var(--olijf);
-            text-align: center;
-            position: relative; overflow: hidden;
-        }
-        .cta-section::before {
-            content: '';
-            position: absolute; inset: 0;
-            background-image: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%);
-        }
-        .cta-content { position: relative; z-index: 1; }
-        .cta-content h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-            font-weight: 300; color: #fff;
-            line-height: 1.15; margin-bottom: 1.4rem;
-        }
-        .cta-content h2 em { font-style: italic; color: rgba(255,255,255,0.7); }
-        .cta-content p {
-            color: rgba(255,255,255,0.75); font-size: 1rem;
-            max-width: 500px; margin: 0 auto 2.8rem;
-        }
-        .btn-white {
-            display: inline-block;
-            background: #fff; color: var(--olijf);
-            padding: 1.1rem 2.8rem;
-            font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-            font-weight: 500; text-decoration: none;
-            transition: all 0.3s;
-        }
-        .btn-white:hover { background: var(--zwart); color: #fff; }
-
-        /* ── BLOG PREVIEW ── */
-        .blog-section { padding: 7rem 2rem; background: var(--wit); }
-        .blog-inner { max-width: 1200px; margin: 0 auto; }
-        .blog-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem; margin-top: 3.5rem;
-        }
-        .blog-card {
-            text-decoration: none; color: inherit; display: block;
-        }
-        .blog-img {
-            width: 100%; aspect-ratio: 16/9;
-            background: linear-gradient(135deg, rgba(90,107,58,0.1) 0%, rgba(196,154,26,0.07) 100%);
-            border: 1px solid rgba(90,107,58,0.1);
-            margin-bottom: 1.5rem;
-            overflow: hidden; position: relative;
-        }
-        .blog-img-inner {
-            width: 100%; height: 100%;
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-serif); color: var(--zink); font-style: italic;
-            transition: transform 0.5s;
-        }
-        .blog-card:hover .blog-img-inner { transform: scale(1.04); }
-        .blog-card:hover .blog-img img { transform: scale(1.04); }
-        .blog-cat {
-            font-size: 0.6rem; letter-spacing: 0.2em;
-            text-transform: uppercase; color: var(--kerrie);
-            margin-bottom: 0.6rem; font-weight: 500;
-        }
-        .blog-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.35rem; font-weight: 400;
-            line-height: 1.3; margin-bottom: 0.6rem;
-            transition: color 0.3s;
-        }
-        .blog-card:hover h3 { color: var(--olijf); }
-        .blog-card p { font-size: 0.88rem; color: var(--zink); line-height: 1.75; }
-
-        /* ── FOOTER ── */
-        footer {
-            background: var(--zwart); color: rgba(255,255,255,0.4);
-            padding: 5rem 2rem 2rem;
+          grid-template-columns: repeat(2, 1fr);
         }
         .footer-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem; margin-bottom: 4rem;
+          grid-template-columns: 1fr 1fr;
         }
-        .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 1.2rem; }
-        .footer-brand p { font-size: 0.88rem; line-height: 1.85; max-width: 260px; }
-        .footer-col h4 {
-            font-size: 0.65rem; letter-spacing: 0.22em;
-            text-transform: uppercase; color: rgba(255,255,255,0.6);
-            font-weight: 500; margin-bottom: 1.4rem;
+      }
+      @media (max-width: 600px) {
+        .hero-title {
+          font-size: 3rem;
         }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.75rem; }
-        .footer-col a {
-            text-decoration: none; color: rgba(255,255,255,0.4);
-            font-size: 0.9rem; transition: color 0.3s;
+        .werkwijze-grid {
+          grid-template-columns: 1fr;
         }
-        .footer-col a:hover { color: var(--kerrie); }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding-top: 2rem;
-            display: flex; justify-content: space-between; align-items: center;
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
         }
-        .footer-bottom p { font-size: 0.68rem; letter-spacing: 0.1em; }
-        .footer-social { display: flex; gap: 1.2rem; }
-        .footer-social a {
-            width: 36px; height: 36px;
-            border: 1px solid rgba(255,255,255,0.1);
-            display: flex; align-items: center; justify-content: center;
-            text-decoration: none; color: rgba(255,255,255,0.4);
-            font-size: 0.75rem; transition: all 0.3s;
+        .over-badge {
+          width: 100px;
+          height: 100px;
+          bottom: -1rem;
+          right: -0.5rem;
         }
-        .footer-social a:hover { border-color: var(--kerrie); color: var(--kerrie); }
+        .over-badge span:first-child {
+          font-size: 1.5rem;
+        }
+      }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .over-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .werkwijze-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-inner { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 600px) {
-            .hero-title { font-size: 3rem; }
-            .werkwijze-grid { grid-template-columns: 1fr; }
-            .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-            .over-badge { width: 100px; height: 100px; bottom: -1rem; right: -0.5rem; }
-            .over-badge span:first-child { font-size: 1.5rem; }
-        }
-    
-        /* ── LOGO IMAGES ── */
-        .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
-        .nav-logo-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
-        .footer-logo { display: inline-block; }
-        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; }
-        
-        /* ── NAV OVERFLOW FIX (mobile) ── */
-        nav { width: 100%; max-width: 100vw; overflow: hidden; }
-        .nav-inner { width: 100%; box-sizing: border-box; overflow: hidden; }
-        .nav-logo { max-width: calc(100vw - 100px); overflow: hidden; }
-        .nav-logo-img { flex-shrink: 0; }
-        html, body { overflow-x: hidden; max-width: 100%; }
-        /* Hero circles overflow fix */
-        .hero { overflow: hidden; }
-        .page-hero { overflow: hidden; }
-        header { overflow-x: hidden; }
-        @media (max-width: 900px) {
-            .hero-circle { width: min(520px, 90vw) !important; height: min(520px, 90vw) !important; }
-            .hero-circle-2 { width: min(380px, 90vw) !important; height: min(380px, 90vw) !important; }
-            .contact-hero { overflow: hidden; }
-            .footer-inner { overflow-x: hidden; }
-        }
-        @media (max-width: 600px) {
-            .form-row { grid-template-columns: 1fr !important; }
-            .service-cards { grid-template-columns: 1fr 1fr !important; }
-            .avail-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        </style>
-</head>
-<body>
+      .nav-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-logo-img {
+        height: 32px;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+      .footer-logo {
+        display: inline-block;
+      }
+      .footer-logo-img {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 1rem;
+      }
 
-<!-- ── NAVIGATION ── -->
-<nav id="mainNav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Ontwikkel-Oase logo" class="nav-logo-img">Ontwikkel<em>-Oase</em></a>
+      nav {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+      .nav-inner {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .nav-logo {
+        max-width: calc(100vw - 100px);
+        overflow: hidden;
+      }
+      .nav-logo-img {
+        flex-shrink: 0;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      .hero {
+        overflow: hidden;
+      }
+      .page-hero {
+        overflow: hidden;
+      }
+      header {
+        overflow-x: hidden;
+      }
+      @media (max-width: 900px) {
+        .hero-circle {
+          width: min(520px, 90vw) !important;
+          height: min(520px, 90vw) !important;
+        }
+        .hero-circle-2 {
+          width: min(380px, 90vw) !important;
+          height: min(380px, 90vw) !important;
+        }
+        .contact-hero {
+          overflow: hidden;
+        }
+        .footer-inner {
+          overflow-x: hidden;
+        }
+      }
+      @media (max-width: 600px) {
+        .form-row {
+          grid-template-columns: 1fr !important;
+        }
+        .service-cards {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .avail-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="OntwikkelOase logo" class="nav-logo-img" />
+          Ontwikkel
+          <em>Oase</em>
+        </a>
         <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over.html">Over Josine</a></li>
+          <li><a href="aanbod.html">Aanbod</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu openen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="over.html">Over Josine</a>
+      <a href="aanbod.html">Aanbod</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Boek een sessie</a>
+    </div>
+
+    <header class="hero" id="home">
+      <div class="hero-circle"></div>
+      <div class="hero-circle-2"></div>
+
+      <div class="hero-content">
+        <span class="hero-eyebrow">Josine Dielissen &nbsp;·&nbsp; Coaching bij rouw, trauma & burn-out</span>
+        <h1 class="hero-title">
+          Ruimte voor
+          <br />
+          <em>herstel, kracht om te groeien.</em>
+        </h1>
+        <p class="hero-sub">
+          Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die klaar zijn voor
+          de volgende stap.
+        </p>
+        <div class="hero-actions">
+          <a href="aanbod.html" class="btn-primary">Bekijk het aanbod</a>
+          <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </header>
+
+    <div class="quote-strip" data-aos="fade-up">
+      <blockquote>"Groei vraagt geen kracht. Groei vraagt ruimte."</blockquote>
+      <cite>— Josine Dielissen, OntwikkelOase</cite>
+    </div>
+
+    <section class="section" id="diensten">
+      <div class="section-inner">
+        <span class="section-label" data-aos="fade-up">Aanbod</span>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+          Wat kun je verwachten
+          <br />
+          van een
+          <em>Ontwikkeloase?</em>
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="140">
+          Of je nu op zoek bent naar persoonlijke verdieping, professionele groei of een frisse blik op je organisatie —
+          hier is ruimte voor jouw verhaal.
+        </p>
+
+        <div class="diensten-grid">
+          <a href="coaching-1op1.html" class="dienst-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="dienst-num">01</div>
+            <h3>1-op-1 Coaching</h3>
+            <p>
+              Diepgaande begeleiding op maat. We werken samen aan zelfinzicht, doelen en de concrete stappen die jij
+              nodig hebt om verder te groeien.
+            </p>
+            <span class="dienst-link">Meer ontdekken</span>
+          </a>
+          <a href="teamontwikkeling.html" class="dienst-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="dienst-num">02</div>
+            <h3>Teamontwikkeling</h3>
+            <p>
+              Workshops en trajecten die teams sterker maken. Door samen te ontdekken, te leren en te groeien, ontstaat
+              een cultuur van openheid en vertrouwen.
+            </p>
+            <span class="dienst-link">Meer ontdekken</span>
+          </a>
+          <a href="leiderschapstraject.html" class="dienst-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="dienst-num">03</div>
+            <h3>Leiderschapstraject</h3>
+            <p>
+              Voor leiders die willen groeien in impact en authenticiteit. Een intensief traject waarbij jij jouw unieke
+              leiderschapsstijl ontdekt en versterkt.
+            </p>
+            <span class="dienst-link">Meer ontdekken</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="over-section" id="over">
+      <div class="over-grid">
+        <div class="over-visual" data-aos="fade-right">
+          <div class="over-img-placeholder">Foto Josine Dielissen</div>
+          <div class="over-badge">
+            <span>10+</span>
+            <span>jaar ervaring</span>
+          </div>
+        </div>
+        <div class="over-text" data-aos="fade-left" data-aos-delay="150">
+          <span class="section-label">Over Josine</span>
+          <h2 class="section-title">
+            Begeleiding vanuit
+            <em>echte verbinding.</em>
+          </h2>
+          <p>
+            Josine Dielissen is de drijvende kracht achter OntwikkelOase. Met haar aanpak combineert ze warme
+            mensgerichtheid met scherpe professionele inzichten.
+          </p>
+          <p>
+            Ze begeleidt mensen en organisaties bij verandering — niet door te vertellen wat ze moeten doen, maar door
+            de juiste ruimte en vragen te bieden zodat de antwoorden van binnenuit komen.
+          </p>
+          <div class="over-stats">
+            <div class="stat-item">
+              <div class="stat-num">200+</div>
+              <div class="stat-label">Coachees begeleid</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">50+</div>
+              <div class="stat-label">Teams geholpen</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">98%</div>
+              <div class="stat-label">Aanbevolen</div>
+            </div>
+          </div>
+          <a href="over.html" class="btn-outline">Lees meer over Josine</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="werkwijze-section">
+      <div class="werkwijze-inner">
+        <div data-aos="fade-up">
+          <span class="section-label">Werkwijze</span>
+          <h2 class="section-title">
+            Zo werkt een traject
+            <em>bij OntwikkelOase.</em>
+          </h2>
+        </div>
+        <div class="werkwijze-grid">
+          <div class="stap" data-aos="fade-up" data-aos-delay="0">
+            <div class="stap-num">01</div>
+            <h3>Kennismaken</h3>
+            <p>Een gratis intakegesprek van 30 minuten. We verkennen jouw situatie, wensen en of er een klik is.</p>
+          </div>
+          <div class="stap" data-aos="fade-up" data-aos-delay="100">
+            <div class="stap-num">02</div>
+            <h3>Intake & Plan</h3>
+            <p>We stellen samen een helder traject op dat past bij jouw unieke doelen en tempo.</p>
+          </div>
+          <div class="stap" data-aos="fade-up" data-aos-delay="200">
+            <div class="stap-num">03</div>
+            <h3>Groeitraject</h3>
+            <p>Diepgaande sessies, reflectie en oefeningen. Altijd met een veilige, uitdagende sfeer als basis.</p>
+          </div>
+          <div class="stap" data-aos="fade-up" data-aos-delay="300">
+            <div class="stap-num">04</div>
+            <h3>Integratie</h3>
+            <p>We borgen de inzichten en zorgen voor een duurzame verankering in jouw dagelijks leven en werk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="testimonial-inner">
+        <span class="section-label" data-aos="fade-up">Ervaringen</span>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+          Wat anderen
+          <em style="color: var(--oudrose)">zeggen.</em>
+        </h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>
+              "Warme, deskundige rouwverwerking bij Ontwikkel Oase: persoonlijke begeleiding, inzicht, structuur en
+              steun na verlies, helpt je weer leven en balans vinden."
+            </blockquote>
+            <div class="testimonial-name">— Monique van Mil</div>
+          </div>
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>
+              "Ons team heeft een enorme transformatie doorgemaakt. De sfeer, het vertrouwen en de samenwerking zijn
+              compleet veranderd."
+            </blockquote>
+            <div class="testimonial-name">— Mark T., Directeur</div>
+          </div>
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>
+              "Ik had nooit gedacht dat coaching zoveel impact kon hebben. Josine creëert een veiligheid die ik nergens
+              anders heb ervaren."
+            </blockquote>
+            <div class="testimonial-name">— Lisa B., Ondernemer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section">
+      <div class="blog-inner">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+          "
+        >
+          <div data-aos="fade-up">
+            <span class="section-label">Blog</span>
+            <h2 class="section-title">
+              Inzichten &
+              <em>inspiratie.</em>
+            </h2>
+          </div>
+          <a href="blog.html" class="btn-outline" data-aos="fade-up" style="margin-bottom: 1.5rem">Alle artikelen</a>
+        </div>
+        <div class="blog-grid" id="homeBlogGrid">
+          <div
+            style="
+              grid-column: 1/-1;
+              text-align: center;
+              padding: 3rem;
+              font-family: var(--font-serif);
+              font-style: italic;
+              color: var(--zink);
+            "
+          >
+            Artikelen laden…
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>
+          Klaar voor jouw
+          <em>volgende stap?</em>
+        </h2>
+        <p>Plan een gratis kennismakingsgesprek en ontdek wat een traject bij OntwikkelOase voor jou kan betekenen.</p>
+        <a href="contact.html" class="btn-white">Gratis gesprek plannen</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo">
+            <img src="assets/full-logo.png" alt="OntwikkelOase" class="footer-logo-img" />
+          </a>
+          <p>
+            Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigatie</h4>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="over.html">Over Josine</a></li>
             <li><a href="aanbod.html">Aanbod</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="cta">Boek een sessie</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu openen">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="over.html">Over Josine</a>
-    <a href="aanbod.html">Aanbod</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Boek een sessie</a>
-</div>
-
-<!-- ── HERO ── -->
-<header class="hero" id="home">
-    <div class="hero-circle"></div>
-    <div class="hero-circle-2"></div>
-
-    <div class="hero-content">
-        <span class="hero-eyebrow">Josine Dielissen &nbsp;·&nbsp; Coaching & Groei</span>
-        <h1 class="hero-title">
-            Ruimte voor<br>
-            <em>nieuwe groei.</em>
-        </h1>
-        <p class="hero-sub">
-            Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die klaar zijn voor de volgende stap.
-        </p>
-        <div class="hero-actions">
-            <a href="aanbod.html" class="btn-primary">Bekijk het aanbod</a>
-            <a href="contact.html" class="btn-outline">Gratis kennismaken</a>
-        </div>
-    </div>
-
-    <div class="hero-scroll">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
-    </div>
-</header>
-
-<!-- ── QUOTE STRIP ── -->
-<div class="quote-strip" data-aos="fade-up">
-    <blockquote>
-        "Groei vraagt geen kracht. Groei vraagt ruimte."
-    </blockquote>
-    <cite>— Josine Dielissen, Ontwikkel-Oase</cite>
-</div>
-
-<!-- ── DIENSTEN ── -->
-<section class="section" id="diensten">
-    <div class="section-inner">
-        <span class="section-label" data-aos="fade-up">Aanbod</span>
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
-            Wat kun je verwachten<br>van een <em>Ontwikkeloase?</em>
-        </h2>
-        <p class="section-intro" data-aos="fade-up" data-aos-delay="140">
-            Of je nu op zoek bent naar persoonlijke verdieping, professionele groei of een frisse blik op je organisatie — hier is ruimte voor jouw verhaal.
-        </p>
-
-        <div class="diensten-grid">
-            <a href="coaching-1op1.html" class="dienst-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="dienst-num">01</div>
-                <h3>1-op-1 Coaching</h3>
-                <p>Diepgaande begeleiding op maat. We werken samen aan zelfinzicht, doelen en de concrete stappen die jij nodig hebt om verder te groeien.</p>
-                <span class="dienst-link">Meer ontdekken</span>
-            </a>
-            <a href="teamontwikkeling.html" class="dienst-card" data-aos="fade-up" data-aos-delay="80">
-                <div class="dienst-num">02</div>
-                <h3>Teamontwikkeling</h3>
-                <p>Workshops en trajecten die teams sterker maken. Door samen te ontdekken, te leren en te groeien, ontstaat een cultuur van openheid en vertrouwen.</p>
-                <span class="dienst-link">Meer ontdekken</span>
-            </a>
-            <a href="leiderschapstraject.html" class="dienst-card" data-aos="fade-up" data-aos-delay="160">
-                <div class="dienst-num">03</div>
-                <h3>Leiderschapstraject</h3>
-                <p>Voor leiders die willen groeien in impact en authenticiteit. Een intensief traject waarbij jij jouw unieke leiderschapsstijl ontdekt en versterkt.</p>
-                <span class="dienst-link">Meer ontdekken</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ── OVER JOSINE ── -->
-<section class="over-section" id="over">
-    <div class="over-grid">
-        <div class="over-visual" data-aos="fade-right">
-            <div class="over-img-placeholder">
-                Foto Josine Dielissen
-            </div>
-            <div class="over-badge">
-                <span>10+</span>
-                <span>jaar ervaring</span>
-            </div>
-        </div>
-        <div class="over-text" data-aos="fade-left" data-aos-delay="150">
-            <span class="section-label">Over Josine</span>
-            <h2 class="section-title">Begeleiding vanuit <em>echte verbinding.</em></h2>
-            <p>Josine Dielissen is de drijvende kracht achter Ontwikkel-Oase. Met haar aanpak combineert ze warme mensgerichtheid met scherpe professionele inzichten.</p>
-            <p>Ze begeleidt mensen en organisaties bij verandering — niet door te vertellen wat ze moeten doen, maar door de juiste ruimte en vragen te bieden zodat de antwoorden van binnenuit komen.</p>
-            <div class="over-stats">
-                <div class="stat-item">
-                    <div class="stat-num">200+</div>
-                    <div class="stat-label">Coachees begeleid</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">50+</div>
-                    <div class="stat-label">Teams geholpen</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">98%</div>
-                    <div class="stat-label">Aanbevolen</div>
-                </div>
-            </div>
-            <a href="over.html" class="btn-outline">Lees meer over Josine</a>
-        </div>
-    </div>
-</section>
-
-<!-- ── WERKWIJZE ── -->
-<section class="werkwijze-section">
-    <div class="werkwijze-inner">
-        <div data-aos="fade-up">
-            <span class="section-label">Werkwijze</span>
-            <h2 class="section-title">Zo werkt een traject <em>bij Ontwikkel-Oase.</em></h2>
-        </div>
-        <div class="werkwijze-grid">
-            <div class="stap" data-aos="fade-up" data-aos-delay="0">
-                <div class="stap-num">01</div>
-                <h3>Kennismaken</h3>
-                <p>Een gratis intakegesprek van 30 minuten. We verkennen jouw situatie, wensen en of er een klik is.</p>
-            </div>
-            <div class="stap" data-aos="fade-up" data-aos-delay="100">
-                <div class="stap-num">02</div>
-                <h3>Intake & Plan</h3>
-                <p>We stellen samen een helder traject op dat past bij jouw unieke doelen en tempo.</p>
-            </div>
-            <div class="stap" data-aos="fade-up" data-aos-delay="200">
-                <div class="stap-num">03</div>
-                <h3>Groeitraject</h3>
-                <p>Diepgaande sessies, reflectie en oefeningen. Altijd met een veilige, uitdagende sfeer als basis.</p>
-            </div>
-            <div class="stap" data-aos="fade-up" data-aos-delay="300">
-                <div class="stap-num">04</div>
-                <h3>Integratie</h3>
-                <p>We borgen de inzichten en zorgen voor een duurzame verankering in jouw dagelijks leven en werk.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ── TESTIMONIALS ── -->
-<section class="testimonial-section">
-    <div class="testimonial-inner">
-        <span class="section-label" data-aos="fade-up">Ervaringen</span>
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Wat anderen <em style="color:var(--oudrose)">zeggen.</em></h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="testimonial-stars">★★★★★</div>
-                <blockquote>"Josine heeft mij geholpen om eindelijk mijn eigen stem te vinden. Het traject was intens, eerlijk en ontzettend waardevol."</blockquote>
-                <div class="testimonial-name">— Sarah V., Manager</div>
-            </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="testimonial-stars">★★★★★</div>
-                <blockquote>"Ons team heeft een enorme transformatie doorgemaakt. De sfeer, het vertrouwen en de samenwerking zijn compleet veranderd."</blockquote>
-                <div class="testimonial-name">— Mark T., Directeur</div>
-            </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonial-stars">★★★★★</div>
-                <blockquote>"Ik had nooit gedacht dat coaching zoveel impact kon hebben. Josine creëert een veiligheid die ik nergens anders heb ervaren."</blockquote>
-                <div class="testimonial-name">— Lisa B., Ondernemer</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ── BLOG PREVIEW ── -->
-<section class="blog-section">
-    <div class="blog-inner">
-        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.5rem;">
-            <div data-aos="fade-up">
-                <span class="section-label">Blog</span>
-                <h2 class="section-title">Inzichten & <em>inspiratie.</em></h2>
-            </div>
-            <a href="blog.html" class="btn-outline" data-aos="fade-up" style="margin-bottom:1.5rem;">Alle artikelen</a>
-        </div>
-        <div class="blog-grid" id="homeBlogGrid">
-            <!-- Wordt automatisch gevuld vanuit blogs.json -->
-            <div style="grid-column:1/-1;text-align:center;padding:3rem;font-family:var(--font-serif);font-style:italic;color:var(--zink);">Artikelen laden…</div>
-        </div>
-    </div>
-</section>
-
-<!-- ── CTA BANNER ── -->
-<section class="cta-section">
-    <div class="cta-content" data-aos="zoom-in">
-        <h2>Klaar voor jouw <em>volgende stap?</em></h2>
-        <p>Plan een gratis kennismakingsgesprek en ontdek wat een traject bij Ontwikkel-Oase voor jou kan betekenen.</p>
-        <a href="contact.html" class="btn-white">Gratis gesprek plannen</a>
-    </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-brand"><a href="index.html" class="nav-logo footer-logo"><img src="assets/full-logo.png" alt="Ontwikkel-Oase" class="footer-logo-img"></a>
-            <p>Groei mogelijk maken in een veilige en stimulerende omgeving. Voor mensen en organisaties die verder willen.</p>
+          </ul>
         </div>
         <div class="footer-col">
-            <h4>Navigatie</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="over.html">Over Josine</a></li>
-                <li><a href="aanbod.html">Aanbod</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
+            <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
+            <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-            <h4>Diensten</h4>
-            <ul>
-                <li><a href="coaching-1op1.html">1-op-1 Coaching</a></li>
-                <li><a href="teamontwikkeling.html">Teamontwikkeling</a></li>
-                <li><a href="leiderschapstraject.html">Leiderschapstraject</a></li>
-            </ul>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
+            <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
+            <li><a href="contact.html">Boek een sessie</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <ul>
-                <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
-                <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
-                <li><a href="contact.html">Boek een sessie</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Ontwikkel-Oase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: 94754942</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 OntwikkelOase &nbsp;·&nbsp; Josine Dielissen &nbsp;·&nbsp; KvK: 94754942</p>
         <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<!-- ── SCRIPTS ── -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    // AOS init
-    AOS.init({ duration: 900, once: true, offset: 60 });
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 900, once: true, offset: 60 });
 
-    // Navbar scroll
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+      });
 
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('open');
-        hamburger.classList.toggle('open', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            hamburger.classList.remove('open');
-            document.body.style.overflow = '';
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+          document.body.style.overflow = "";
         });
-    });
+      });
 
-    // ── DYNAMISCHE BLOG PREVIEW ──
-    const CAT = {groei:'Persoonlijke Groei',leiderschap:'Leiderschap',team:'Teamdynamiek',mindset:'Mindset',werkgeluk:'Werkgeluk'};
+      const CAT = {
+        groei: "Persoonlijke Groei",
+        leiderschap: "Leiderschap",
+        team: "Teamdynamiek",
+        mindset: "Mindset",
+        werkgeluk: "Werkgeluk",
+      };
 
-    fetch('blogs.json')
-        .then(r => r.json())
-        .then(posts => {
-            // Sorteer op datum nieuwste eerst, pak top 3
-            const recent = [...posts]
-                .sort((a, b) => b.date.localeCompare(a.date))
-                .slice(0, 3);
+      fetch("blogs.json")
+        .then((r) => r.json())
+        .then((posts) => {
+          const recent = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 
-            const grid = document.getElementById('homeBlogGrid');
-            grid.innerHTML = recent.map((p, i) => {
-                const img = p.image
-                    ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;">`
-                    : `<div class="blog-img-inner">Afbeelding artikel</div>`;
-                return `
+          const grid = document.getElementById("homeBlogGrid");
+          grid.innerHTML = recent
+            .map((p, i) => {
+              const img = p.image
+                ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;">`
+                : `<div class="blog-img-inner">Afbeelding artikel</div>`;
+              return `
                 <a href="blog-post.html?id=${p.id}" class="blog-card" data-aos="fade-up" data-aos-delay="${i * 100}">
                     <div class="blog-img">${img}</div>
                     <div class="blog-cat">${CAT[p.category] || p.category}</div>
                     <h3>${p.title}</h3>
                     <p>${p.summary}</p>
                 </a>`;
-            }).join('');
+            })
+            .join("");
 
-            AOS.refresh();
+          AOS.refresh();
         })
         .catch(() => {
-            // Fout bij laden — verberg de laadtekst
-            document.getElementById('homeBlogGrid').innerHTML = '';
+          document.getElementById("homeBlogGrid").innerHTML = "";
         });
-</script>
-</body>
+    </script>
+  </body>
 </html>
