@@ -536,7 +536,7 @@
         font-size: 0.62rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: var(--zink);
+        color: var(--wit);
         margin-bottom: 0.6rem;
       }
       .visual-quote {
@@ -545,7 +545,7 @@
         font-style: italic;
         font-weight: 300;
         line-height: 1.4;
-        color: var(--zwart);
+        color: var(--wit);
       }
 
       .price-badge {
@@ -964,6 +964,27 @@
         color: var(--kerrie);
       }
 
+      .visual-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .dienst-visual-card::after {
+        inset: 0;
+      }
+
+      .visual-quote {
+        z-index: 2;
+      }
+
+      .visual-label {
+        z-index: 1;
+      }
+
       @media (max-width: 900px) {
         .nav-links {
           display: none;
@@ -1099,7 +1120,7 @@
           <li><a href="aanbod.html" class="active">Aanbod</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html" class="cta">Boek een sessie</a></li>
+          <li><a href="contact.html" class="cta">Boek een gesprek</a></li>
         </ul>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span>
@@ -1114,7 +1135,7 @@
       <a href="aanbod.html">Aanbod</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="blog.html">Blog</a>
-      <a href="contact.html">Boek een sessie</a>
+      <a href="contact.html">Boek een gepsrek</a>
     </div>
 
     <header class="page-hero">
@@ -1175,7 +1196,7 @@
             <h4>Wat is inbegrepen</h4>
             <div class="include-item">
               <span class="include-check">✓</span>
-              <span>Gratis intakegesprek, alle tijd die nodig is - want een goede klik en vetrouwen staan voorop</span>
+              <span>Gratis intakegesprek, een intake duurt zolang het duurt, want een goede klik en vertrouwen staan voorop</span>
             </div>
             <div class="include-item">
               <span class="include-check">✓</span>
@@ -1202,10 +1223,10 @@
         </div>
         <div class="dienst-visual" data-aos="fade-left" data-aos-delay="150">
           <div class="dienst-visual-card">
-            <div class="visual-number">01</div>
+            <img src="assets/images/Aanbod/01.png" alt="1-op-1 coaching" class="visual-photo" />
 
             <div class="visual-label">1-op-1 Coaching</div>
-            <div class="visual-quote">"De ruimte om eindelijk jezelf te horen."</div>
+            <div class="visual-quote">"Een veilige plek waar jouw verhaal gehoord wordt en jij weer richting vindt."</div>
           </div>
           <div class="stat-float">
             <strong>98%</strong>
@@ -1616,7 +1637,7 @@
           <ul>
             <li><a href="mailto:info@ontwikkeloase.nl">info@ontwikkeloase.nl</a></li>
             <li><a href="tel:+31683234386">+31 6 83 23 43 86</a></li>
-            <li><a href="contact.html">Boek een sessie</a></li>
+            <li><a href="contact.html">Boek een gepsrek</a></li>
           </ul>
         </div>
       </div>
